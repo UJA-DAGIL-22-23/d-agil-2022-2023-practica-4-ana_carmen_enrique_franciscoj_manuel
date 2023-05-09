@@ -93,7 +93,7 @@ describe('API Gateway: rutas estáticas', () => {
   });
 
 
-    describe('API Gateway: rutas estáticas', () => {
+    
         describe('Rutas estáticas de MS Balonmano', () => {
             it('Devuelve MS Balonmano Home Page', (done) => {
                 supertest(app)
@@ -231,10 +231,9 @@ describe('API Gateway: rutas estáticas', () => {
                     );
             });
 
-        })
-    });
-    describe('Rutas estáticas de MS Plantilla', () => {
-        it('Devuelve MS Plantilla Home Page', (done) => {
+        });
+    describe('Rutas estáticas de MS Futbol', () => {
+        it('Devuelve MS Futbol Home Page', (done) => {
           supertest(app)
             .get('/futbol/')
             .expect(200)
@@ -242,12 +241,12 @@ describe('API Gateway: rutas estáticas', () => {
             .expect(function (res) {
               //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
               assert(res.body.hasOwnProperty('mensaje'));
-              assert(res.body.mensaje === "Microservicio MS Plantilla: home");
+              assert(res.body.mensaje === "Microservicio MS Futbol: home");
     
             })
             .end((error) => { error ? done.fail(error) : done() })
         });
-        it('Devuelve MS Plantilla Acerca De', (done) => {
+        it('Devuelve MS Futbol Acerca De', (done) => {
           supertest(app)
             .get('/futbol/acercade')
             .expect(200)
@@ -255,7 +254,7 @@ describe('API Gateway: rutas estáticas', () => {
             .expect(function (res) {
               //console.log( "BODY ACERCA DE ", res.body ); // Para comprobar qué contiene exactamente res.body
               assert(res.body.hasOwnProperty('mensaje'));
-              assert(res.body.mensaje === "Microservicio MS Plantilla: acerca de");
+              assert(res.body.mensaje === "Microservicio MS Futbol: acerca de");
     
             })
             .end((error) => { error ? done.fail(error) : done() })
@@ -330,8 +329,73 @@ describe('API Gateway: rutas estáticas', () => {
       });
     })
 
+    describe('Rutas estáticas de MS motonautica', () => {
+      it('Devuelve MS motonautica Home Page', (done) => {
+        supertest(app)
+          .get('/motonautica/')
+          .expect(200)
+          .expect('Content-Type', /json/)
+          .expect(function (res) {
+            //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
+            assert(res.body.hasOwnProperty('mensaje'));
+            assert(res.body.mensaje === "Microservicio MS motonautica: home");
+  
+          })
+          .end((error) => { error ? done.fail(error) : done() })
+      });
+      it('Devuelve MS motonautica Acerca De', (done) => {
+        supertest(app)
+          .get('/motonautica/acercade')
+          .expect(200)
+          .expect('Content-Type', /json/)
+          .expect(function (res) {
+            //console.log( "BODY ACERCA DE ", res.body ); // Para comprobar qué contiene exactamente res.body
+            assert(res.body.hasOwnProperty('mensaje'));
+            assert(res.body.mensaje === "Microservicio MS motonautica: acerca de");
+  
+          })
+          .end((error) => { error ? done.fail(error) : done() })
+      });
+      it('Devuelve un listado con todos los pilotos', (done) => {
+        supertest(app)
+          .get('/motonautica/get_pilotos')
+          .expect(200)
+          .expect('Content-Type', /json/)
+          .expect(function (res) {
+            //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
+            assert(res.body.data[0].data.hasOwnProperty('nombre'));
+            assert(res.body.data[0].data.hasOwnProperty('apellido'));
+            assert(res.body.data[0].data.nombre === "Ana");
+            assert(res.body.data[0].data.nombre != "Pato");
+            assert(res.body.data.length === 10);
+          })
+          .end((error) => { error ? done.fail(error) : done(); }
+          );
+      });
+      it('Devuelve un listado con todos los pilotos', (done) => {
+        supertest(app)
+          .get('/motonautica/get_pilotos_completos')
+          .expect(200)
+          .expect('Content-Type', /json/)
+          .expect(function (res) {
+            //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
+            assert(res.body.data[0].data.hasOwnProperty('nombre'));
+            assert(res.body.data[0].data.hasOwnProperty('apellido'));
+            assert(res.body.data[0].data.hasOwnProperty('edad'));
+            assert(res.body.data[0].data.hasOwnProperty('motos'));
+            assert(res.body.data[0].data.hasOwnProperty('playasvisitadas'));
+            assert(res.body.data[0].data.nombre === "Ana");
+            assert(res.body.data[0].data.nombre != "Pato");
+            assert(res.body.data.length === 10);
+          })
+          .end((error) => { error ? done.fail(error) : done(); }
+          );
+      });
+    })
 
 
+
+    
 });
 
 
