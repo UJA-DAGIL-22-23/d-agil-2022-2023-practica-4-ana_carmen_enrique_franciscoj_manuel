@@ -395,8 +395,138 @@ describe('API Gateway: rutas estáticas', () => {
 
 
 
+    describe('Rutas estáticas de MS gimnasia', () => {
+      it('Devuelve MS gimnasia Home Page', (done) => {
+        supertest(app)
+          .get('/gimnasia/')
+          .expect(200)
+          .expect('Content-Type', /json/)
+          .expect(function (res) {
+            //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
+            assert(res.body.hasOwnProperty('mensaje'));
+            assert(res.body.mensaje === "Microservicio MS gimnasia: home");
+  
+          })
+          .end((error) => { error ? done.fail(error) : done() })
+      });
+      it('Devuelve MS gimnasia Acerca De', (done) => {
+        supertest(app)
+          .get('/gimnasia/acercade')
+          .expect(200)
+          .expect('Content-Type', /json/)
+          .expect(function (res) {
+            //console.log( "BODY ACERCA DE ", res.body ); // Para comprobar qué contiene exactamente res.body
+            assert(res.body.hasOwnProperty('mensaje'));
+            assert(res.body.mensaje === "Microservicio MS gimnasia: acerca de");
+  
+          })
+          .end((error) => { error ? done.fail(error) : done() })
+      });
+    
+  
+  
+    it('Devuelve Ana, nombre de la primera Atleta', (done) => {
+      supertest(app)
+        .get('/gimnasia/get_Atletas')
+        .expect(200)
+      })
+  
+  
+    it('Devuelve Listado de nombres de todos los atletas', (done) => {
+      supertest(app)
+        .get('/gimnasia/get_Atletas')
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .expect(function (res) {
+          //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
+          assert(res.body.data[0].data.hasOwnProperty('nombre'));
+         
+  
+  
+        })
+        .end((error) => { error ? done.fail(error) : done(); }
+        );
+    });
+  
+  
+  
+  
+  
+  /**
+     * Tests para acceso a la lista de Atletas completa
+     */
+  it('Devuelve todos los datos de todos los Atletas', (done) => {
+    supertest(app)
+      .get('/get_Atletas_completos')
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .expect(function (res) {
+        //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
+        assert(res.body.data[0].data.hasOwnProperty('nombre'));
+        assert(res.body.data[0].data.hasOwnProperty('apellido'));
+        assert(res.body.data[0].data.hasOwnProperty('edad'));
+        assert(res.body.data[0].data.hasOwnProperty('dni'));
+        assert(res.body.data[0].data.hasOwnProperty('medallas'));
+        assert(res.body.data[0].data.hasOwnProperty('direccion'));
+        assert(res.body.data[0].data.hasOwnProperty('rankingMundial'));
+        assert(res.body.data.length === 10);
+  
+      })
+      .end((error) => { error ? done.fail(error) : done(); }
+      );
+  });
+  
+  /**
+   * Tests para acceso a la lista de nombres ordenados de Atletas
+   */
+  it('Devuelve Ana, nombre de la primera Atleta, y Sara nombre del último', (done) => {
+    supertest(app)
+      .get('/get_Atletas')
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .expect(function (res) {
+        //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
+        assert(res.body.data[0].data.hasOwnProperty('nombre'));
+        assert(res.body.data[0].data.nombre === "Ana");
+        assert(res.body.data[9].data.nombre === "Sara");
+  
+        assert( res.body.data.length === 10); 
+  
+  
+  
+      })
+      .end((error) => { error ? done.fail(error) : done(); }
+      );
+  });
+  
+  
+  /**
+   * Tests para acceso a la lista de nombres ordenados de arqueros
+   */
+  it('Devuelve Ana, nombre de la primera Atleta, y Sara nombre del último', (done) => {
+    supertest(app)
+      .get('/get_Atletas')
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .expect(function (res) {
+        //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
+        assert(res.body.data[0].data.hasOwnProperty('nombre'));
+        assert(res.body.data[0].data.nombre === "Ana");
+        assert(res.body.data[9].data.nombre === "Sara");
+  
+        assert( res.body.data.length === 10); 
+  
+  
+  
+      })
+      .end((error) => { error ? done.fail(error) : done(); }
+      );
+
+
+    });
     
 });
 
+});
 
 
