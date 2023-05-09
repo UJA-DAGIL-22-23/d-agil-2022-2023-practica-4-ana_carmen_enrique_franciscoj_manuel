@@ -12,8 +12,8 @@ const assert = require('assert')
 const app = require('../server');
 
 describe('API Gateway: rutas estáticas', () => {
-  describe('Rutas estáticas de MS Plantilla', () => {
-    it('Devuelve MS Plantilla Home Page', (done) => {
+  describe('Rutas estáticas de MS tiro_con_arco', () => {
+    it('Devuelve MS tiro_con_arco con Home Page', (done) => {
       supertest(app)
         .get('/tiro_con_arco/')
         .expect(200)
@@ -21,12 +21,12 @@ describe('API Gateway: rutas estáticas', () => {
         .expect(function (res) {
           //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
           assert(res.body.hasOwnProperty('mensaje'));
-          assert(res.body.mensaje === "Microservicio MS Plantilla: home");
+          assert(res.body.mensaje === "Microservicio MS tiro_con_arco: home");
 
         })
         .end((error) => { error ? done.fail(error) : done() })
     });
-    it('Devuelve MS Plantilla Acerca De', (done) => {
+    it('Devuelve MS tiro_con_arco Acerca De', (done) => {
       supertest(app)
         .get('/tiro_con_arco/acercade')
         .expect(200)
@@ -34,7 +34,7 @@ describe('API Gateway: rutas estáticas', () => {
         .expect(function (res) {
           //console.log( "BODY ACERCA DE ", res.body ); // Para comprobar qué contiene exactamente res.body
           assert(res.body.hasOwnProperty('mensaje'));
-          assert(res.body.mensaje === "Microservicio MS Plantilla: acerca de");
+          assert(res.body.mensaje === "Microservicio MS tiro_con_arco: acerca de");
 
         })
         .end((error) => { error ? done.fail(error) : done() })
@@ -94,8 +94,8 @@ describe('API Gateway: rutas estáticas', () => {
 
 
     describe('API Gateway: rutas estáticas', () => {
-        describe('Rutas estáticas de MS Plantilla', () => {
-            it('Devuelve MS Plantilla Home Page', (done) => {
+        describe('Rutas estáticas de MS Balonmano', () => {
+            it('Devuelve MS Balonmano Home Page', (done) => {
                 supertest(app)
                     .get('/balonmano/')
                     .expect(200)
@@ -103,12 +103,12 @@ describe('API Gateway: rutas estáticas', () => {
                     .expect(function (res) {
                         //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
                         assert(res.body.hasOwnProperty('mensaje'));
-                        assert(res.body.mensaje === "Microservicio MS Plantilla: home");
+                        assert(res.body.mensaje === "Microservicio MS Balonmano: home");
 
                     })
                     .end((error) => { error ? done.fail(error) : done() })
             });
-            it('Devuelve MS Plantilla Acerca De', (done) => {
+            it('Devuelve MS Balonmano Acerca De', (done) => {
                 supertest(app)
                     .get('/balonmano/acercade')
                     .expect(200)
@@ -116,7 +116,7 @@ describe('API Gateway: rutas estáticas', () => {
                     .expect(function (res) {
                         //console.log( "BODY ACERCA DE ", res.body ); // Para comprobar qué contiene exactamente res.body
                         assert(res.body.hasOwnProperty('mensaje'));
-                        assert(res.body.mensaje === "Microservicio MS Plantilla: acerca de");
+                        assert(res.body.mensaje === "Microservicio MS tiro_con_arco: acerca de");
                         assert(res.body.autor == "Francisco Javier Galvez Marin");
                         assert(res.body.email == "fjgm0038@red.ujaen.es");
                         assert(res.body.fecha == "28-03-2023");
