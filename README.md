@@ -567,3 +567,17 @@ Deporte: Fútbol
   goles: 327
 }
 ```
+
+# *Historias de usuario elegidas a implementar:* 
+* HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Carmen.
+* HU02. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Francisco Javier.
+* HU03. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ana.
+* HU04. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Manuel.
+* HU05. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Enrique.
+* HU06. Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”.
+* HU07. Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app.
+* HU08. Ver un listado solo con los nombres de todos los jugadores/equipos ordenados alfabéticamente de todos los deportes incluidos en la app.
+* HU09. Mostrar el nombre y el deporte de todos los jugadores/equipos que contengan una determinada cadena introducida por el usuario. (Por ejemplo, si el usuario introduce “EST” se mostrarán todos los nombres junto con el deporte practicado de todos los jugadores/equipos cuyo nombre incluya “EST”).
+* HU10. Modificar la visualización de la app con un modo ALTO CONTRASTE.
+
+## HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Carmen
