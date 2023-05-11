@@ -9,15 +9,13 @@
 # *Datos del equipo*
 
 ## Estudiante 1:
-Nombre y apellidos: Carmen Huesa Guardiola
-
-Correo Electronico: chg00016@red.ujaen.es
-
-Deporte: Tiro con arco
+- **Nombre y apellidos**: Carmen Huesa Guardiola
+- **Correo Electronico**: chg00016@red.ujaen.es
+- **Deporte**: Tiro con arco
 
 ## Los documentos de la bases de datos:
 
-**1º Arquera**
+### **1º Arquera**
 ```
 {
     "nombre": "Carmen",
@@ -34,7 +32,7 @@ Deporte: Tiro con arco
 }
   ```
 
-  **2º Arquera**
+###  **2º Arquera**
   ```
   {
     "nombre": "Ana",
@@ -51,7 +49,7 @@ Deporte: Tiro con arco
 }
   ```
 
-  **3º Arquero**
+###  **3º Arquero**
 ```
 {
     "nombre": "Francisco",
@@ -68,7 +66,7 @@ Deporte: Tiro con arco
 }
   ```
 
-  **4º Arquero**
+###  **4º Arquero**
 ```
 {
     "nombre": "Antonio",
@@ -85,7 +83,7 @@ Deporte: Tiro con arco
 }
   ```
 
-  **5º Arquero**
+###   **5º Arquero**
   ```
 {
     "nombre": "Jorge",
@@ -102,7 +100,7 @@ Deporte: Tiro con arco
 }
   ```
 
-  **6º Arquera**
+###   **6º Arquera**
 ```
 {
     "nombre": "Britney",
@@ -119,7 +117,7 @@ Deporte: Tiro con arco
 }
 ```
 
-  **7º Arquero**
+###  **7º Arquero**
 ```
 {
     "nombre": "Sora",
@@ -136,7 +134,7 @@ Deporte: Tiro con arco
 }
 ```
 
-  **8º Arquero**
+###  **8º Arquero**
 ```
 {
     "nombre": "Yusepe",
@@ -153,7 +151,7 @@ Deporte: Tiro con arco
 }
 ```
 
-  **9º Arquera**
+###  **9º Arquera**
 ```
 {
     "nombre": "Pepa",
@@ -170,7 +168,7 @@ Deporte: Tiro con arco
 }
 ```
 
-  **10º Arquera**
+###   **10º Arquera**
 ```
 {
     "nombre": "Trixie",
@@ -188,15 +186,178 @@ Deporte: Tiro con arco
 ```
 
 ## Estudiante 2:
-Nombre y apellidos: Ana León Pulido 
+- **Nombre y apellidos**: Francisco Javier Gálvez Marín
+- **Correo Electronico**: fjgm0038@red.ujaen.es
+- **Deporte**: Balonmano
 
-Correo Electronico: alp00054@red.ujaen.es
-
-Deporte: Motonaútica
+## Los documentos de la bases de datos:
+### **1º Jugador**
+```{
+  playerId: 1,
+  name: "Arno",
+  surname: "Sommer",
+  dateBirth: {
+    day: 22,
+    month: 9,
+    year: 1921
+  },
+  seasonsPlayed: [1998, 1999, 2000, 2001, 2002, 2003, 2004],
+  goalSeason: [2, 5, 11, 7, 3, 4, 14],
+  disqualified: true
+}
+```
+### **2º Jugador**
+```
+{
+  playerId: 2,
+  name: "Eshair",
+  surname: "Talqamar",
+  dateBirth: {
+    day: 31,
+    month: 3,
+    year: 2001
+  },
+  seasonsPlayed: [2021, 2022, 2023],
+  goalSeason: [1, 7, 11],
+  disqualified: true
+}
+```
+### **3º Jugador**
+```
+{
+  playerId: 3,
+  name: "Goroki",
+  surname: "Leupar",
+  dateBirth: {
+    day: 15,
+    month: 3,
+    year: 1997
+  },
+  seasonsPlayed: [2021, 2022],
+  goalSeason: [3, 8],
+  disqualified: false
+}
+```
+### **4º Jugador**
+```
+{
+  playerId: 4,
+  name: "Desmond",
+  surname: "Verelli",
+  dateBirth: {
+    day: 28,
+    month: 11,
+    year: 2000
+  },
+  seasonsPlayed: [2021, 2022, 2023],
+  goalSeason: [3, 0, 12],
+  disqualified: true
+}
+```
+### **5º Jugador**
+```
+{
+  playerId: 5,
+  name: "Ax",
+  surname: "El",
+  dateBirth: {
+    day: 3,
+    month: 8,
+    year: 1999
+  },
+  seasonsPlayed: [2018, 2019, 2020, 2021, 2022, 2023],
+  goalSeason: [1, 2, 3, 4, 5, 6],
+  disqualified: false
+}
+```
+### **6º Jugador**
+```
+{
+  playerId: 6,
+  name: "Shaloth",
+  surname: "Goldark",
+  dateBirth: {
+    day: 13,
+    month: 11,
+    year: 2002
+  },
+  seasonsPlayed: [2020, 2021, 2022, 2023],
+  goalSeason: [3, 2, 1, 5],
+  disqualified: false
+}
+```
+### **7º Jugador**
+```
+{
+  playerId: 7,
+  name: "Sobunar",
+  surname: "D. Profundidadgris",
+  dateBirth: {
+    day: 1,
+    month: 7,
+    year: 2002
+  },
+  seasonsPlayed: [2022, 2023],
+  goalSeason: [6, 9],
+  disqualified: false
+}
+```
+### **8º Jugador**
+```
+{
+  playerId: 8,
+  name: "Cronk",
+  surname: "von Kessel",
+  dateBirth: {
+    day: 24,
+    month: 12,
+    year: 1998
+  },
+  seasonsPlayed: [2015, 2016, 2017],
+  goalSeason: [1, 0, 0],
+  disqualified: true
+}
+```
+### **9º Jugador**
+```
+{
+  playerId: 9,
+  name: "Admes",
+  surname: "Myrr",
+  dateBirth: {
+    day: 27,
+    month: 1,
+    year: 2003
+  },
+  seasonsPlayed: [2017, 2018, 2019, 2020, 2021],
+  goalSeason: [5, 6, 4, 7, 8],
+  disqualified: true
+}
+```
+### **10º Jugador**
+```
+{
+  playerId: 10,
+  name: "Cairbre",
+  surname: "Larnaz",
+  dateBirth: {
+    day: 26,
+    month: 8,
+    year: 2004
+  },
+  seasonsPlayed: [2020, 2021, 2022],
+  goalSeason: [1, 3, 4],
+  disqualified: false
+}
+```
+## Estudiante 3:
+- **Nombre y apellidos**: Ana León Pulido
+- **Correo Electrónico**: alp00054@red.ujaen.es
+- **Deporte**: Motonaútica
 
 ## Los documentos de la bases de datos:
 
-**1º Piloto**
+### **1º Piloto**
 ```
 {
   "ref": Ref(Collection("Pilotos"), "359810309521670348"),
@@ -219,7 +380,7 @@ Deporte: Motonaútica
 }
   ```
 
-  **2º Piloto**
+###  **2º Piloto**
   ```
   {
   "ref": Ref(Collection("Pilotos"), "359810552909791436"),
@@ -242,7 +403,7 @@ Deporte: Motonaútica
 }
   ```
 
-  **3º Piloto**
+###  **3º Piloto**
 ```
 {
   "ref": Ref(Collection("Pilotos"), "359810690659123404"),
@@ -265,7 +426,7 @@ Deporte: Motonaútica
 }
   ```
 
-  **4º Piloto**
+###  **4º Piloto**
 ```
 {
   "ref": Ref(Collection("Pilotos"), "359810788904403149"),
@@ -288,7 +449,7 @@ Deporte: Motonaútica
 }
   ```
 
-  **5º Piloto**
+###  **5º Piloto**
   ```
 {
   "ref": Ref(Collection("Pilotos"), "359810864228860109"),
@@ -311,7 +472,7 @@ Deporte: Motonaútica
 }
   ```
 
-  **6º Piloto**
+###  **6º Piloto**
 ```
 {
   "ref": Ref(Collection("Pilotos"), "359811054744633548"),
@@ -334,7 +495,7 @@ Deporte: Motonaútica
 }
 ```
 
-  **7º Piloto**
+###  **7º Piloto**
 ```
 {
   "ref": Ref(Collection("Pilotos"), "360724982393733325"),
@@ -357,7 +518,7 @@ Deporte: Motonaútica
 }
 ```
 
-  **8º Piloto**
+###  **8º Piloto**
 ```
 {
   "ref": Ref(Collection("Pilotos"), "360725180782215373"),
@@ -380,7 +541,7 @@ Deporte: Motonaútica
 }
 ```
 
-  **9º Piloto**
+###  **9º Piloto**
 ```
 {
   "ref": Ref(Collection("Pilotos"), "360725302631989453"),
@@ -403,7 +564,7 @@ Deporte: Motonaútica
 }
 ```
 
-  **10º Piloto**
+###  **10º Piloto**
 ```
 {
   "ref": Ref(Collection("Pilotos"), "360725403916042445"),
@@ -426,16 +587,14 @@ Deporte: Motonaútica
 }
 ```
 
-## Estudiante 3:
-Nombre y apellidos: Manuel Lara Torres
-
-Correo Electronico: mlt00024@red.ujaen.es
-
-Deporte: Fútbol
+## Estudiante 4:
+- **Nombre y apellidos**: Manuel Lara Torres
+- **Correo Electrónico**: mlt00024@red.ujaen.es
+- **Deporte**: Fútbol
 
 ## Los documentos de la bases de datos:
 
-**1º Jugador**
+### **1º Jugador**
 ```
 {
   nombre: "Leo",
@@ -449,7 +608,7 @@ Deporte: Fútbol
   goles: 701
 }
 ```
-**2º Jugador**
+### **2º Jugador**
 ```
 {
   nombre: "Cristiano",
@@ -469,7 +628,7 @@ Deporte: Fútbol
   goles: 801
 }
 ```
-**3º Jugador**
+### **3º Jugador**
 ```
 {
   nombre: "Andres",
@@ -483,7 +642,7 @@ Deporte: Fútbol
   goles: 433
 }
 ```
-**4º Jugador**
+### **4º Jugador**
 ```
 {
   nombre: "Miguel",
@@ -497,7 +656,7 @@ Deporte: Fútbol
   goles: 123
 }
 ```
-**5º Jugador**
+### **5 Jugador**
 ```
 {
   nombre: "Jacobo",
@@ -511,7 +670,7 @@ Deporte: Fútbol
   goles: 0
 }
 ```
-**6º Jugador**
+### **6º Jugador**
 ```
 {
   nombre: "Angel",
@@ -525,7 +684,7 @@ Deporte: Fútbol
   goles: 98
 }
 ```
-**8º Jugador**
+### **8º Jugador**
 ```
 {
   nombre: "Andres",
@@ -539,7 +698,7 @@ Deporte: Fútbol
   goles: 0
 }
 ```
-**9º Jugador**
+### **9º Jugador**
 ```
 {
   nombre: "Enrique",
@@ -553,7 +712,7 @@ Deporte: Fútbol
   goles: 145
 }
 ```
-**10º Jugador**
+### **10º Jugador**
 ```
 {
   nombre: "Manuel",
@@ -581,7 +740,7 @@ Deporte: Fútbol
 * HU10. Modificar la visualización de la app con un modo ALTO CONTRASTE.
 
 ## HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Carmen
-
+## HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Fran
 ## HU03. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ana
 
 
