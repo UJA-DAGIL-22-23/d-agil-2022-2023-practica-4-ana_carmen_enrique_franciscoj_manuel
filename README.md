@@ -186,3 +186,242 @@ Deporte: Tiro con arco
     "puntuaciones_de_la_tanda": [6, 6, 10, 9, 3, 3]
 }
 ```
+
+## Estudiante 2:
+Nombre y apellidos: Ana León Pulido 
+
+Correo Electronico: alp00054@red.ujaen.es
+
+Deporte: Motonaútica
+
+## Los documentos de la bases de datos:
+
+**1º Piloto**
+```
+{
+  "ref": Ref(Collection("Pilotos"), "359810309521670348"),
+  "ts": 1680272907585000,
+  "data": {
+    "nombre": "Ana",
+    "apellido": "Tello",
+    "edad": 27,
+    "motos": {
+      "nombre": "Jet Ski",
+      "plazas": "1 persona",
+      "peso": 150
+    },
+    "playasvisitadas": [
+      "Ses Illetes",
+      "Bolonia",
+      "Catedrales"
+    ]
+  }
+}
+  ```
+
+  **2º Piloto**
+  ```
+  {
+  "ref": Ref(Collection("Pilotos"), "359810552909791436"),
+  "ts": 1679400952740000,
+  "data": {
+    "nombre": "Juan",
+    "apellido": "Yeguas",
+    "edad": 23,
+    "motos": {
+      "nombre": "Runabout",
+      "plazas": "4 personas",
+      "peso": 216
+    },
+    "playasvisitadas": [
+      "Cala Macarella",
+      "Macarelleta",
+      "Valdevaqueros"
+    ]
+  }
+}
+  ```
+
+  **3º Piloto**
+```
+{
+  "ref": Ref(Collection("Pilotos"), "359810690659123404"),
+  "ts": 1679401064450000,
+  "data": {
+    "nombre": "Nuria",
+    "apellido": "Pulido",
+    "edad": 38,
+    "motos": {
+      "nombre": "Runabout",
+      "plazas": "4 personas",
+      "peso": 216
+    },
+    "playasvisitadas": [
+      "Papagayo",
+      "Cofete",
+      "Rodas"
+    ]
+  }
+}
+  ```
+
+  **4º Piloto**
+```
+{
+  "ref": Ref(Collection("Pilotos"), "359810788904403149"),
+  "ts": 1679401158200000,
+  "data": {
+    "nombre": "Francisco",
+    "apellido": "Amezcua",
+    "edad": 54,
+    "motos": {
+      "nombre": "Jet Ski",
+      "plazas": "1 persona",
+      "peso": 150
+    },
+    "playasvisitadas": [
+      "Torimbia",
+      "Cala Saona",
+      "Catedrales"
+    ]
+  }
+}
+  ```
+
+  **5º Piloto**
+  ```
+{
+  "ref": Ref(Collection("Pilotos"), "359810864228860109"),
+  "ts": 1679401229980000,
+  "data": {
+    "nombre": "Victor",
+    "apellido": "Lechuga",
+    "edad": 37,
+    "motos": {
+      "nombre": "Jet Ski",
+      "plazas": "1 persona",
+      "peso": 150
+    },
+    "playasvisitadas": [
+      "La Concha",
+      "Bolonia",
+      "Maspalomas"
+    ]
+  }
+}
+  ```
+
+  **6º Piloto**
+```
+{
+  "ref": Ref(Collection("Pilotos"), "359811054744633548"),
+  "ts": 1679401411670000,
+  "data": {
+    "nombre": "Dereck",
+    "apellido": "Archilla",
+    "edad": 20,
+    "motos": {
+      "nombre": "Runabout",
+      "plazas": "4 personas",
+      "peso": 216
+    },
+    "playasvisitadas": [
+      "Punta Paloma",
+      "La Arnía",
+      "Silencio"
+    ]
+  }
+}
+```
+
+  **7º Piloto**
+```
+{
+  "ref": Ref(Collection("Pilotos"), "360724982393733325"),
+  "ts": 1680273001010000,
+  "data": {
+    "nombre": "Paco",
+    "apellido": "Nerea",
+    "edad": 68,
+    "motos": {
+      "nombre": "Jet Ski",
+      "plazas": "1 persona",
+      "peso": 150
+    },
+    "playasvisitadas": [
+      "Bolonia",
+      "Tulum",
+      "Maui"
+    ]
+  }
+}
+```
+
+  **8º Piloto**
+```
+{
+  "ref": Ref(Collection("Pilotos"), "360725180782215373"),
+  "ts": 1680602808210000,
+  "data": {
+    "nombre": "Marta",
+    "apellido": "Mata",
+    "edad": 22,
+    "motos": {
+      "nombre": "Runabout",
+      "plazas": "4 personas",
+      "peso": 216
+    },
+    "playasvisitadas": [
+      "Santa Monica",
+      "Mykonos",
+      "Sarakiniko"
+    ]
+  }
+}
+```
+
+  **9º Piloto**
+```
+{
+  "ref": Ref(Collection("Pilotos"), "360725302631989453"),
+  "ts": 1680273306410000,
+  "data": {
+    "nombre": "Mario",
+    "apellido": "Quesada",
+    "edad": 58,
+    "motos": {
+      "nombre": "Jet Ski",
+      "plazas": "1 persona",
+      "peso": 150
+    },
+    "playasvisitadas": [
+      "Oludeniz",
+      "Mykonos",
+      "Cala Macarelleta"
+    ]
+  }
+}
+```
+
+  **10º Piloto**
+```
+{
+  "ref": Ref(Collection("Pilotos"), "360725403916042445"),
+  "ts": 1680273403003000,
+  "data": {
+    "nombre": "Olivia",
+    "apellido": "Jurado",
+    "edad": 29,
+    "motos": {
+      "nombre": "Runabout",
+      "plazas": "4 personas",
+      "peso": 216
+    },
+    "playasvisitadas": [
+      "Palolem",
+      "Bora Bora",
+      "Silencio"
+    ]
+  }
+}
+```
