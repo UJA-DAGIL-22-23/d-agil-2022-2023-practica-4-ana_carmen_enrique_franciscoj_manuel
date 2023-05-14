@@ -13,7 +13,7 @@ const elementoContenido_gimnasia = document.getElementById(Frontend.ID_SECCION_P
 const TITULO_HOME_gimnasia = "gimnasia Home"
 const TITULO_ACERCA_DE_gimnasia = "gimnasia Acerca de"
 
-const datosDescargadosPrueba = {
+const datosDescargadosPrueba_gimnasia = {
     mensaje: "Mensaje de prueba descargado",
     autor: "Prueba de autor",
     email: "Prueba de email",
@@ -65,9 +65,9 @@ describe("gimnasia.mostrarHome: ", function () {
 
     it("muestra correctamente el título y el mensaje",
         function () {
-            gimnasia.mostrarHome(datosDescargadosPrueba)
+            gimnasia.mostrarHome(datosDescargadosPrueba_gimnasia)
             expect(elementoTitulo_gimnasia.innerHTML).toBe(TITULO_HOME_gimnasia)
-            expect(elementoContenido_gimnasia.innerHTML).toBe(datosDescargadosPrueba.mensaje)
+            expect(elementoContenido_gimnasia.innerHTML).toBe(datosDescargadosPrueba_gimnasia.mensaje)
         })
 })
 
@@ -113,13 +113,13 @@ describe("gimnasia.mostrarAcercaDe: ", function () {
         })
     it("muestra correctamente el título y el mensaje conteniendo el autor, el email y la fecha",
         function () {
-            gimnasia.mostrarAcercaDe(datosDescargadosPrueba)
+            gimnasia.mostrarAcercaDe(datosDescargadosPrueba_gimnasia)
             expect(elementoTitulo_gimnasia.innerHTML).toBe(TITULO_ACERCA_DE_gimnasia)
 
             // Comprobamos que al buscar el autor, el email y la fecha de prueba los encuentra dentro del contenido del article
-            expect(elementoContenido_gimnasia.innerHTML.search(datosDescargadosPrueba.autor) >= 0).toBeTrue()
-            expect(elementoContenido_gimnasia.innerHTML.search(datosDescargadosPrueba.email) >= 0).toBeTrue()
-            expect(elementoContenido_gimnasia.innerHTML.search(datosDescargadosPrueba.fecha) >= 0).toBeTrue()
+            expect(elementoContenido_gimnasia.innerHTML.search(datosDescargadosPrueba_gimnasia.autor) >= 0).toBeTrue()
+            expect(elementoContenido_gimnasia.innerHTML.search(datosDescargadosPrueba_gimnasia.email) >= 0).toBeTrue()
+            expect(elementoContenido_gimnasia.innerHTML.search(datosDescargadosPrueba_gimnasia.fecha) >= 0).toBeTrue()
         })
 })
 
