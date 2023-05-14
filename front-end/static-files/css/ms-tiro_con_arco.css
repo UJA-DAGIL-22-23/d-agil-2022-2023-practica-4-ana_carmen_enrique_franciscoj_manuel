@@ -1,0 +1,137 @@
+/**
+ * @file ms-plantilla.css
+ * @description Estilos aplicables a la visualización de elementos relacionados con el MS Plantilla
+ * @author Víctor M. Rivas Santos <vrivas@ujaen.es>
+ * @date 03-Feb-2023
+ */
+
+ 
+ * {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+table.Aplicacion-tiro_con_arco {
+    width: 100%;
+    border: 1px solid rgba(125, 14, 153, 0.699);
+}
+  
+table.Aplicacion-tiro_con_arco thead th,
+table.Aplicacion-tiro_con_arco tbody th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(153, 14, 146, 0.699);
+    text-transform: uppercase;
+}
+  
+table.Aplicacion-tiro_con_arco tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+  
+table.Aplicacion-tiro_con_arco tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(172, 0, 252, 0.575)
+}
+table.Aplicacion-tiro_con_arco thead,
+table.Aplicacion-tiro_con_arco tbody,
+table.Aplicacion-tiro_con_arco tr,
+table.Aplicacion-tiro_con_arco td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+table.Aplicacion-tiro_con_arco {
+    width: 100%;
+}
+
+table.listado-tiro_con_arco {
+    width: 100%;
+    border: 1px solid rgba(63, 0, 100, 0.8);
+}
+
+table.listado-tiro_con_arco thead th,
+table.listado-tiro_con_arco tbody th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+
+}
+
+table.listado-tiro_con_arco tbody th {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+table.listado-tiro_con_arco tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+table.listado-tiro_con_arco tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(0, 0, 100, 0.1)
+}
+ 
+
+table.listado-arqueros {
+    width: 100%;
+    border: 1px solid rgba(55, 0, 100, 0.8);
+}
+
+table.listado-arqueros thead th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+
+}
+
+table.listado-arqueros tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+table.listado-arqueros tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(0, 0, 100, 0.1)
+}
+
+.listado-tiro_con_arco {
+    max-width: 100%;
+    overflow-x: auto;
+}
+  
+.form-arqueros-elemento {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+.form-arqueros-elemento:disabled {
+    color: black;
+    background-color: inherit;
+    border-width: 0px;
+    text-align: center;
+}
+
+.form-arqueros-elemento:enabled {
+    color:rgba(41, 2, 66, 0.8);
+}
+
+.form-arqueros-elemento:enabled:required {
+    color:rgba(100, 0, 58, 0.8);
+}
+
+table.listado-arqueros thead,
+table.listado-arqueros tbody,
+table.listado-arqueros tr,
+table.listado-arqueros td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+table.listado-arqueros {
+    width: 100%;
+}
