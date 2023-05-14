@@ -8,10 +8,10 @@
 "use strict";
 
 /// Creo el espacio de nombres
-let Plantilla = {};
+let BalonmanoJugador = {};
 
 // Plantilla de datosDescargados vacíos
-Plantilla.datosDescargadosNulos = {
+BalonmanoJugador.datosDescargadosNulos = {
     mensaje: "Datos Descargados No válidos",
     autor: "",
     email: "",
@@ -21,7 +21,7 @@ Plantilla.datosDescargadosNulos = {
 
 
 /* Plantilla de datosJugadoresvacíos */
-Plantilla.datosJugadoresNulos = {
+BalonmanoJugador.datosJugadoresNulos = {
     playerId: "undefined",
     name: "undefined",
     surname: "undefined",
@@ -34,7 +34,7 @@ Plantilla.datosJugadoresNulos = {
 
 
 // Plantilla de tags
-Plantilla.plantillaTags = {
+BalonmanoJugador.plantillaTags = {
     "ID": "### ID ###",
     "PLAYERID": "### PLAYERID ###",
     "NAME": "### NAME ###",
@@ -53,7 +53,7 @@ Plantilla.plantillaTags = {
  * @param {función} callBackFn Función a la que se llamará una vez recibidos los datos.
  *
  */
-Plantilla.descargarRuta = async function (ruta, callBackFn) {
+BalonmanoJugador.descargarRuta = async function (ruta, callBackFn) {
     let response = null
 
     // Intento conectar con el microservicio Plantilla
@@ -79,7 +79,7 @@ Plantilla.descargarRuta = async function (ruta, callBackFn) {
 /**
  * Función principal para mostrar los datos enviados por la ruta "home" de MS Plantilla
  */
-Plantilla.mostrarHome = function (datosDescargados) {
+BalonmanoJugador.mostrarHome = function (datosDescargados) {
     // Si no se ha proporcionado valor para datosDescargados
     datosDescargados = datosDescargados || this.datosDescargadosNulos
 
@@ -95,7 +95,7 @@ Plantilla.mostrarHome = function (datosDescargados) {
 /**
  * Función principal para mostrar los datos enviados por la ruta "acerca de" de MS Plantilla
  */
-Plantilla.mostrarAcercaDe = function (datosDescargados) {
+BalonmanoJugador.mostrarAcercaDe = function (datosDescargados) {
     // Si no se ha proporcionado valor para datosDescargados
     datosDescargados = datosDescargados || this.datosDescargadosNulos
 
@@ -125,22 +125,22 @@ Plantilla.mostrarAcercaDe = function (datosDescargados) {
 /**
  * Función principal para responder al evento de elegir la opción "Home"
  */
-Plantilla.procesarHome = function () {
+BalonmanoJugador.procesarHome = function () {
     this.descargarRuta("/balonmano/", this.mostrarHome);
 }
 
 /**
  * Función principal para responder al evento de elegir la opción "Acerca de"
  */
-Plantilla.procesarAcercaDe = function () {
+BalonmanoJugador.procesarAcercaDe = function () {
     this.descargarRuta("/balonmano/acercade", this.mostrarAcercaDe);
 }
 
 //Tabla donde irán los jugadores
-Plantilla.plantillaTablaJugadores = {}
+BalonmanoJugador.plantillaTablaJugadores = {}
 
 // Cabecera de la tabla para solo los nombres
-Plantilla.plantillaTablaJugadores.headerNombres = `<table width="100%" class="listado_jugadores">
+BalonmanoJugador.plantillaTablaJugadores.headerNombres = `<table width="100%" class="listado_jugadores">
 <thead>
     <th width="5%">ID</th>
     <th width="15%">Nombre</th>
@@ -149,7 +149,7 @@ Plantilla.plantillaTablaJugadores.headerNombres = `<table width="100%" class="li
 <tbody>`;
 
 // Cabecera de la tabla para solo los nombres
-Plantilla.plantillaTablaJugadores.headerTodosDatos = `<table width="100%" class="listado_jugadores_completo">
+BalonmanoJugador.plantillaTablaJugadores.headerTodosDatos = `<table width="100%" class="listado_jugadores_completo">
 <thead>
     <th width="5%">ID</th>
     <th width="10%">Nombre</th>
@@ -163,11 +163,11 @@ Plantilla.plantillaTablaJugadores.headerTodosDatos = `<table width="100%" class=
 
 
 //Elementos RT que muestra los datos de un jugador de balonmano
-Plantilla.plantillaTablaJugadores.cuerpoNombres = `
-<tr title="${Plantilla.plantillaTags.NAME}">
-    <td>${Plantilla.plantillaTags.PLAYERID}</td>
-    <td>${Plantilla.plantillaTags.NAME}</td>
-    <td>${Plantilla.plantillaTags.SURNAME}</td>
+BalonmanoJugador.plantillaTablaJugadores.cuerpoNombres = `
+<tr title="${BalonmanoJugador.plantillaTags.NAME}">
+    <td>${BalonmanoJugador.plantillaTags.PLAYERID}</td>
+    <td>${BalonmanoJugador.plantillaTags.NAME}</td>
+    <td>${BalonmanoJugador.plantillaTags.SURNAME}</td>
     <td>
     <div></div>
 </td>
@@ -176,15 +176,15 @@ Plantilla.plantillaTablaJugadores.cuerpoNombres = `
 
 
 //Elementos RT que muestra los datos de un jugador de balonmano
-Plantilla.plantillaTablaJugadores.cuerpoCompleto = `
-<tr title="${Plantilla.plantillaTags.NAME}">
-    <td>${Plantilla.plantillaTags.PLAYERID}</td>
-    <td>${Plantilla.plantillaTags.NAME}</td>
-    <td>${Plantilla.plantillaTags.SURNAME}</td>
-    <td>${Plantilla.plantillaTags.DATE_BIRTH}</td>
-    <td>${Plantilla.plantillaTags["SEASONS_PLAYED"]}</td>
-    <td>${Plantilla.plantillaTags["GOAL_SEASON"]}</td>
-    <td>${Plantilla.plantillaTags.DISQUALIFIED}</td>
+BalonmanoJugador.plantillaTablaJugadores.cuerpoCompleto = `
+<tr title="${BalonmanoJugador.plantillaTags.NAME}">
+    <td>${BalonmanoJugador.plantillaTags.PLAYERID}</td>
+    <td>${BalonmanoJugador.plantillaTags.NAME}</td>
+    <td>${BalonmanoJugador.plantillaTags.SURNAME}</td>
+    <td>${BalonmanoJugador.plantillaTags.DATE_BIRTH}</td>
+    <td>${BalonmanoJugador.plantillaTags["SEASONS_PLAYED"]}</td>
+    <td>${BalonmanoJugador.plantillaTags["GOAL_SEASON"]}</td>
+    <td>${BalonmanoJugador.plantillaTags.DISQUALIFIED}</td>
     <td>
     <div></div>
 </td>
@@ -192,7 +192,7 @@ Plantilla.plantillaTablaJugadores.cuerpoCompleto = `
 
 
 //pie de la tabla
-Plantilla.plantillaTablaJugadores.footer = `</tbody>
+BalonmanoJugador.plantillaTablaJugadores.footer = `</tbody>
 </table>
 `;
 
@@ -201,21 +201,21 @@ Plantilla.plantillaTablaJugadores.footer = `</tbody>
 /**
  * Actualiza el cuerpo de la plantilla deseada con los datos de los jugadores de balonmano que se le pasa
  * @param {String} plantilla Cadena conteniendo HTML en la que se desea cambiar lso campos de la plantilla por datos
- * @param {Plantilla} player Objeto con los datos del jugador que queremos escribir en el TR
+ * @param {BalonmanoJugador} player Objeto con los datos del jugador que queremos escribir en el TR
  * @returns La plantilla del cuerpo de la tabla con los datos actualizados
  * TODO TDD
  */
-Plantilla.sustituyeTags = function (plantilla, player) {
-    return plantilla
-        .replace(new RegExp(Plantilla.plantillaTags.ID, 'g'), player.ref['@ref'].id)
-        .replace(new RegExp(Plantilla.plantillaTags.PLAYERID, 'g'), player.data.playerId)
-        .replace(new RegExp(Plantilla.plantillaTags.NAME, 'g'), player.data.name)
-        .replace(new RegExp(Plantilla.plantillaTags.SURNAME, 'g'), player.data.surname)
-        .replace(new RegExp(Plantilla.plantillaTags.DATE_BIRTH, 'g'), player.data.dateBirth.day + "/" + player.data.dateBirth.month +
+BalonmanoJugador.sustituyeTags = function (playerBalonmano, player) {
+    return playerBalonmano
+        .replace(new RegExp(BalonmanoJugador.plantillaTags.ID, 'g'), player.ref['@ref'].id)
+        .replace(new RegExp(BalonmanoJugador.plantillaTags.PLAYERID, 'g'), player.data.playerId)
+        .replace(new RegExp(BalonmanoJugador.plantillaTags.NAME, 'g'), player.data.name)
+        .replace(new RegExp(BalonmanoJugador.plantillaTags.SURNAME, 'g'), player.data.surname)
+        .replace(new RegExp(BalonmanoJugador.plantillaTags.DATE_BIRTH, 'g'), player.data.dateBirth.day + "/" + player.data.dateBirth.month +
         "/" + player.data.dateBirth.year)
-        .replace(new RegExp(Plantilla.plantillaTags["SEASONS_PLAYED"], 'g'), player.data.seasonsPlayed)
-        .replace(new RegExp(Plantilla.plantillaTags["GOAL_SEASON"], 'g'), player.data.goalSeason)
-        .replace(new RegExp(Plantilla.plantillaTags.DISQUALIFIED, 'g'), player.data.disqualified)
+        .replace(new RegExp(BalonmanoJugador.plantillaTags["SEASONS_PLAYED"], 'g'), player.data.seasonsPlayed)
+        .replace(new RegExp(BalonmanoJugador.plantillaTags["GOAL_SEASON"], 'g'), player.data.goalSeason)
+        .replace(new RegExp(BalonmanoJugador.plantillaTags.DISQUALIFIED, 'g'), player.data.disqualified)
 }
 
 
@@ -226,8 +226,8 @@ Plantilla.sustituyeTags = function (plantilla, player) {
  * @returns La plantilla de cuerpo de la tabla con los datos actualizados
  * TODO TDD
  */
-Plantilla.plantillaTablaJugadores.actualizaNombres = function (player) {
-    return Plantilla.sustituyeTags(this.cuerpoNombres, player)
+BalonmanoJugador.plantillaTablaJugadores.actualizaNombres = function (player) {
+    return BalonmanoJugador.sustituyeTags(this.cuerpoNombres, player)
 }
 
 /**
@@ -236,8 +236,8 @@ Plantilla.plantillaTablaJugadores.actualizaNombres = function (player) {
  * @returns La plantilla de cuerpo de la tabla con los datos actualizados
  * TODO TDD
  */
-Plantilla.plantillaTablaJugadores.actualizaTodo = function (player) {
-    return Plantilla.sustituyeTags(this.cuerpoCompleto, player)
+BalonmanoJugador.plantillaTablaJugadores.actualizaTodo = function (player) {
+    return BalonmanoJugador.sustituyeTags(this.cuerpoCompleto, player)
 }
 
 
@@ -247,7 +247,7 @@ Plantilla.plantillaTablaJugadores.actualizaTodo = function (player) {
  *
  */
 
-Plantilla.recupera = async function (callBackFn, direccion) {
+BalonmanoJugador.recupera = async function (callBackFn, direccion) {
     let response = null
 
     // Intento conectar con el microservicio
@@ -277,13 +277,13 @@ Plantilla.recupera = async function (callBackFn, direccion) {
  * @param {vector_players} vector
  * TODO TDD
  */
-Plantilla.muestraSoloNombres = function (vector) {
+BalonmanoJugador.muestraSoloNombres = function (vector) {
     // Compongo el contenido que se va a mostrar dentro de la tabla
-    let msj = Plantilla.plantillaTablaJugadores.headerNombres
+    let msj = BalonmanoJugador.plantillaTablaJugadores.headerNombres
     if (vector && Array.isArray(vector)) {
-        vector.forEach(e => msj += Plantilla.plantillaTablaJugadores.actualizaNombres(e));
+        vector.forEach(e => msj += BalonmanoJugador.plantillaTablaJugadores.actualizaNombres(e));
     }
-    msj += Plantilla.plantillaTablaJugadores.footer
+    msj += BalonmanoJugador.plantillaTablaJugadores.footer
 
     // Borrar toda la información del Article y la sustituyo por la que ma interesa
     Frontend.Article.actualizar("Plantilla del listado de los nombres de todos los jugadores de balonmano", msj)
@@ -294,15 +294,15 @@ Plantilla.muestraSoloNombres = function (vector) {
 /**
  * Función principal para recuperar solo los nombres de los jugadores de balonmano desde el MS, y posteriormente imprimirlos
  */
-Plantilla.procesarListaNombres = function () {
-    Plantilla.recupera(Plantilla.muestraSoloNombres, "/balonmano/get_lista_jugadores");
+BalonmanoJugador.procesarListaNombres = function () {
+    BalonmanoJugador.recupera(BalonmanoJugador.muestraSoloNombres, "/balonmano/get_lista_jugadores");
 }
 
 /**
  * Función principal para recuperar todos los datos de los jugadores de balonmano desde el MS, y posteriormente imprimirlos
  */
-Plantilla.procesarListaCompleta = function () {
-    Plantilla.recupera(Plantilla.muestraTodo, "/balonmano/get_lista_completa");
+BalonmanoJugador.procesarListaCompleta = function () {
+    BalonmanoJugador.recupera(BalonmanoJugador.muestraTodo, "/balonmano/get_lista_completa");
 }
 
 /**
@@ -311,13 +311,13 @@ Plantilla.procesarListaCompleta = function () {
  * @param {vector_players} vector
  * TODO TDD
  */
-Plantilla.muestraTodo = function (vector) {
+BalonmanoJugador.muestraTodo = function (vector) {
     // Compongo el contenido que se va a mostrar dentro de la tabla
-    let msj = Plantilla.plantillaTablaJugadores.headerTodosDatos
+    let msj = BalonmanoJugador.plantillaTablaJugadores.headerTodosDatos
     if (vector && Array.isArray(vector)) {
-        vector.forEach(e => msj += Plantilla.plantillaTablaJugadores.actualizaTodo(e));
+        vector.forEach(e => msj += BalonmanoJugador.plantillaTablaJugadores.actualizaTodo(e));
     }
-    msj += Plantilla.plantillaTablaJugadores.footer
+    msj += BalonmanoJugador.plantillaTablaJugadores.footer
 
     // Borrar toda la información del Article y la sustituyo por la que ma interesa
     Frontend.Article.actualizar("Plantilla del listado de todos los datos de los jugadores de balonmano", msj)
@@ -327,8 +327,8 @@ Plantilla.muestraTodo = function (vector) {
 /**
  * Función principal para mostrar ordenados por nombretodos los datos de los jugadores de balonmano desde el MS, y posteriormente imprimirlos
  */
-Plantilla.procesarListaOrdenada = function () {
-    Plantilla.recupera(Plantilla.muestraOrdenado, "/balonmano/get_lista_ordenada");
+BalonmanoJugador.procesarListaOrdenada = function () {
+    BalonmanoJugador.recupera(BalonmanoJugador.muestraOrdenado, "/balonmano/get_lista_ordenada");
 }
 
 
@@ -339,14 +339,14 @@ Plantilla.procesarListaOrdenada = function () {
  * @param {vector_players} vector
  * TODO TDD
  */
-Plantilla.muestraOrdenado = function (vector) {
+BalonmanoJugador.muestraOrdenado = function (vector) {
     // Compongo el contenido que se va a mostrar dentro de la tabla
-    let msj = Plantilla.plantillaTablaJugadores.headerTodosDatos
+    let msj = BalonmanoJugador.plantillaTablaJugadores.headerTodosDatos
     if (vector && Array.isArray(vector)) {
-        Plantilla.ordena(vector)
-        vector.forEach(e => msj += Plantilla.plantillaTablaJugadores.actualizaTodo(e));
+        BalonmanoJugador.ordena(vector)
+        vector.forEach(e => msj += BalonmanoJugador.plantillaTablaJugadores.actualizaTodo(e));
     }
-    msj += Plantilla.plantillaTablaJugadores.footer
+    msj += BalonmanoJugador.plantillaTablaJugadores.footer
 
     // Borrar toda la información del Article y la sustituyo por la que ma interesa
     Frontend.Article.actualizar("Plantilla del listado de los datos de todos los jugadores de balonmano ordenados alfabeticamente", msj)
@@ -357,7 +357,7 @@ Plantilla.muestraOrdenado = function (vector) {
  * Función que ordena un vector según el nombre
  * TODO TDD
  * */
-Plantilla.ordena = function(vector){
+BalonmanoJugador.ordena = function(vector){
     vector.sort(function (min, max) {
         let nameMin = min.data.name.toUpperCase(); // convertir a mayúsculas para evitar problemas de ordenamiento
         let nameMax = max.data.name.toUpperCase(); // convertir a mayúsculas para evitar problemas de ordenamiento
@@ -374,13 +374,13 @@ Plantilla.ordena = function(vector){
 /** Funcion para buscar jugadores con un cierto nombre
  *
  * */
-Plantilla.busquedaNombre = function(nombre){
-    Plantilla.recuperaDato(Plantilla.muestraTodo, nombre, "/balonmano/get_busqueda_nombre");
+BalonmanoJugador.busquedaNombre = function(nombre){
+    BalonmanoJugador.recuperaDato(BalonmanoJugador.muestraTodo, nombre, "/balonmano/get_busqueda_nombre");
 }
 
 /**Función que recuperar todos los jugadores con cierto nombre
  @param {función} callBackFn Función a la que se llamará una vez recibidos los datos.*/
-Plantilla.recuperaDato = async function (callBackFn, nombre, direccion) {
+BalonmanoJugador.recuperaDato = async function (callBackFn, nombre, direccion) {
     let response = null
 
     // Intento conectar con el microservicio
@@ -403,11 +403,11 @@ Plantilla.recuperaDato = async function (callBackFn, nombre, direccion) {
     }
 }
 
-Plantilla.BuscaCriterios = function(criterio1, criterio2, criterio3, modo){
-    Plantilla.recuperaDatoCriterios(Plantilla.muestraTodo, criterio1, criterio2, criterio3, modo, "/balonmano/get_busqueda_criterios");
+BalonmanoJugador.BuscaCriterios = function(criterio1, criterio2, criterio3, modo){
+    BalonmanoJugador.recuperaDatoCriterios(BalonmanoJugador.muestraTodo, criterio1, criterio2, criterio3, modo, "/balonmano/get_busqueda_criterios");
 }
 
-Plantilla.recuperaDatoCriterios = async function(callBackFn, criterio1, criterio2, criterio3, modo, direccion){
+BalonmanoJugador.recuperaDatoCriterios = async function(callBackFn, criterio1, criterio2, criterio3, modo, direccion){
     let response = null
 
     // Intento conectar con el microservicio
