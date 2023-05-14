@@ -19,7 +19,7 @@ app.use("/", routes);
 
 
 
-const port = 8002;
+const port = 8005;
 app.listen(port, () => {
     console.log(`Microservicio FUTBOL ejecutándose en puerto ${port}!`);
 });
