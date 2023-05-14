@@ -17,7 +17,7 @@ const TITULO_LISTA_NOMBRE_C = "Datos de los pilotos"
 const TITULO_LISTA_ORDEN = "Nombres en orden"
 const EMPTY = ''
 
-const datosDescargadosPrueba = {
+const datosDescargadosPruebaMotonautica = {
     mensaje: "Mensaje de prueba descargado",
     autor: "Prueba de autor",
     email: "Prueba de email",
@@ -69,9 +69,9 @@ describe("motonautica.mostrarHome: ", function () {
 
     it("muestra correctamente el título y el mensaje",
         function () {
-            motonautica.mostrarHome(datosDescargadosPrueba)
+            motonautica.mostrarHome()
             expect(elementoTitulo.innerHTML).toBe(TITULO_HOME)
-            expect(elementoContenido.innerHTML).toBe(datosDescargadosPrueba.mensaje)
+            expect(elementoContenido.innerHTML).toBe(.mensaje)
         })
 })
 
@@ -117,13 +117,13 @@ describe("motonautica.mostrarAcercaDe: ", function () {
         })
     it("muestra correctamente el título y el mensaje conteniendo el autor, el email y la fecha",
         function () {
-            motonautica.mostrarAcercaDe(datosDescargadosPrueba)
+            motonautica.mostrarAcercaDe()
             expect(elementoTitulo.innerHTML).toBe(TITULO_ACERCA_DE)
 
             // Comprobamos que al buscar el autor, el email y la fecha de prueba los encuentra dentro del contenido del article
-            expect(elementoContenido.innerHTML.search(datosDescargadosPrueba.autor) >= 0).toBeTrue()
-            expect(elementoContenido.innerHTML.search(datosDescargadosPrueba.email) >= 0).toBeTrue()
-            expect(elementoContenido.innerHTML.search(datosDescargadosPrueba.fecha) >= 0).toBeTrue()
+            expect(elementoContenido.innerHTML.search(.autor) >= 0).toBeTrue()
+            expect(elementoContenido.innerHTML.search(.email) >= 0).toBeTrue()
+            expect(elementoContenido.innerHTML.search(.fecha) >= 0).toBeTrue()
         })
 })
 
