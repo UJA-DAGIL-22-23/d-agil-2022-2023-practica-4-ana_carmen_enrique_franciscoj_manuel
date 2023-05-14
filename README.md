@@ -656,7 +656,21 @@
   goles: 123
 }
 ```
-### **5 Jugador**
+### **5º Jugador**
+```
+{
+  nombre: "Victor",
+  apellidos: "Rivas",
+  fnac: {
+    dia: 8,
+    mes: 12,
+    anio: 2000
+  },
+  equipos: ["UJA F.C."],
+  goles: 1000
+}
+```
+### **6º Jugador**
 ```
 {
   nombre: "Jacobo",
@@ -670,7 +684,7 @@
   goles: 0
 }
 ```
-### **6º Jugador**
+### **7º Jugador**
 ```
 {
   nombre: "Angel",
