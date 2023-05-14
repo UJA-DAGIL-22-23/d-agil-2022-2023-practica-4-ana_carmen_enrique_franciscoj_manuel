@@ -243,8 +243,8 @@ motonautica.recuperacom = async function (callBackFn) {
  * @param {motonautica} piloto Objeto con los datos del piloto que queremos escribir en el TR
  * @returns La motonautica del cuerpo de la tabla con los datos actualizados 
  */ 
-motonautica.sustituyeTagscompleto = function (motonautica, piloto) {
-    return motonautica
+motonautica.sustituyeTagscompleto = function (moto, piloto) {
+    return moto
         .replace(new RegExp(motonautica.motonauticaTags.nombre, 'g'), piloto.data.nombre)
         .replace(new RegExp(motonautica.motonauticaTags.apellido, 'g'), piloto.data.apellido)
         .replace(new RegExp(motonautica.motonauticaTags.edad, 'g'), piloto.data.edad)
