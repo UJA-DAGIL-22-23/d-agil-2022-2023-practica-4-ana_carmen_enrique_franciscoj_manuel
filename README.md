@@ -727,6 +727,187 @@
 }
 ```
 
+## Estudiante 5:
+- **Nombre y apellidos**: Enrique Fernández Fernández
+- **Correo Electrónico**: eff00007@red.ujaen.es
+- **Deporte**: Gimasia Rítmica
+
+## Los documentos de la bases de datos:
+
+### **1º Jugador**
+```
+{
+  nombre: "Ana",
+  apellido: "Romero",
+  edad: 22,
+  dni: "01234567H",
+  medallas: [2018],
+  direccion: {
+    calle: "Calle A",
+    numero: "123",
+    ciudad: "Sevilla",
+    pais: "España"
+  },
+  rankingMundial: 19
+}
+```
+### **2º Jugador**
+```
+{
+  nombre: "Julia",
+  apellido: "Martinez",
+  edad: 22,
+  dni: "45624956D",
+  medallas: [2018],
+  direccion: {
+    calle: "Calle B",
+    numero: "2353",
+    ciudad: "Jaén",
+    pais: "España"
+  },
+  rankingMundial: 23
+}
+```
+### **3º Jugador**
+```
+{
+  nombre: "Carolina",
+  apellido: "García",
+  edad: 24,
+  dni: "54567043B",
+  medallas: [2012, 2016],
+  direccion: {
+    calle: "Calle C",
+    numero: "456",
+    ciudad: "Barcelona",
+    pais: "España"
+  },
+  rankingMundial: 8
+}
+```
+### **4º Jugador**
+```
+{
+  nombre: "Eva",
+  apellido: "Fernández",
+  edad: 22,
+  dni: "56034564C",
+  medallas: [2016],
+  direccion: {
+    calle: "Calle D",
+    numero: "332",
+    ciudad: "Valencia",
+    pais: "España"
+  },
+  rankingMundial: 12
+}
+```
+### **5 Jugador**
+```
+{
+  nombre: "Sara",
+  apellido: "López",
+  edad: 1043,
+  dni: "33224183V",
+  medallas: [2018],
+  direccion: {
+    calle: "Calle E",
+    numero: "1",
+    ciudad: "Andujar",
+    pais: "España"
+  },
+  rankingMundial: 18
+}
+```
+### **6º Jugador**
+```
+{
+  nombre: "Manolillo",
+  apellido: "Lara",
+  edad: 2,
+  dni: "12345432B",
+  medallas: [2012, 2016, 2020],
+  direccion: {
+    calle: "Calle F",
+    numero: "5214",
+    ciudad: "Andujar",
+    pais: "España"
+  },
+  rankingMundial: 1
+}
+```
+### **7º Jugador**
+```
+{
+  nombre: "Ana",
+  apellido: "Fernández",
+  edad: 27,
+  dni: "54306754H",
+  medallas: [2020, 2022],
+  direccion: {
+    calle: "Calle B",
+    numero: "2",
+    ciudad: "Barcelona",
+    pais: "España"
+  },
+  rankingMundial: 4521
+}
+```
+### **8º Jugador**
+```
+{
+  nombre: "Antonio",
+  apellido: "Hernandez",
+  edad: 20,
+  dni: "34520954J",
+  medallas: [2014],
+  direccion: {
+    calle: "Calle F",
+    numero: "6",
+    ciudad: "Madriz",
+    pais: "España"
+  },
+  rankingMundial: 14
+}
+```
+### **9º Jugador**
+```
+{
+  nombre: "Clara",
+  apellido: "Díaz",
+  edad: 26,
+  dni: "56673985F",
+  medallas: [2010, 2014, 2018],
+  direccion: {
+    calle: "Calle G",
+    numero: "4",
+    ciudad: "Valencia",
+    pais: "España"
+  },
+  rankingMundial: 6
+}
+```
+### **10º Jugador**
+```
+{
+  nombre: "Andrea",
+  apellido: "Cobo",
+  edad: 21,
+  dni: "54326798R",
+  medallas: [2012, 2014],
+  direccion: {
+    calle: "Calle E",
+    numero: "5673",
+    ciudad: "Jaén",
+    pais: "España"
+  },
+  rankingMundial: 5467
+}
+```
+
+
+
+
 # *Historias de usuario elegidas a implementar:* 
 * HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Carmen.
 * HU02. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Francisco Javier.
@@ -740,8 +921,12 @@
 * HU10. Modificar la visualización de la app con un modo ALTO CONTRASTE.
 
 ## HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Carmen
-## HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Fran
+## HU02. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Fran
 ## HU03. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ana
+## HU04. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Manuel
+## HU05. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Enrique
+
+
 
 
 ## HU06. Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”
