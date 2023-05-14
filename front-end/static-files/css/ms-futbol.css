@@ -1,0 +1,137 @@
+/**
+ * @file ms-plantilla.css
+ * @description Estilos aplicables a la visualización de elementos relacionados con el MS Plantilla
+ * @author Víctor M. Rivas Santos <vrivas@ujaen.es>
+ * @date 03-Feb-2023
+ */
+
+ 
+ * {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+table.Aplicacion-futbol {
+    width: 100%;
+    border: 1px solid rgba(255, 128, 0);
+}
+  
+table.Aplicacion-futbol thead th,
+table.Aplicacion-futbol tbody th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(255, 128, 0);
+    text-transform: uppercase;
+}
+  
+table.Aplicacion-futbol tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+  
+table.Aplicacion-futbol tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(255, 128, 0)
+}
+table.Aplicacion-futbol thead,
+table.Aplicacion-futbol tbody,
+table.Aplicacion-futbol tr,
+table.Aplicacion-futbol td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+table.Aplicacion-futbol {
+    width: 100%;
+}
+
+table.listado-personas {
+    width: 100%;
+    border: 1px solid rgb(255, 128, 0);
+}
+
+table.listado-personas thead th,
+table.listado-personas tbody th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+
+}
+
+table.listado-personas tbody th {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+table.listado-personas tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+table.listado-personas tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(0, 0, 100, 0.1)
+}
+ 
+/**/
+table.listado-personas {
+    width: 100%;
+    border: 1px solid rgba(255, 128, 0);
+}
+
+table.listado-personas thead th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+
+}
+
+table.listado-personas tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+table.listado-personas tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(0, 0, 100, 0.1)
+}
+
+.listado-personas {
+    max-width: 100%;
+    overflow-x: auto;
+}
+  
+.form-jugadores-elemento {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+.form-jugadores-elemento:disabled {
+    color: black;
+    background-color: inherit;
+    border-width: 0px;
+    text-align: center;
+}
+
+.form-jugadores-elemento:enabled {
+    color:rgba(197, 112, 26, 0.968);
+}
+
+.form-jugadores-elemento:enabled:required {
+    color:rgba(164, 91, 19, 0.7);
+}
+
+table.listado-personas thead,
+table.listado-personas tbody,
+table.listado-personas tr,
+table.listado-personas td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+table.listado-personas {
+    width: 100%;
+}
