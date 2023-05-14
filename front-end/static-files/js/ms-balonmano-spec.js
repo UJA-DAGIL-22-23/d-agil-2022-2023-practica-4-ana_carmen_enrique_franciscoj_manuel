@@ -13,7 +13,7 @@ const elementoContenidoBalonmano = document.getElementById(Frontend.ID_SECCION_P
 const TITULO_HOME_BALONMANO = "Plantilla Home"
 const TITULO_ACERCA_DE_BALONMANO = "Plantilla Acerca de"
 
-const datosDescargadosPrueba = {
+const datosDescargadosPruebaBalonmano = {
     mensaje: "Mensaje de prueba descargado",
     autor: "Prueba de autor",
     email: "Prueba de email",
@@ -65,9 +65,9 @@ describe("Plantilla.mostrarHome: ", function () {
 
     it("muestra correctamente el título y el mensaje",
         function () {
-            Plantilla.mostrarHome(datosDescargadosPrueba)
+            Plantilla.mostrarHome(datosDescargadosPruebaBalonmano)
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_HOME_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML).toBe(datosDescargadosPrueba.mensaje)
+            expect(elementoContenidoBalonmano.innerHTML).toBe(datosDescargadosPruebaBalonmano.mensaje)
         })
 })
 
@@ -115,13 +115,13 @@ describe("Plantilla.mostrarAcercaDe: ", function () {
 
     it("muestra correctamente el título y el mensaje conteniendo el autor, el email y la fecha",
         function () {
-            Plantilla.mostrarAcercaDe(datosDescargadosPrueba)
+            Plantilla.mostrarAcercaDe(datosDescargadosPruebaBalonmano)
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_ACERCA_DE_BALONMANO)
 
             // Comprobamos que al buscar el autor, el email y la fecha de prueba los encuentra dentro del contenido del article
-            expect(elementoContenidoBalonmano.innerHTML.search(datosDescargadosPrueba.autor) >= 0).toBeTrue()
-            expect(elementoContenidoBalonmano.innerHTML.search(datosDescargadosPrueba.email) >= 0).toBeTrue()
-            expect(elementoContenidoBalonmano.innerHTML.search(datosDescargadosPrueba.fecha) >= 0).toBeTrue()
+            expect(elementoContenidoBalonmano.innerHTML.search(datosDescargadosPruebaBalonmano.autor) >= 0).toBeTrue()
+            expect(elementoContenidoBalonmano.innerHTML.search(datosDescargadosPruebaBalonmano.email) >= 0).toBeTrue()
+            expect(elementoContenidoBalonmano.innerHTML.search(datosDescargadosPruebaBalonmano.fecha) >= 0).toBeTrue()
         })
 
 
