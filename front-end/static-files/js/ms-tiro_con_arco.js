@@ -196,8 +196,8 @@ tiro_con_arco.tiro_con_arcoTablaArqueros.pie = `</tbody>
  * @param {tiro_con_arco} arquero Objeto con los datos del arquero que queremos escribir en el TR
  * @returns La tiro_con_arco del cuerpo de la tabla con los datos actualizados 
  */ 
-tiro_con_arco.sustituyeTags = function (tiro_con_arco, arquero) {
-    return tiro_con_arco
+tiro_con_arco.sustituyeTags = function (tiroConArco, arquero) {
+    return tiroConArco
         .replace(new RegExp(tiro_con_arco.tiro_con_arcoTags.ID, 'g'), arquero.data.id)
         .replace(new RegExp(tiro_con_arco.tiro_con_arcoTags.NOMBRE, 'g'), arquero.data.nombre)
         .replace(new RegExp(tiro_con_arco.tiro_con_arcoTags.APELLIDO, 'g'), arquero.data.apellido)
