@@ -1,0 +1,137 @@
+/**
+ * @file ms-plantilla.css
+ * @description Estilos aplicables a la visualización de elementos relacionados con el MS Plantilla
+ * @author Víctor M. Rivas Santos <vrivas@ujaen.es>
+ * @date 03-Feb-2023
+ */
+
+ 
+ * {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+table.Aplicacion-gimnasia {
+    width: 100%;
+    border: 1px solid rgba(0, 255, 234, 0.8);
+}
+  
+table.Aplicacion-gimnasia thead th,
+table.Aplicacion-gimnasia tbody th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(0, 255, 234, 0.8);
+    text-transform: uppercase;
+}
+  
+table.Aplicacion-gimnasia tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+  
+table.Aplicacion-gimnasia tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(0, 255, 234, 0.8);
+}
+table.Aplicacion-gimnasia thead,
+table.Aplicacion-gimnasia tbody,
+table.Aplicacion-gimnasia tr,
+table.Aplicacion-gimnasia td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+table.Aplicacion-gimnasia {
+    width: 100%;
+}
+
+table.listado-gimnasia {
+    width: 100%;
+    border: 1px solid rgba(0, 255, 234, 0.8);
+}
+
+table.listado-gimnasia thead th,
+table.listado-gimnasia tbody th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+
+}
+
+table.listado-gimnasia tbody th {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+table.listado-gimnasia tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+table.listado-gimnasia tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(0, 0, 100, 0.1)
+}
+ 
+
+table.listado-jugadores {
+    width: 100%;
+    border: 1px solid rgba(0, 255, 234, 0.8);
+}
+
+table.listado-jugadores thead th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+
+}
+
+table.listado-jugadores tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+table.listado-jugadores tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(0, 0, 100, 0.1)
+}
+
+.listado-gimnasia {
+    max-width: 100%;
+    overflow-x: auto;
+}
+  
+.form-gimnasia-elemento {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+.form-gimnasia-elemento:disabled {
+    color: black;
+    background-color: inherit;
+    border-width: 0px;
+    text-align: center;
+}
+
+.form-gimnasia-elemento:enabled {
+    color: rgba(7, 45, 8, 0.8);
+}
+
+.form-gimnasia-elemento:enabled:required {
+    color: rgba(36, 97, 12, 0.54);
+}
+
+table.listado-jugadores thead,
+table.listado-jugadores tbody,
+table.listado-jugadores tr,
+table.listado-jugadores td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+table.listado-jugadores {
+    width: 100%;
+}
