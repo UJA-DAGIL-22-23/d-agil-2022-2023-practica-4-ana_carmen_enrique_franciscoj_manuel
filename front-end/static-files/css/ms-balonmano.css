@@ -12,14 +12,14 @@
 
 table.Aplicacion-balonmano {
     width: 100%;
-    border: 1px solid rgba(125, 14, 153, 0.699);
+    border: 1px solid rgba(37, 143, 25, 0.8);
 }
   
 table.Aplicacion-balonmano thead th,
 table.Aplicacion-balonmano tbody th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(153, 14, 146, 0.699);
+    background-color: rgba(36, 97, 12, 0.54);
     text-transform: uppercase;
 }
   
@@ -31,7 +31,7 @@ table.Aplicacion-balonmano tbody td {
 table.Aplicacion-balonmano tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(172, 0, 252, 0.575)
+    background-color: rgba(36, 97, 12, 0.54)
 }
 table.Aplicacion-balonmano thead,
 table.Aplicacion-balonmano tbody,
@@ -76,7 +76,7 @@ table.listado-balonmano tbody tr {
 
 table.listado-jugadores {
     width: 100%;
-    border: 1px solid rgba(55, 0, 100, 0.8);
+    border: 1px solid rgba(37, 143, 25, 0.8);
 }
 
 table.listado-jugadores thead th {
@@ -117,11 +117,11 @@ table.listado-jugadores tbody tr {
 }
 
 .form-balonmano-elemento:enabled {
-    color:rgba(41, 2, 66, 0.8);
+    color: rgba(7, 45, 8, 0.8);
 }
 
 .form-balonmano-elemento:enabled:required {
-    color:rgba(100, 0, 58, 0.8);
+    color: rgba(36, 97, 12, 0.54);
 }
 
 table.listado-jugadores thead,
