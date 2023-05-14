@@ -71,7 +71,7 @@ describe("motonautica.mostrarHome: ", function () {
         function () {
             motonautica.mostrarHome()
             expect(elementoTitulo.innerHTML).toBe(TITULO_HOME)
-            expect(elementoContenido.innerHTML).toBe(.mensaje)
+            expect(elementoContenido.innerHTML).toBe(datosDescargadosPruebaMotonautica.mensaje)
         })
 })
 
@@ -121,9 +121,9 @@ describe("motonautica.mostrarAcercaDe: ", function () {
             expect(elementoTitulo.innerHTML).toBe(TITULO_ACERCA_DE)
 
             // Comprobamos que al buscar el autor, el email y la fecha de prueba los encuentra dentro del contenido del article
-            expect(elementoContenido.innerHTML.search(.autor) >= 0).toBeTrue()
-            expect(elementoContenido.innerHTML.search(.email) >= 0).toBeTrue()
-            expect(elementoContenido.innerHTML.search(.fecha) >= 0).toBeTrue()
+            expect(elementoContenido.innerHTML.search(datosDescargadosPruebaMotonautica.autor) >= 0).toBeTrue()
+            expect(elementoContenido.innerHTML.search(datosDescargadosPruebaMotonautica.email) >= 0).toBeTrue()
+            expect(elementoContenido.innerHTML.search(datosDescargadosPruebaMotonautica.fecha) >= 0).toBeTrue()
         })
 })
 
