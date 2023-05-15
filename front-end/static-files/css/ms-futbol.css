@@ -31,7 +31,7 @@ table.Aplicacion-futbol tbody td {
 table.Aplicacion-futbol tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(255, 128, 0)
+    background-color: rgba(255, 128, 0, 0.542)
 }
 table.Aplicacion-futbol thead,
 table.Aplicacion-futbol tbody,
@@ -46,14 +46,14 @@ table.Aplicacion-futbol {
 
 table.listado-personas {
     width: 100%;
-    border: 1px solid rgb(255, 128, 0);
+    border: 1px solid rgba(210, 118, 26, 0.503);
 }
 
 table.listado-personas thead th,
 table.listado-personas tbody th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 128, 0);
     text-transform: uppercase;
 
 }
@@ -70,19 +70,19 @@ table.listado-personas tbody td {
 table.listado-personas tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(0, 0, 100, 0.1)
+    background-color: rgba(255, 128, 0, 0.542);
 }
  
 /**/
 table.listado-personas {
     width: 100%;
-    border: 1px solid rgba(255, 128, 0);
+    border: 1px solid rgb(158, 107, 57);
 }
 
 table.listado-personas thead th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 128, 0);
     text-transform: uppercase;
 
 }
@@ -95,33 +95,12 @@ table.listado-personas tbody td {
 table.listado-personas tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(0, 0, 100, 0.1)
+    background-color: rgba(255, 128, 0, 0.542);
 }
 
 .listado-personas {
     max-width: 100%;
     overflow-x: auto;
-}
-  
-.form-jugadores-elemento {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-}
-
-.form-jugadores-elemento:disabled {
-    color: black;
-    background-color: inherit;
-    border-width: 0px;
-    text-align: center;
-}
-
-.form-jugadores-elemento:enabled {
-    color:rgba(197, 112, 26, 0.968);
-}
-
-.form-jugadores-elemento:enabled:required {
-    color:rgba(164, 91, 19, 0.7);
 }
 
 table.listado-personas thead,
