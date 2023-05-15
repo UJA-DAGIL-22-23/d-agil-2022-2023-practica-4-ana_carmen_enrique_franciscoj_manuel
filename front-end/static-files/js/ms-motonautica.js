@@ -139,8 +139,8 @@ motonautica.procesarAcercaDe = function () {
  * @param {motonautica} piloto Objeto con los datos del piloto que queremos escribir en el TR
  * @returns La motonautica del cuerpo de la tabla con los datos actualizados 
  */ 
-motonautica.sustituyeTags = function (motonautica, piloto) {
-    return motonautica
+motonautica.sustituyeTags = function (moto, piloto) {
+    return moto
         .replace(new RegExp(motonautica.motonauticaTags.nombre, 'g'), piloto.data.nombre)
         .replace(new RegExp(motonautica.motonauticaTags.apellido, 'g'), piloto.data.apellido)
 }
@@ -158,7 +158,7 @@ motonautica.motonauticaTags = {
 motonautica.motonauticaTablaPilotos = {}
 
 // Cabecera de la tabla de pilotos
-motonautica.motonauticaTablaPilotos.cabecera = `<table width="100%" class="listado-personas">
+motonautica.motonauticaTablaPilotos.cabecera = `<table width="100%" class="listado_personas">
                     <thead>
                         <th width="20%">Nombre</th>
                         <th width="20%">Apellidos</th>
@@ -257,7 +257,7 @@ motonautica.sustituyeTagscompleto = function (moto, piloto) {
 motonautica.motonauticaTablaPilotoscom = {}
 
 // Cabecera de la tabla de pilotos
-motonautica.motonauticaTablaPilotoscom.cabecera = `<table width="100%" class="listado-personas">
+motonautica.motonauticaTablaPilotoscom.cabecera = `<table width="100%" class="listado_personas">
                     <thead>
                         <th width="20%">Nombre</th>
                         <th width="20%">Apellidos</th>

@@ -69,7 +69,7 @@ describe("motonautica.mostrarHome: ", function () {
 
     it("muestra correctamente el título y el mensaje",
         function () {
-            motonautica.mostrarHome()
+            motonautica.mostrarHome(datosDescargadosPruebaMotonautica)
             expect(elementoTitulo.innerHTML).toBe(TITULO_HOME)
             expect(elementoContenido.innerHTML).toBe(datosDescargadosPruebaMotonautica.mensaje)
         })
@@ -117,7 +117,7 @@ describe("motonautica.mostrarAcercaDe: ", function () {
         })
     it("muestra correctamente el título y el mensaje conteniendo el autor, el email y la fecha",
         function () {
-            motonautica.mostrarAcercaDe()
+            motonautica.mostrarAcercaDe(datosDescargadosPruebaMotonautica)
             expect(elementoTitulo.innerHTML).toBe(TITULO_ACERCA_DE)
 
             // Comprobamos que al buscar el autor, el email y la fecha de prueba los encuentra dentro del contenido del article

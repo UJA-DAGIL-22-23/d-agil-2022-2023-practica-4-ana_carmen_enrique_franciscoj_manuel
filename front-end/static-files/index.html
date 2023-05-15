@@ -105,6 +105,44 @@
     <br></br>
 
 
+    
+        <h1>Aplicación Microservicios ms-motonautica</h1>
+        <!-- Barra de navegación de la aplicación -->
+        <nav>
+            <table class="Aplicacion-motonautica">
+                <thead>
+                    <tr>
+                        <th colspan="4">Aplicacion-motonautica</th>
+                    </tr>
+                </thead>
+                <thead>
+                        <th>Listados de pilotos</th><th>Busquedas</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="javascript:motonautica.procesarlistado()" class="opcion-principal"
+                            title="Muestra los nombres de los pilotos de la base de datos">Listar nombres</a>
+                            <a href="javascript:motonautica.ordenarlistado()" class="opcion-principal"
+                            title="Muestra los nombres de los pilotos ordenados de la base de datos">Lista de nombres ordenada</a>
+                            <a href="javascript:motonautica.procesarlistadocompleto()" class="opcion-principal"
+                            title="Muestra todos los datos de los pilotos de la base de datos">Lista de pilotos</a>
+                        </td>
+                         <td>
+                            <input type="text" placeholder="nombre" id="criterio-p1">
+                            <input type="text" placeholder="apellido" id="criterio-p2">
+                            <input type="text" placeholder="edad" id="criterio-p3">
+                            <button class="btn" onclick="motonautica.buscaCriterio(document.getElementById('criterio-p1').value, document.getElementById('criterio-p2').value, document.getElementById('criterio-p3').value, false)">Buscar por criterios</button>
+                            <button class="btn" onclick="motonautica.buscaCriterio(document.getElementById('criterio-p1').value, document.getElementById('criterio-p2').value, document.getElementById('criterio-p3').value, true)">Buscar por algún criterio</button>
+                            <div></div>
+                            <input type="text" placeholder="Nombre" id="nombre-p1">
+                            <button class="btn" onclick="motonautica.busquedaporNombre(document.getElementById('nombre-p1').value)">Buscar por nombre</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <br></br>
 
     <!-- 
         Article en el que se va a mostrar la info cuando se pinche una opción del menú 
