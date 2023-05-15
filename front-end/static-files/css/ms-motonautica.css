@@ -78,3 +78,43 @@ table.listado-motonautica tbody tr {
     overflow-x: auto;
 }
 
+table.listado_personas {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 100, 0.8);
+}
+
+table.listado_personas thead th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(153, 139, 14, 0.699);
+    text-transform: uppercase;
+
+}
+
+table.listado_personas tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+table.listado_personas tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(227, 252, 0, 0.575)
+}
+
+.listado-motonautica {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table.listado_personas thead,
+table.listado_personas tbody,
+table.listado_personas tr,
+table.listado_personas td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+table.listado_personas {
+    width: 100%;
+}

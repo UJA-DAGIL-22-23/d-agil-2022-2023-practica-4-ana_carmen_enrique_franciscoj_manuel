@@ -170,9 +170,6 @@ motonautica.motonauticaTablaPilotos.cuerpo = `
     <tr title="${motonautica.motonauticaTags.nombre}">
         <td>${motonautica.motonauticaTags.nombre}</td>
         <td>${motonautica.motonauticaTags.apellido}</td>
-        <td>
-                    <div></div>
-        </td>
     </tr>
     `;
 
@@ -275,8 +272,6 @@ motonautica.motonauticaTablaPilotoscom.cuerpo = `
         <td>${motonautica.motonauticaTags.edad}</td>
         <td>${motonautica.motonauticaTags.motos}</td>
         <td>${motonautica.motonauticaTags["playasvisitadas"]}</td>
-        <td><div></div>
-        </td>
     </tr>
     `;
 
