@@ -157,9 +157,6 @@ futbol.futbolTablaJugadores.cuerpo = `
     <tr title="${futbol.futbolTags.nombre}">
         <td>${futbol.futbolTags.nombre}</td>
         <td>${futbol.futbolTags.apellidos}</td>
-        <td>
-                    <div></div>
-        </td>
     </tr>
     `;
 
@@ -278,10 +275,7 @@ futbol.futbolTablaJugadoresAll.cuerpo = `
         <td>${futbol.futbolTags.fnac}</td>
         <td>${futbol.futbolTags["equipos"]}</td>
         <td>${futbol.futbolTags.goles}</td>
-        <td>
-                    <div></div>
-        </td>
-    </tr>
+        
     `;
 
 // Pie de la tabla
