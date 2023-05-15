@@ -748,7 +748,7 @@
 
 ## Los documentos de la bases de datos:
 
-### **1º Jugador**
+### **1º Atleta**
 ```
 {
   nombre: "Ana",
@@ -765,7 +765,7 @@
   rankingMundial: 19
 }
 ```
-### **2º Jugador**
+### **2º Atleta**
 ```
 {
   nombre: "Julia",
@@ -782,7 +782,7 @@
   rankingMundial: 23
 }
 ```
-### **3º Jugador**
+### **3º Atleta**
 ```
 {
   nombre: "Carolina",
@@ -799,7 +799,7 @@
   rankingMundial: 8
 }
 ```
-### **4º Jugador**
+### **4º Atleta**
 ```
 {
   nombre: "Eva",
@@ -816,7 +816,7 @@
   rankingMundial: 12
 }
 ```
-### **5 Jugador**
+### **5 Atleta**
 ```
 {
   nombre: "Sara",
@@ -833,7 +833,7 @@
   rankingMundial: 18
 }
 ```
-### **6º Jugador**
+### **6º Atleta**
 ```
 {
   nombre: "Manolillo",
@@ -850,7 +850,7 @@
   rankingMundial: 1
 }
 ```
-### **7º Jugador**
+### **7º Atleta**
 ```
 {
   nombre: "Ana",
@@ -867,7 +867,7 @@
   rankingMundial: 4521
 }
 ```
-### **8º Jugador**
+### **8º Atleta**
 ```
 {
   nombre: "Antonio",
@@ -884,7 +884,7 @@
   rankingMundial: 14
 }
 ```
-### **9º Jugador**
+### **9º Atleta**
 ```
 {
   nombre: "Clara",
@@ -901,7 +901,7 @@
   rankingMundial: 6
 }
 ```
-### **10º Jugador**
+### **10º Atleta**
 ```
 {
   nombre: "Andrea",
