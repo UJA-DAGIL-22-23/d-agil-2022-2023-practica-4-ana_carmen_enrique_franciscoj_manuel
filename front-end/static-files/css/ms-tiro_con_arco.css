@@ -53,13 +53,13 @@ table.listado-tiro_con_arco thead th,
 table.listado-tiro_con_arco tbody th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(96, 11, 117, 0.822);
     text-transform: uppercase;
 
 }
 
 table.listado-tiro_con_arco tbody th {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(96, 11, 117, 0.822);
 }
 
 table.listado-tiro_con_arco tbody td {
@@ -74,3 +74,84 @@ table.listado-tiro_con_arco tbody tr {
 }
  
 
+table.listado_arqueros_completo {
+    width: 100%;
+    border: 1px solid rgba(96, 11, 117, 0.822);
+}
+
+table.listado_arqueros_completo thead th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(155, 33, 185, 0.822);
+    text-transform: uppercase;
+
+}
+
+table.listado_arqueros_completo tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+table.listado_arqueros_completo tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(207, 87, 236, 0.822)
+}
+
+.listado-tiro_con_arco {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table.listado_arqueros_completo thead,
+table.listado_arqueros_completo tbody,
+table.listado_arqueros_completo tr,
+table.listado_arqueros_completo td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+table.listado_arqueros_completo {
+    width: 100%;
+}
+
+table.listado_arqueros {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 100, 0.8);
+}
+
+table.listado_arqueros thead th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(155, 33, 185, 0.822);
+    text-transform: uppercase;
+
+}
+
+table.listado_arqueros tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+table.listado_arqueros tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(207, 87, 236, 0.822)
+}
+
+.listado-tiro_con_arco {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table.listado_arqueros thead,
+table.listado_arqueros tbody,
+table.listado_arqueros tr,
+table.listado_arqueros td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+table.listado_arqueros {
+    width: 100%;
+}

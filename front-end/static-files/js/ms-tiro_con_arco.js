@@ -165,9 +165,6 @@ tiro_con_arco.tiro_con_arcoTablaArqueros.cuerpoNombres = `
     
     <td>${tiro_con_arco.tiro_con_arcoTags.NOMBRE}</td>
     <td>${tiro_con_arco.tiro_con_arcoTags.APELLIDO}</td>
-    <td>
-    <div></div>
-</td>
 </tr>
 `;
 //Elementos RT que muestra los datos de un Arquero
@@ -180,9 +177,7 @@ tiro_con_arco.tiro_con_arcoTablaArqueros.cuerpoCompleto = `
     <td>${tiro_con_arco.tiro_con_arcoTags.EDAD}</td>
     <td>${tiro_con_arco.tiro_con_arcoTags.DISPARO}</td>
     <td>${tiro_con_arco.tiro_con_arcoTags["PUNTUACIONES_DE_LA_TANDA"]}</td>
-    <td>
-    <div></div>
-</td>
+   
 </tr>
 `;
 //pie de la tabla 
