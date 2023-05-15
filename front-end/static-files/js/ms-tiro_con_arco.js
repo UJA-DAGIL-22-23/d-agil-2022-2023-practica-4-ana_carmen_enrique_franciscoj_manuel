@@ -327,7 +327,7 @@ tiro_con_arco.imprimeSoloNombres = function (vector) {
     msj += tiro_con_arco.tiro_con_arcoTablaArqueros.pie
 
     // Borrar toda la información del Article y la sustituyo por la que ma interesa
-    Frontend.Article.actualizar("tiro_con_arco del listado de los nombres de todos los arqueros", msj)
+    Frontend.Article.actualizar("Listado de los nombres de todos los arqueros", msj)
 }
 
 /**
@@ -344,7 +344,7 @@ tiro_con_arco.imprimeCompleto = function (vector) {
     msj += tiro_con_arco.tiro_con_arcoTablaArqueros.pie
 
     // Borrar toda la información del Article y la sustituyo por la que ma interesa
-    Frontend.Article.actualizar("tiro_con_arco del listado de todos los datos de todos los arqueros", msj)
+    Frontend.Article.actualizar("Listado de todos los datos de todos los arqueros", msj)
 }
 
 /**
@@ -372,7 +372,7 @@ tiro_con_arco.imprimeOrdenados = function(vector) {
     msj += tiro_con_arco.tiro_con_arcoTablaArqueros.pie
 
     // Borrar toda la información del Article y la sustituyo por la que ma interesa
-    Frontend.Article.actualizar("tiro_con_arco del listado de los nombres de todos los arqueros ordenados", msj)
+    Frontend.Article.actualizar("Listado de los nombres de todos los arqueros ordenados", msj)
 }
 
 
