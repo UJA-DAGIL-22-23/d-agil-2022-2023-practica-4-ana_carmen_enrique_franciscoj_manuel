@@ -194,8 +194,8 @@ gimnasia.gimnasiaTablaAtletas.cuerpoCompleto = `
  * @param {gimnasia} Atleta Objeto con los datos del Atleta que queremos escribir en el TR
  * @returns La gimnasia del cuerpo de la tabla con los datos actualizados 
  */ 
-gimnasia.sustituyeTags = function (gimnasia, Atleta) {
-    return gimnasia
+gimnasia.sustituyeTags = function (gim, Atleta) {
+    return gim
         .replace(new RegExp(gimnasia.gimnasiaTags.DNI, 'g'), Atleta.data.dni)
         .replace(new RegExp(gimnasia.gimnasiaTags.NOMBRE, 'g'), Atleta.data.nombre)
         .replace(new RegExp(gimnasia.gimnasiaTags.APELLIDO, 'g'), Atleta.data.apellido)
