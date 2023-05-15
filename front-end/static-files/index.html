@@ -88,14 +88,15 @@
 
                     </td>
                     <td>
-                        <input type="text" placeholder="Apellido" id="criterio-b1">
-                        <input type="text" placeholder="Nacimiento" id="criterio-b2">
-                        <input type="text" placeholder="Descalificado" id="criterio-b3">
-                        <button class="btn" onclick="Balonmano.tiro_con_arco.procesarListaCriteriosPrecisa(document.getElementById('criterio-b1').value, document.getElementById('criterio-b2').value, document.getElementById('criterio-b3').value, true)">Buscar por criterios</button>
-                        <button class="btn" onclick="tiro_con_arco.procesarListaCriteriosPrecisa(document.getElementById('criterio-b1').value, document.getElementById('criterio-b2').value, document.getElementById('criterio-b3').value, false)">Buscar por algún criterio</button>
+                        <input type="text" placeholder="Nombre" id="nombre-buscar">
+                        <button class="btn" onclick="BalonmanoJugador.busquedaNombre(document.getElementById('nombre-buscar').value)">Busqueda por Nombre</button>
                         <div></div>
-                        <input type="text" placeholder="Nombre" id="nombre-b1">
-                        <button class="btn" onclick="tiro_con_arco.procesarListaBusquedaNombre(document.getElementById('nombre-1').value)">Buscar por nombre</button>
+                        <input type="text" placeholder="Apellido" id="criterio-b1">
+                        <input type="text" placeholder="Nacimiento (dd/mm/aaaa)" id="criterio-b2">
+                        <input type="text" placeholder="Descalificado"id="criterio-b3">
+                        <button class="btn" onclick="BalonmanoJugador.BuscaCriterios(document.getElementById('criterio-b1').value, document.getElementById('criterio-b2').value, document.getElementById('criterio-b3').value, true)">Buscar algun criterio</button>
+                        <button class="btn" onclick="BalonmanoJugador.BuscaCriterios(document.getElementById('criterio-b1').value, document.getElementById('criterio-b2').value, document.getElementById('criterio-b3').value, false)">Buscar todos los criterios</button>
+
                     </td>
                 </tr>
                 </tbody>
