@@ -128,7 +128,7 @@ describe("tiro_con_arco.imprimeOrdenados: ", function() {
     it("Mostrar datos nulos cuando le pasamos vector nulo", 
         function() {
             tiro_con_arco.imprimeOrdenados([])
-            expect(elementoTiroConArco.innerHTML).toBe("tiro_con_arco del listado de los nombres de todos los arqueros ordenados")
+            expect(elementoTiroConArco.innerHTML).toBe("Listado de los nombres de todos los arqueros ordenados")
             expect(TiroConArcoContenido.querySelector('tbody').innerHTML).toBe('')
     })
 })
@@ -137,7 +137,7 @@ describe("tiro_con_arco.imprimeCompleto: ", function() {
     it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
     function() {
         tiro_con_arco.imprimeCompleto(10)
-        expect(elementoTiroConArco.innerHTML).toBe("tiro_con_arco del listado de todos los datos de todos los arqueros")
+        expect(elementoTiroConArco.innerHTML).toBe("Listado de todos los datos de todos los arqueros")
         expect(TiroConArcoContenido.querySelector('tbody').innerHTML).toBe('')
 })
 })
@@ -147,13 +147,13 @@ describe("tiro_con_arco.imprimeSoloNombres: ", function() {
     it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
     function() {
         tiro_con_arco.imprimeSoloNombres(10)
-        expect(elementoTiroConArco.innerHTML).toBe("tiro_con_arco del listado de los nombres de todos los arqueros")
+        expect(elementoTiroConArco.innerHTML).toBe("Listado de los nombres de todos los arqueros")
         expect(TiroConArcoContenido.querySelector('tbody').innerHTML).toBe('')
 })
     it("Mostrar datos nulos cuando le pasamos vector nulo", 
     function() {
     tiro_con_arco.imprimeSoloNombres([])
-    expect(elementoTiroConArco.innerHTML).toBe("tiro_con_arco del listado de los nombres de todos los arqueros")
+    expect(elementoTiroConArco.innerHTML).toBe("Listado de los nombres de todos los arqueros")
     expect(TiroConArcoContenido.querySelector('tbody').innerHTML).toBe('')
 })
 })
