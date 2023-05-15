@@ -38,84 +38,84 @@ describe("Plantilla.mostrarHome: ", function () {
 
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
-            Balonmano.mostrarHome()
+            BalonmanoJugador.mostrarHome()
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_HOME_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML).toBe(Balonmano.datosDescargadosNulos.mensaje)
+            expect(elementoContenidoBalonmano.innerHTML).toBe(BalonmanoJugador.datosDescargadosNulos.mensaje)
         })
 
     it("muestra datos nulos cuando le pasamos un valor que no es un objeto",
         function () {
-            Balonmano.mostrarHome(23)
+            BalonmanoJugador.mostrarHome(23)
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_HOME_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML).toBe(Balonmano.datosDescargadosNulos.mensaje)
+            expect(elementoContenidoBalonmano.innerHTML).toBe(BalonmanoJugador.datosDescargadosNulos.mensaje)
         })
 
     it("muestra datos nulos cuando le pasamos un objeto que no tiene campo mensaje",
         function () {
             // Objeto vacío
-            Balonmano.mostrarHome({})
+            BalonmanoJugador.mostrarHome({})
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_HOME_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML).toBe(Balonmano.datosDescargadosNulos.mensaje)
+            expect(elementoContenidoBalonmano.innerHTML).toBe(BalonmanoJugador.datosDescargadosNulos.mensaje)
 
             // Objeto sin campo mensaje
-            Balonmano.mostrarHome({ foo: "bar" })
+            BalonmanoJugador.mostrarHome({ foo: "bar" })
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_HOME_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML).toBe(Balonmano.datosDescargadosNulos.mensaje)
+            expect(elementoContenidoBalonmano.innerHTML).toBe(BalonmanoJugador.datosDescargadosNulos.mensaje)
         })
 
     it("muestra correctamente el título y el mensaje",
         function () {
-            Balonmano.mostrarHome(datosDescargadosPruebaBalonmano)
+            BalonmanoJugador.mostrarHome(datosDescargadosPruebaBalonmano)
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_HOME_BALONMANO)
             expect(elementoContenidoBalonmano.innerHTML).toBe(datosDescargadosPruebaBalonmano.mensaje)
         })
 })
 
 
-describe("Balonmano.mostrarAcercaDe: ", function () {
+describe("BalonmanoJugador.mostrarAcercaDe: ", function () {
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
-            Balonmano.mostrarAcercaDe()
+            BalonmanoJugador.mostrarAcercaDe()
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_ACERCA_DE_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML.search(Balonmano.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBalonmano.innerHTML.search(BalonmanoJugador.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
         })
 
     it("muestra datos nulos cuando le pasamos un valor que no es un objeto",
         function () {
-            Balonmano.mostrarAcercaDe(23)
+            BalonmanoJugador.mostrarAcercaDe(23)
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_ACERCA_DE_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML.search(Balonmano.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBalonmano.innerHTML.search(BalonmanoJugador.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
         })
 
     it("muestra datos nulos cuando le pasamos un objeto que no tiene campo mensaje o autor o email o fecha ",
         function () {
             // Objeto vacío
-            Balonmano.mostrarAcercaDe({})
+            BalonmanoJugador.mostrarAcercaDe({})
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_ACERCA_DE_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML.search(Balonmano.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBalonmano.innerHTML.search(BalonmanoJugador.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
 
             // Objeto sin campo mensaje
-            Balonmano.mostrarAcercaDe({ autor: "un autor", email: "un email", fecha: "una fecha" })
+            BalonmanoJugador.mostrarAcercaDe({ autor: "un autor", email: "un email", fecha: "una fecha" })
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_ACERCA_DE_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML.search(Balonmano.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBalonmano.innerHTML.search(BalonmanoJugador.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
             // Objeto sin campo autor
-            Balonmano.mostrarAcercaDe({ mensaje: "un mensaje", email: "un email", fecha: "una fecha" })
+            BalonmanoJugador.mostrarAcercaDe({ mensaje: "un mensaje", email: "un email", fecha: "una fecha" })
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_ACERCA_DE_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML.search(Balonmano.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBalonmano.innerHTML.search(BalonmanoJugador.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
             // Objeto sin campo email
-            Balonmano.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", fecha: "una fecha" })
+            BalonmanoJugador.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", fecha: "una fecha" })
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_ACERCA_DE_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML.search(Balonmano.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBalonmano.innerHTML.search(BalonmanoJugador.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
             // Objeto sin campo fecha
-            Balonmano.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", email: "un email" })
+            BalonmanoJugador.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", email: "un email" })
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_ACERCA_DE_BALONMANO)
-            expect(elementoContenidoBalonmano.innerHTML.search(Balonmano.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBalonmano.innerHTML.search(BalonmanoJugador.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
         })
 
 
     it("muestra correctamente el título y el mensaje conteniendo el autor, el email y la fecha",
         function () {
-            Balonmano.mostrarAcercaDe(datosDescargadosPruebaBalonmano)
+            BalonmanoJugador.mostrarAcercaDe(datosDescargadosPruebaBalonmano)
             expect(elementoTituloBalonmano.innerHTML).toBe(TITULO_ACERCA_DE_BALONMANO)
 
             // Comprobamos que al buscar el autor, el email y la fecha de prueba los encuentra dentro del contenido del article
@@ -127,7 +127,7 @@ describe("Balonmano.mostrarAcercaDe: ", function () {
 
 })
 
-describe("Balonmano.ordena: ", function () {
+describe("BalonmanoJugador.ordena: ", function () {
 
     it("ordena correctamente un vector",
         function () {
@@ -145,56 +145,56 @@ describe("Balonmano.ordena: ", function () {
                 {data: {name: 'Sobunar'}},
             ];
 
-            Balonmano.ordena(vector)
+            BalonmanoJugador.ordena(vector)
             expect(vector).toEqual(vectorOrdenado)
         })
 })
 
-describe("Balonmano.muestraSoloNombres: ", function() {
+describe("BalonmanoJugador.muestraSoloNombres: ", function() {
     it("Mostrar datos nulos cuando le pasamos vector nulo",
         function() {
-            Balonmano.muestraSoloNombres([])
-            expect(elementoTituloBalonmano.innerHTML).toBe("Balonmano del listado de los nombres de todos los jugadores de balonmano")
+            BalonmanoJugador.muestraSoloNombres([])
+            expect(elementoTituloBalonmano.innerHTML).toBe("Plantilla del listado de los nombres de todos los jugadores de balonmano")
             expect(elementoContenidoBalonmano.querySelector('tbody').innerHTML).toBe('')
         })
 
     it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
         function() {
-            Balonmano.muestraSoloNombres(10)
-            expect(elementoTituloBalonmano.innerHTML).toBe("Balonmano del listado de los nombres de todos los jugadores de balonmano")
+            BalonmanoJugador.muestraSoloNombres(10)
+            expect(elementoTituloBalonmano.innerHTML).toBe("Plantilla del listado de los nombres de todos los jugadores de balonmano")
             expect(elementoContenidoBalonmano.querySelector('tbody').innerHTML).toBe('')
         })
 })
 
 
 
-describe("Balonmano.muestraTodo: ", function() {
+describe("BalonmanoJugador.muestraTodo: ", function() {
     it("Mostrar datos nulos cuando le pasamos vector nulo",
         function() {
-            Balonmano.muestraTodo([])
-            expect(elementoTituloBalonmano.innerHTML).toBe("Balonmano del listado de todos los datos de los jugadores de balonmano")
+            BalonmanoJugador.muestraTodo([])
+            expect(elementoTituloBalonmano.innerHTML).toBe("Plantilla del listado de todos los datos de los jugadores de balonmano")
             expect(elementoContenidoBalonmano.querySelector('tbody').innerHTML).toBe('')
         })
     it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
         function() {
-            Balonmano.muestraTodo(10)
-            expect(elementoTituloBalonmano.innerHTML).toBe("Balonmano del listado de todos los datos de los jugadores de balonmano")
+            BalonmanoJugador.muestraTodo(10)
+            expect(elementoTituloBalonmano.innerHTML).toBe("Plantilla del listado de todos los datos de los jugadores de balonmano")
             expect(elementoContenidoBalonmano.querySelector('tbody').innerHTML).toBe('')
         })
 })
 
 
-describe("Balonmano.muestraOrdenado: ", function() {
+describe("BalonmanoJugador.muestraOrdenado: ", function() {
     it("Mostrar datos nulos cuando le pasamos vector nulo",
         function() {
-            Balonmano.muestraOrdenado([])
-            expect(elementoTituloBalonmano.innerHTML).toBe("Balonmano del listado de los datos de todos los jugadores de balonmano ordenados alfabeticamente")
+            BalonmanoJugador.muestraOrdenado([])
+            expect(elementoTituloBalonmano.innerHTML).toBe("Plantilla del listado de los datos de todos los jugadores de balonmano ordenados alfabeticamente")
             expect(elementoContenidoBalonmano.querySelector('tbody').innerHTML).toBe('')
         })
     it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
         function() {
-            Balonmano.muestraOrdenado(10)
-            expect(elementoTituloBalonmano.innerHTML).toBe("Balonmano del listado de los datos de todos los jugadores de balonmano ordenados alfabeticamente")
+            BalonmanoJugador.muestraOrdenado(10)
+            expect(elementoTituloBalonmano.innerHTML).toBe("Plantilla del listado de los datos de todos los jugadores de balonmano ordenados alfabeticamente")
             expect(elementoContenidoBalonmano.querySelector('tbody').innerHTML).toBe('')
         })
 })
@@ -209,9 +209,9 @@ IMPORTANTE
 Las pruebas TDD que se encargan de probar las conexiones con el microservicio desde el cliente son difíciles de probar 
 dado que requieren solucionar temas de sincronización. 
 Esto afecta a los métodos:
- - Balonmano.descargarRuta
- - Balonmano.procesarAcercaDe
- - Balonmano.procesarHome
+ - BalonmanoJugador.descargarRuta
+ - BalonmanoJugador.procesarAcercaDe
+ - BalonmanoJugador.procesarHome
 
  Las soluciones propuestas en distintos sitios web no han producido el resultado esperado, 
  por tanto: para esta práctica, se pueden dejar SIN HACER.
