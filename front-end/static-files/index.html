@@ -143,6 +143,44 @@
         </nav>
         <br></br>
 
+        <h2>Aplicación Microservicios - Fútbol</h2>
+        <!-- Barra de navegación de la aplicación -->
+        <nav>
+            <table class="Aplicacion-futbol">
+                <thead>
+                    <tr>
+                        <th colspan="4">Aplicacion-futbol</th>
+                    </tr>
+                </thead>
+                <thead>
+                        <th>Listados de jugadores</th><th>Busquedas</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="javascript:futbol.procesarListaJugadores()" class="opcion-principal"
+                            title="Llama a la ruta /get_jugadores del MS Futbol">Lista de nombres de jugadores</a>
+                            <a href="javascript:futbol.procesarListaJugadoresCompleta()" class="opcion-principal"
+                            title="Llama a la ruta /get_jugadores_completa del MS Futbol">Lista de jugadores completa</a>
+                            <a href="javascript:futbol.ordenaListaNombresJugadores()" class="opcion-principal"
+                            title="Muestra los jugadores ordenados">Lista de jugadores ordenada</a>
+                        </td>
+                         <td>
+                            <input type="text" placeholder="Nombre" id="criterio-1">
+                            <input type="text" placeholder="Apellido" id="criterio-2">
+                            <input type="text" placeholder="Goles"id="criterio-3">
+                            <button class="btn" onclick="futbol.buscaCriterio(document.getElementById('criterio-1').value, document.getElementById('criterio-2').value, document.getElementById('criterio-3').value, true)">Buscar por algún criterio</button>
+                            <button class="btn" onclick="futbol.buscaCriterio(document.getElementById('criterio-1').value, document.getElementById('criterio-2').value, document.getElementById('criterio-3').value, false)">Buscar todos los criterios</button>
+                            <div></div>
+                            <input type="text" placeholder="nombre" id="busqueda_nombre">
+                            <button class="btn" onclick="futbol.busquedaporNombre(document.getElementById('busqueda_nombre').value)">Buscar por nombre</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <br></br>
+
     <!-- 
         Article en el que se va a mostrar la info cuando se pinche una opción del menú 
         Todos los apartados de este article se rellenarán con funciones en Javascript
