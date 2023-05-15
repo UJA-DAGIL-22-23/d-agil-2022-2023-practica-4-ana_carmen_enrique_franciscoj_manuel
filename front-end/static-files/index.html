@@ -60,6 +60,48 @@
             </tbody>
         </table>
     </nav>
+        <h1>Aplicación Microservicios Balonmano</h1>
+        <!-- Barra de navegación de la aplicación -->
+        <nav>
+            <table class="Aplicacion-balonmano">
+                <thead>
+                <tr>
+                    <th colspan="4">Aplicación Balonmano</th>
+                </tr>
+                </thead>
+                <thead>
+                <th>Listados de jugadores de balonmano</th><th>Búsquedas</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="javascript:BalonmanoJugador.procesarHome()" class="opcion-principal"
+                           title="Llama a la ruta / del MS Plantilla">Home</a>
+                        <a href="javascript:BalonmanoJugador.procesarListaNombres()" class="opcion-principal"
+                           title="Llama a la ruta /get_lista_jugadores del MS Plantilla">Listado de Nombres</a>
+                        <a href="javascript:BalonmanoJugador.procesarListaCompleta()" class="opcion-principal"
+                           title="Llama a la ruta /get_lista_completa del MS Plantilla">Listado Detallado</a>
+                        <a href="javascript:BalonmanoJugador.procesarListaOrdenada()" class="opcion-principal"
+                           title="Llama a la ruta /get_lista_ordenada del MS Plantilla">Listado Ordenado</a>
+
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Nombre" id="nombre-buscar">
+                        <button class="btn" onclick="BalonmanoJugador.busquedaNombre(document.getElementById('nombre-buscar').value)">Busqueda por Nombre</button>
+                        <div></div>
+                        <input type="text" placeholder="Apellido" id="criterio-b1">
+                        <input type="text" placeholder="Nacimiento (dd/mm/aaaa)" id="criterio-b2">
+                        <input type="text" placeholder="Descalificado"id="criterio-b3">
+                        <button class="btn" onclick="BalonmanoJugador.BuscaCriterios(document.getElementById('criterio-b1').value, document.getElementById('criterio-b2').value, document.getElementById('criterio-b3').value, true)">Buscar algun criterio</button>
+                        <button class="btn" onclick="BalonmanoJugador.BuscaCriterios(document.getElementById('criterio-b1').value, document.getElementById('criterio-b2').value, document.getElementById('criterio-b3').value, false)">Buscar todos los criterios</button>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </nav>
+
+
     <br></br>
 
 
