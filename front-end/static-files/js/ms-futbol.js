@@ -171,12 +171,12 @@ futbol.futbolTablaJugadores.pie = `</tbody>
 
 /**
  * Actualiza el cuerpo de la futbol deseada con los datos del jugador que se le pasa
- * @param {String} futbol Cadena conteniendo HTML en la que se desea cambiar los campos de la futbol por datos
+ * @param {String} futbolin Cadena conteniendo HTML en la que se desea cambiar los campos de la futbol por datos
  * @param {futbol} jugador Objeto con los datos del jugador que queremos escribir en el TR
  * @returns La futbol del cuerpo de la tabla con los datos actualizados 
  */ 
-futbol.sustituyeTags = function (futbol, jugador) {
-    return futbol
+futbol.sustituyeTags = function (futbolin, jugador) {
+    return futbolin
         //.replace(new RegExp(futbol.futbolTags.nombre, 'g'), jugador.ref['@ref'].nombre)
         .replace(new RegExp(futbol.futbolTags.nombre, 'g'), jugador.data.nombre)
         .replace(new RegExp(futbol.futbolTags.apellidos, 'g'), jugador.data.apellidos)
