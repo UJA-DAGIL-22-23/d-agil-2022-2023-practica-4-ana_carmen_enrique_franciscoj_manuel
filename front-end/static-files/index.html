@@ -27,30 +27,40 @@
     <h1>Aplicación Microservicios tiro_con_arco</h1>
     <!-- Barra de navegación de la aplicación -->
     <nav>
-        <a href="javascript:tiro_con_arco.procesarHome()" class="opcion-principal"
-            title="Llama a la ruta / del MS tiro_con_arco">Home</a>
-        <a href="javascript:tiro_con_arco.procesarAcercaDe()" class="opcion-principal"
-            title="Llama a la ruta /acercade del MS tiro_con_arco">Acerca de</a>
-            <a href="javascript:tiro_con_arco.procesarListaNombre()" class="opcion-principal"
-            title="Muestra los nombres de los arqueros de la base de datos">Lista de nombres</a>
-            <a href="javascript:tiro_con_arco.procesarListaNombreOrdenado()" class="opcion-principal"
-            title="Muestra los nombres de los arqueros ordenados de la base de datos">Lista de nombres ordenada</a>
-            <a href="javascript:tiro_con_arco.procesarListaEntera()" class="opcion-principal"
-            title="Muestra todos los datos de los arqueros de la base de datos">Lista de arqueros</a>
-            <div></div>
-            <input type="text" placeholder="Apellido" id="criterio-1">
-            <input type="text" placeholder="Nacionalidad" id="criterio-2">
-            <input type="text" placeholder="Edad" id="criterio-3">
-            <button class="btn" onclick="tiro_con_arco.procesarListaCriteriosPrecisa(document.getElementById('criterio-1').value, document.getElementById('criterio-2').value, document.getElementById('criterio-3').value, true)">Buscar por criterios</button>
-            <button class="btn" onclick="tiro_con_arco.procesarListaCriteriosPrecisa(document.getElementById('criterio-1').value, document.getElementById('criterio-2').value, document.getElementById('criterio-3').value, false)">Buscar por algún criterio</button>
-            <div></div>
-            <input type="text" placeholder="Nombre" id="nombre-1">
-            <button class="btn" onclick="tiro_con_arco.procesarListaBusquedaNombre(document.getElementById('nombre-1').value)">Buscar por nombre</button>
+        <table class="Aplicacion-tiro_con_arco">
+            <thead>
+                <tr>
+                    <th colspan="4">Aplicación Tiro con Arco</th>
+                </tr>
+            </thead>
+            <thead>
+                    <th>Listados de arqueros</th><th>Busquedas</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="javascript:tiro_con_arco.procesarListaNombre()" class="opcion-principal"
+                        title="Muestra los nombres de los arqueros de la base de datos">Listar nombres</a>
+                        <a href="javascript:tiro_con_arco.procesarListaNombreOrdenado()" class="opcion-principal"
+                        title="Muestra los nombres de los arqueros ordenados de la base de datos">Lista de nombres ordenada</a>
+                        <a href="javascript:tiro_con_arco.procesarListaEntera()" class="opcion-principal"
+                        title="Muestra todos los datos de los arqueros de la base de datos">Lista de arqueros</a>
+                    </td>
+                     <td>
+                        <input type="text" placeholder="Apellido" id="criterio-1">
+                        <input type="text" placeholder="Nacionalidad" id="criterio-2">
+                        <input type="text" placeholder="Edad" id="criterio-3">
+                        <button class="btn" onclick="tiro_con_arco.procesarListaCriteriosPrecisa(document.getElementById('criterio-1').value, document.getElementById('criterio-2').value, document.getElementById('criterio-3').value, true)">Buscar por criterios</button>
+                        <button class="btn" onclick="tiro_con_arco.procesarListaCriteriosPrecisa(document.getElementById('criterio-1').value, document.getElementById('criterio-2').value, document.getElementById('criterio-3').value, false)">Buscar por algún criterio</button>
+                        <div></div>
+                        <input type="text" placeholder="Nombre" id="nombre-1">
+                        <button class="btn" onclick="tiro_con_arco.procesarListaBusquedaNombre(document.getElementById('nombre-1').value)">Buscar por nombre</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </nav>
-
-
-
-
+    <br></br>
 
 
 
