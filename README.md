@@ -978,6 +978,38 @@ Esta segunda muestra el resultado de hacer una búsqueda por algún criterio, si
 
 
 ## HU02. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Fran
+Implementada por Francisco Javier Gálvez Marín
+
+Para implementar la HU 02, he tenido que implementar mi ms-plantilla de la práctica anterior, para ello he realizado las siguientes moficicaciones:
+
+- Cambios en front-end
+  * Añadir los ficheros ms-balonmano.js y ms-balonmano.js en la carpeta js.
+  * Cambiar el nombre de todas las funciones de ms-balonmano.js para que cuando sean llamadas en index.html no cause conflicto ningún problema con las llamadas de los otros microservicios. Además Plantilla ahora se llama BalonmanoJugador.
+  * Cambiar los spc en ms-balonmano-spec.js para adaptarse y reflejar los cambios anteriores.
+  * Renombrar el fichero ms-plantilla.css de la carpeta css a  ms-balonmano.css.
+  * Modificar los contenidos de ms-balonmano.css para que los colores sean diferentes a los del resto de microservicios, en este caso tomando diferentes tonalidades de verde.
+  * Cargar los ficheros ms-balonmano.css, ms-balonmano.js y ms-balonmano-spec.js en index.html.
+  * Modificada la presentación del microservicio de balonmano en index.html, incluyendo los cambios en el nombre de Plantilla a BalonmanoJugador y de las variables para que tengan nombres únicos que no coincidan con el resto de microservicios.
+
+- Modificaciones en api-gateway
+  * Carmen cambió el número de la ruta de este microservicio mientras realizaba el cambio del suyo
+
+- Modificaciones en ms-balonmano (anteriormente ms-plantilla en la práctica individual)
+  * Añadir la carpeta ms-balonmano al proyecto.
+  * Cambiar el nombre ms-plantilla por ms-balonmano tanto en package.json como en package-lock.json
+  * Añadir la carpeta ms-balonmano al proyecto.
+
+- Modificaciones en assests
+  * Capturas subidas de la funcionalidad y el trello.
+
+En estas capturas se muestran la funcionalidad de este microservicio. La primera muestra los distintos botones y 
+búsqueda dentro de la nueva tabla mientras que la segunda captura muestra la lista de todos los jugadores de 
+balonmano ordenados alfabéticamente como ejemplo de que las diferentes funcionalidades operan correctamente. 
+Finalmente está la captura de trello en el instante en el que esta HU pasó de IN PROCESS a DONE
+![Captura_HU_02_tabla](./assets/img/HU02_funcional_tabla.png)
+![Captura_HU_02_ejemplo](./assets/img/HU02_funcional_ejemplo.png)
+![Captura_HU_02_trello](./assets/img/CapturaTrello_HU02_final.png)
+
 ## HU03. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ana
 ## HU04. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Manuel
 ## HU05. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Enrique
