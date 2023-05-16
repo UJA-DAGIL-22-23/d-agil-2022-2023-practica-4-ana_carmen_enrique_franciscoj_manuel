@@ -10,47 +10,47 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-table.Aplicacion-futbol {
+table.Aplicacion-atletas {
     width: 100%;
     border: 1px solid rgba(255, 128, 0);
 }
   
-table.Aplicacion-futbol thead th,
-table.Aplicacion-futbol tbody th {
+table.Aplicacion-atletas thead th,
+table.Aplicacion-atletas tbody th {
     margin: 3px;
     height: 2.5em;
     background-color: rgba(255, 128, 0);
     text-transform: uppercase;
 }
   
-table.Aplicacion-futbol tbody td {
+table.Aplicacion-atletas tbody td {
     padding: 0.5em;
     text-align: center;
 }
   
-table.Aplicacion-futbol tbody tr {
+table.Aplicacion-atletas tbody tr {
     margin: 3px;
     height: 2em;
     background-color: rgba(255, 128, 0, 0.542)
 }
-table.Aplicacion-futbol thead,
-table.Aplicacion-futbol tbody,
-table.Aplicacion-futbol tr,
-table.Aplicacion-futbol td {
+table.Aplicacion-atletas thead,
+table.Aplicacion-atletas tbody,
+table.Aplicacion-atletas tr,
+table.Aplicacion-atletas td {
     text-align: center;
     margin: 0 auto 0 auto;
 }
-table.Aplicacion-futbol {
+table.Aplicacion-atletas {
     width: 100%;
 }
 
-table.listado-personas {
+table.listado-atletas {
     width: 100%;
     border: 1px solid rgba(210, 118, 26, 0.503);
 }
 
-table.listado-personas thead th,
-table.listado-personas tbody th {
+table.listado-atletas thead th,
+table.listado-atletas tbody th {
     margin: 3px;
     height: 2.5em;
     background-color: rgba(255, 128, 0);
@@ -58,28 +58,28 @@ table.listado-personas tbody th {
 
 }
 
-table.listado-personas tbody th {
+table.listado-atletas tbody th {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-table.listado-personas tbody td {
+table.listado-atletas tbody td {
     padding: 0.5em;
     text-align: center;
 }
 
-table.listado-personas tbody tr {
+table.listado-atletas tbody tr {
     margin: 3px;
     height: 2em;
     background-color: rgba(255, 128, 0, 0.542);
 }
  
 /**/
-table.listado-personas {
+table.listado-atletas {
     width: 100%;
     border: 1px solid rgb(158, 107, 57);
 }
 
-table.listado-personas thead th {
+table.listado-atletas thead th {
     margin: 3px;
     height: 2.5em;
     background-color: rgba(255, 128, 0);
@@ -87,30 +87,30 @@ table.listado-personas thead th {
 
 }
 
-table.listado-personas tbody td {
+table.listado-atletas tbody td {
     padding: 0.5em;
     text-align: center;
 }
 
-table.listado-personas tbody tr {
+table.listado-atletas tbody tr {
     margin: 3px;
     height: 2em;
     background-color: rgba(255, 128, 0, 0.542);
 }
 
-.listado-personas {
+.listado-atletas {
     max-width: 100%;
     overflow-x: auto;
 }
 
-table.listado-personas thead,
-table.listado-personas tbody,
-table.listado-personas tr,
-table.listado-personas td {
+table.listado-atletas thead,
+table.listado-atletas tbody,
+table.listado-atletas tr,
+table.listado-atletas td {
     text-align: center;
     margin: 0 auto 0 auto;
 }
 
-table.listado-personas {
+table.listado-atletas {
     width: 100%;
 }
