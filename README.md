@@ -942,7 +942,7 @@ En esta imagen queda reflejado dicho proceso.
 
 
 ## HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Carmen
-
+Implementada por Carmen Huesa Guardiola
 Para implementar toda la funcionalidad de mi práctica individual he tenido que:
 
 -Modificaciones en front-end
@@ -951,7 +951,7 @@ Para implementar toda la funcionalidad de mi práctica individual he tenido que:
 * Cambiar el nombre de todas las funciones del ms-tiro_con_arco.js para que al llamarlas en el index.html no provoque ningún problema con las llamadas de mi equipo.
 * Cambiar el nombre de las definiciones de unos parametros en ms-tiro_con_arco-spec.js para que no genere problemas con los de mi equipo.
 * Modificar el fichero ms-plantilla.css de la carpeta css para llamarlo ms-tiro_con_arco.css.
-* En ms-tiro_con_arco.css crear tablas de color morado para mejorar la visualización mi funcionalidad, tanto de los botones como de las listas resultantes de pulsarlos.
+* En ms-tiro_con_arco.css crear tablas de color morado para mejorar la visualización de mi funcionalidad, tanto de los botones como de las listas resultantes de pulsarlos.
 * Cargar mis ficheros ms-tiro_con_arco.css, ms-tiro_con_arco.js y ms-tiro_con_arco-spec.js en index.html.
 * Modificar la presentación de mi microservicio en index.html.
 
@@ -1017,12 +1017,41 @@ Finalmente está la captura de trello en el instante en el que esta HU pasó de 
 ![Captura_HU_02_trello](./assets/img/CapturaTrello_HU02_final.png)
 
 ## HU03. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ana
+Implementada por Ana León Pulido
+
+Para implementar la HU03, he tenido que implementar mi ms-plantilla de la práctica anterior, para ello he realizado las siguientes moficicaciones:
+
+- Cambios en front-end
+  * Añadir los ficheros ms-motonautica.js y ms-motonautica.js en la carpeta js.
+  * Cambiar el nombre de las funciones de ms-motonautica.js para que al ser llamadas no cause ningún problema con las llamadas de los otros microservicios. Además la Plantilla ahora se llama motonautica.
+  * Cambiar los spec en ms-motonautica-spec.js para adaptarse y reflejar los cambios anteriores.
+  * Añadido el fichero ms-motonautica.css.
+  * Modificar los contenidos de ms-motonautica.css para que los colores sean diferentes a los del resto de microservicios, en mi caso he utilizado el color amarillo.
+  * Cargar los ficheros ms-motonautica.css, ms-motonautica.js y ms-motonautica-spec.js en index.html.
+  * Modificada la presentación del microservicio de motonautica en index.html, incluyendo los cambios en el nombre de Plantilla a motonautica y de las variables para que tengan nombres únicos que no coincidan con el resto de microservicios.
+
+- Modificaciones en api-gateway
+  * Carmen cambió el número de la ruta de este microservicio mientras realizaba el cambio del suyo
+
+- Modificaciones en ms-motonautica (anteriormente ms-plantilla en la práctica individual)
+  * Añadir la carpeta ms-motonautica al proyecto.
+  * Cambiar el nombre ms-plantilla por ms-motonautica tanto en package.json como en package-lock.json
+  * Añadir la carpeta ms-motonautica al proyecto.
+
+- Modificaciones en assests
+  * Capturas subidas de la funcionalidad y el trello.
+
+En estas capturas se muestran la funcionalidad de este microservicio. 
+
+La primera captura muestra la barra de búsqueda e la que se probaran las distintas funcionalidades: 
+<img src=./assets\img\HU03Barra.PNG>
+La segunda captura muestra una funcionalidad siendo probada, todas funcionan:
+<img src=./assets\img\HU03terminada.PNG>
+Finalmente está la captura de trello en el instante en el que esta HU pasó de IN PROCESS a DONE:
+<img src=./assets\img\HU03trello.png>
+
 ## HU04. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Manuel
 ## HU05. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Enrique
-
-
-
-
 ## HU06. Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”
 ## HU07. Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app
 ## HU08. Ver un listado solo con los nombres de todos los jugadores/equipos ordenados alfabéticamente de todos los deportes incluidos en la app
