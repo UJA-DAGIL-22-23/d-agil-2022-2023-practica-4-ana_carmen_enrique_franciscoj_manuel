@@ -305,17 +305,18 @@ describe("general.SustituyeTagsAtletas: ", function() {
 describe("general.imprimeBusca: ", function() {
     it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
         function() {
-            general.imprimeSoloNombres(10)
+            general.imprimeBusca(10)
             expect(elementoGeneral.innerHTML).toBe("Listado de los nombres de los jugadores que incluyen una cadena y su deporte correspondiente")
             expect(generalContenido.querySelector('tbody').innerHTML).toBe('')
         })
     it("Mostrar datos nulos cuando le pasamos vector nulo",
         function() {
-            general.imprimeSoloNombres([])
+            general.imprimeBusca([])
             expect(elementoGeneral.innerHTML).toBe("Listado de los nombres de los jugadores que incluyen una cadena y su deporte correspondiente")
             expect(generalContenido.querySelector('tbody').innerHTML).toBe('')
         })
 })
+
 
 /*
 IMPORTANTE
