@@ -12,7 +12,7 @@
 
 table.Aplicacion-tiro_con_arco {
     width: 100%;
-    border: 1px solid rgba(96, 11, 117, 0.822);
+    border: 1px solid rgba(155, 33, 185, 0.822);
 }
   
 table.Aplicacion-tiro_con_arco thead th,
@@ -53,13 +53,13 @@ table.listado-tiro_con_arco thead th,
 table.listado-tiro_con_arco tbody th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(96, 11, 117, 0.822);
+    background-color: rgba(155, 33, 185, 0.822);
     text-transform: uppercase;
 
 }
 
 table.listado-tiro_con_arco tbody th {
-    background-color: rgba(96, 11, 117, 0.822);
+    background-color: rgba(155, 33, 185, 0.822);
 }
 
 table.listado-tiro_con_arco tbody td {
@@ -70,13 +70,13 @@ table.listado-tiro_con_arco tbody td {
 table.listado-tiro_con_arco tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(0, 0, 100, 0.1)
+    background-color: rgba(155, 33, 185, 0.822)
 }
  
 
 table.listado_arqueros_completo {
     width: 100%;
-    border: 1px solid rgba(96, 11, 117, 0.822);
+    border: 1px solid rgba(155, 33, 185, 0.822);
 }
 
 table.listado_arqueros_completo thead th {
@@ -117,7 +117,7 @@ table.listado_arqueros_completo {
 
 table.listado_arqueros {
     width: 100%;
-    border: 1px solid rgba(0, 0, 100, 0.8);
+    border: 1px solid rgba(155, 33, 185, 0.822);
 }
 
 table.listado_arqueros thead th {
