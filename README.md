@@ -985,8 +985,8 @@ Para implementar la HU 02, he tenido que implementar mi ms-plantilla de la prác
 - Cambios en front-end
   * Añadir los ficheros ms-balonmano.js y ms-balonmano.js en la carpeta js.
   * Cambiar el nombre de todas las funciones de ms-balonmano.js para que cuando sean llamadas en index.html no cause conflicto ningún problema con las llamadas de los otros microservicios. Además Plantilla ahora se llama BalonmanoJugador.
-  * Cambiar los spc en ms-balonmano-spec.js para adaptarse y reflejar los cambios anteriores.
-  * Renombrar el fichero ms-plantilla.css de la carpeta css a  ms-balonmano.css.
+  * Cambiar los spec en ms-balonmano-spec.js para adaptarse y reflejar los cambios anteriores.
+  * Añadido el fichero ms-balonmano.css.
   * Modificar los contenidos de ms-balonmano.css para que los colores sean diferentes a los del resto de microservicios, en este caso tomando diferentes tonalidades de verde.
   * Cargar los ficheros ms-balonmano.css, ms-balonmano.js y ms-balonmano-spec.js en index.html.
   * Modificada la presentación del microservicio de balonmano en index.html, incluyendo los cambios en el nombre de Plantilla a BalonmanoJugador y de las variables para que tengan nombres únicos que no coincidan con el resto de microservicios.
