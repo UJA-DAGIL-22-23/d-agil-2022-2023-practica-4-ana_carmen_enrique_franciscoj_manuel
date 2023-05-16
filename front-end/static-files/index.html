@@ -41,7 +41,8 @@
        
             <a href="javascript:general.procesarListaNombre()" class="opcion-principal"
             title="Muestra los nombres de todos los jugadores de todos los deportes">Listar nombres</a>
-                        
+            <input type="text" placeholder="Escribe una cadena" id="cadena">
+            <button class="btn" onclick="general.procesarListaBusca(document.getElementById('cadena').value)">Buscar por cadena</button>
     </nav>
 
 

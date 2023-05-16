@@ -137,7 +137,7 @@ describe("general.imprimeSoloNombres: ", function() {
     general.imprimeSoloNombres([])
     expect(elementoGeneral.innerHTML).toBe("Listado de los nombres de todos los jugadores de todos los deportes")
     expect(generalContenido.querySelector('tbody').innerHTML).toBe('')
-})
+    })
 })
 
 
@@ -154,6 +154,7 @@ describe("general.SustituyeTagArqueros: ", function() {
                         let plantillaTagsSpec = {
                             "NOMBRE": "### NOMBRE ###",
                             "APELLIDO": "### APELLIDO ###",
+                            "DEPORTE": "### DEPORTE ###"
 
                         }
 
@@ -161,11 +162,13 @@ describe("general.SustituyeTagArqueros: ", function() {
             <tr title="${plantillaTagsSpec.NOMBRE}">
             <td>${plantillaTagsSpec.NOMBRE}</td>
             <td>${plantillaTagsSpec.APELLIDO}</td>
+            <td>${plantillaTagsSpec.DEPORTE}</td>
         </tr>`;
 
                         let msj = general.sustituyeTagsArqueros(vecFinal, vecJugador);
                         expect(msj.includes("Arno")).toBeTrue();
                         expect(msj.includes("Sommer")).toBeTrue();
+                        expect(msj.includes("Tiro con Arco")).toBeTrue();
                     })
 })
 
@@ -183,6 +186,7 @@ describe("general.SustituyeTagsJugadores: ", function() {
                         let plantillaTagsSpec = {
                             "NOMBRE": "### NOMBRE ###",
                             "APELLIDO": "### APELLIDO ###",
+                            "DEPORTE": "### DEPORTE ###"
 
                         }
 
@@ -190,11 +194,13 @@ describe("general.SustituyeTagsJugadores: ", function() {
             <tr title="${plantillaTagsSpec.NOMBRE}">
             <td>${plantillaTagsSpec.NOMBRE}</td>
             <td>${plantillaTagsSpec.APELLIDO}</td>
+            <td>${plantillaTagsSpec.DEPORTE}</td>
         </tr>`;
 
                         let msj = general.sustituyeTagsJugadores(vecFinal, vecJugador);
                         expect(msj.includes("Arno")).toBeTrue();
                         expect(msj.includes("Sommer")).toBeTrue();
+                        expect(msj.includes("Balonmano")).toBeTrue();
                     })
  })
 
@@ -213,6 +219,7 @@ describe("general.SustituyeTagsPilotos: ", function() {
                         let plantillaTagsSpec = {
                             "NOMBRE": "### NOMBRE ###",
                             "APELLIDO": "### APELLIDO ###",
+                            "DEPORTE": "### DEPORTE ###"
 
                         }
 
@@ -220,11 +227,13 @@ describe("general.SustituyeTagsPilotos: ", function() {
             <tr title="${plantillaTagsSpec.NOMBRE}">
             <td>${plantillaTagsSpec.NOMBRE}</td>
             <td>${plantillaTagsSpec.APELLIDO}</td>
+            <td>${plantillaTagsSpec.DEPORTE}</td>
         </tr>`;
 
                         let msj = general.sustituyeTagsPilotos(vecFinal, vecJugador);
                         expect(msj.includes("Arno")).toBeTrue();
                         expect(msj.includes("Sommer")).toBeTrue();
+                        expect(msj.includes("Motonáutica")).toBeTrue();
                     })
 })
 
@@ -242,6 +251,7 @@ describe("general.SustituyeTagsFutbolistas: ", function() {
                         let plantillaTagsSpec = {
                             "NOMBRE": "### NOMBRE ###",
                             "APELLIDO": "### APELLIDO ###",
+                            "DEPORTE": "### DEPORTE ###"
 
                         }
 
@@ -249,11 +259,13 @@ describe("general.SustituyeTagsFutbolistas: ", function() {
             <tr title="${plantillaTagsSpec.NOMBRE}">
             <td>${plantillaTagsSpec.NOMBRE}</td>
             <td>${plantillaTagsSpec.APELLIDO}</td>
+            <td>${plantillaTagsSpec.DEPORTE}</td>
         </tr>`;
 
                         let msj = general.sustituyeTagsFutbolistas(vecFinal, vecJugador);
                         expect(msj.includes("Arno")).toBeTrue();
                         expect(msj.includes("Sommer")).toBeTrue();
+                        expect(msj.includes("Fútbol")).toBeTrue();
                     })
             })
 
@@ -271,22 +283,39 @@ describe("general.SustituyeTagsAtletas: ", function() {
                         let plantillaTagsSpec = {
                             "NOMBRE": "### NOMBRE ###",
                             "APELLIDO": "### APELLIDO ###",
+                            "DEPORTE": "### DEPORTE ###",
                         }
 
                         let vecFinal = `
             <tr title="${plantillaTagsSpec.NOMBRE}">
             <td>${plantillaTagsSpec.NOMBRE}</td>
             <td>${plantillaTagsSpec.APELLIDO}</td>
+            <td>${plantillaTagsSpec.DEPORTE}</td>
         </tr>`;
 
                         let msj = general.sustituyeTagsAtletas(vecFinal, vecJugador);
                         expect(msj.includes("Arno")).toBeTrue();
                         expect(msj.includes("Sommer")).toBeTrue();
+                        expect(msj.includes("Gimnasia")).toBeTrue();
                     })
-            })
+        })
 
 
 
+describe("general.imprimeBusca: ", function() {
+    it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
+        function() {
+            general.imprimeSoloNombres(10)
+            expect(elementoGeneral.innerHTML).toBe("Listado de los nombres de los jugadores que incluyen una cadena y su deporte correspondiente")
+            expect(generalContenido.querySelector('tbody').innerHTML).toBe('')
+        })
+    it("Mostrar datos nulos cuando le pasamos vector nulo",
+        function() {
+            general.imprimeSoloNombres([])
+            expect(elementoGeneral.innerHTML).toBe("Listado de los nombres de los jugadores que incluyen una cadena y su deporte correspondiente")
+            expect(generalContenido.querySelector('tbody').innerHTML).toBe('')
+        })
+})
 
 /*
 IMPORTANTE
