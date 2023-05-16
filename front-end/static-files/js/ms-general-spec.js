@@ -140,6 +140,193 @@ describe("general.imprimeSoloNombres: ", function() {
 })
 })
 
+
+
+describe("general.sustituyeTagsArqueros: ", function() {
+    it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
+        function() {
+            describe("general.SustituyeTagArqueros: ", function() {
+                it("Sustituye correctamente los tags",
+                    function() {
+                        let vecJugador = {
+                            data: {
+                                nombre: "Arno",
+                                apellido: "Sommer",
+                            }
+                        }
+                        let plantillaTagsSpec = {
+                            "NOMBRE": "### NAME ###",
+                            "APELLIDO": "### SURNAME ###",
+
+                        }
+
+            let vecFinal = `
+            <tr title="${plantillaTagsSpec.NOMBRE}">
+            <td>${plantillaTagsSpec.NOMBRE}</td>
+            <td>${plantillaTagsSpec.APELLIDO}</td>
+        </tr>`;
+
+                        let msj = general.sustituyeTagsArqueros(vecFinal, vecJugador);
+                        expect(msj.includes("Arno")).toBeTrue();
+                        expect(msj.includes("Sommer")).toBeTrue();
+                    })
+            })
+        })
+
+})
+
+
+describe("general.sustituyeTagsJugadores: ", function() {
+    it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
+        function() {
+            describe("general.SustituyeTagsJugadores: ", function() {
+                it("Sustituye correctamente los tags",
+            function() {
+                        let vecJugador = {
+                            data: {
+                                name: "Arno",
+                                surname: "Sommer",
+                            }
+                        }
+                        let plantillaTagsSpec = {
+                            "NOMBRE": "### NOMBRE ###",
+                            "APELLIDO": "### APELLIDO ###",
+
+                        }
+
+                        let vecFinal = `
+            <tr title="${plantillaTagsSpec.NOMBRE}">
+            <td>${plantillaTagsSpec.NOMBRE}</td>
+            <td>${plantillaTagsSpec.APELLIDO}</td>
+        </tr>`;
+
+                        let msj = general.sustituyeTagsAJugadores(vecFinal, vecJugador);
+                        expect(msj.includes("Arno")).toBeTrue();
+                        expect(msj.includes("Sommer")).toBeTrue();
+                    })
+            })
+        })
+
+})
+
+
+
+
+describe("general.sustituyeTagsPilotos: ", function() {
+    it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
+        function() {
+            describe("general.SustituyeTagsPilotos: ", function() {
+                it("Sustituye correctamente los tags",
+                    function() {
+                        let vecJugador = {
+                            data: {
+                                nombre: "Arno",
+                                apellido: "Sommer",
+                            }
+                        }
+                        let plantillaTagsSpec = {
+                            "NOMBRE": "### NAME ###",
+                            "APELLIDO": "### SURNAME ###",
+
+                        }
+
+                        let vecFinal = `
+            <tr title="${plantillaTagsSpec.NOMBRE}">
+            <td>${plantillaTagsSpec.NOMBRE}</td>
+            <td>${plantillaTagsSpec.APELLIDO}</td>
+        </tr>`;
+
+                        let msj = general.sustituyeTagsPilotos(vecFinal, vecJugador);
+                        expect(msj.includes("Arno")).toBeTrue();
+                        expect(msj.includes("Sommer")).toBeTrue();
+                    })
+            })
+        })
+
+})
+
+
+describe("general.sustituyeTagsFutbolistas: ", function() {
+    it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
+        function() {
+            describe("general.SustituyeTagsFutbolistas: ", function() {
+                it("Sustituye correctamente los tags",
+                    function() {
+                        let vecJugador = {
+                            data: {
+                                nombre: "Arno",
+                                apellidos: "Sommer",
+                            }
+                        }
+                        let plantillaTagsSpec = {
+                            "NOMBRE": "### NAME ###",
+                            "APELLIDO": "### SURNAME ###",
+
+                        }
+
+                        let vecFinal = `
+            <tr title="${plantillaTagsSpec.NOMBRE}">
+            <td>${plantillaTagsSpec.NOMBRE}</td>
+            <td>${plantillaTagsSpec.APELLIDO}</td>
+        </tr>`;
+
+                        let msj = general.sustituyeTagsFutbolistas(vecFinal, vecJugador);
+                        expect(msj.includes("Arno")).toBeTrue();
+                        expect(msj.includes("Sommer")).toBeTrue();
+                    })
+            })
+        })
+
+})
+
+
+describe("general.sustituyeTagsAtletas: ", function() {
+    it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
+        function() {
+            describe("general.SustituyeTagsAtletas: ", function() {
+                it("Sustituye correctamente los tags",
+                    function() {
+                        let vecJugador = {
+                            data: {
+                                nombre: "Arno",
+                                apellido: "Sommer",
+                            }
+                        }
+                        let plantillaTagsSpec = {
+                            "NOMBRE": "### NAME ###",
+                            "APELLIDO": "### SURNAME ###",
+
+                        }
+
+                        let vecFinal = `
+            <tr title="${plantillaTagsSpec.NOMBRE}">
+            <td>${plantillaTagsSpec.NOMBRE}</td>
+            <td>${plantillaTagsSpec.APELLIDO}</td>
+        </tr>`;
+
+                        let msj = general.sustituyeTagsAtletas(vecFinal, vecJugador);
+                        expect(msj.includes("Arno")).toBeTrue();
+                        expect(msj.includes("Sommer")).toBeTrue();
+                    })
+            })
+        })
+
+})
+
+
+describe("general.imprimeSoloNombres: ", function() {it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
+    function() {
+        describe("general.imprimeSoloNombres: ", function() {
+            it("Muestra correctamente el mensaje por defecto si no se le pasa nada más",
+                function() {
+                    general.imprimeSoloNombres([], [], [], [], [])
+                    expect(elementoTituloBalonmano.innerHTML).toBe("Listado de los nombres de todos los jugadores de todos los deportes")
+                    expect(elementoContenidoBalonmano.querySelector('tbody').innerHTML).toBe('')
+                })
+        })
+    })
+
+})
 /*
 IMPORTANTE
 ==========
