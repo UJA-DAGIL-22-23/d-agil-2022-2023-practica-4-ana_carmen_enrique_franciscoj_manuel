@@ -978,11 +978,11 @@ En estas capturas muestro la funcionalidad de mi microservicio. La primera muest
 <img src=./assets\img\HU01terminada.png>
 
 
-Esta segunda muestra el resultado de hacer una búsqueda por algún criterio, siendo el criterio por el que buscar de entre los arqueros que tengan nacionalidad española.
+Esta segunda, muestra el resultado de hacer una búsqueda por algún criterio, siendo el criterio por el que buscar de entre los arqueros que tengan nacionalidad española.
 
 <img src=./assets\img\HU01terminadadatos.png>
 
-
+<br></br>
 
 ## HU02. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Fran
 Implementada por Francisco Javier Gálvez Marín
@@ -1016,6 +1016,8 @@ Finalmente está la captura de trello en el instante en el que esta HU pasó de 
 ![Captura_HU_02_ejemplo1](./assets/img/HU02_funcional_ejemplo1.png)
 ![Captura_HU_02_trello](./assets/img/CapturaTrello_HU02_final.png)
 
+<br></br>
+
 ## HU03. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ana
 Implementada por Ana León Pulido
 
@@ -1043,11 +1045,20 @@ Para implementar la HU03, he tenido que implementar mi ms-plantilla de la práct
 En estas capturas se muestran la funcionalidad de este microservicio. 
 
 La primera captura muestra la barra de búsqueda e la que se probaran las distintas funcionalidades: 
+
 <img src=./assets\img\HU03Barra.PNG>
+
+
 La segunda captura muestra una funcionalidad siendo probada, todas funcionan:
+
 <img src=./assets\img\HU03terminada.PNG>
+
+
 Finalmente está la captura de trello en el instante en el que esta HU pasó de IN PROCESS a DONE:
+
 <img src=./assets\img\HU03trello.png>
+
+<br></br>
 
 ## HU04. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Manuel
 Implementada por Manuel Lara Torres
@@ -1076,13 +1087,25 @@ Para implementar la HU04, he tenido que implementar mi ms-plantilla de la práct
 En estas capturas se muestran la funcionalidad de este microservicio. 
 
 La primera captura muestra la barra de búsqueda e la que se probaran las distintas funcionalidades: 
+
 <img src=./assets\img\HU04-Tabla.png>
+
+
 La segunda captura muestra una funcionalidad de listado siendo probada, todas funcionan:
+
 <img src=./assets\img\HU04-JugadoresCompletaEjemplo.png>
+
+
 La segunda captura muestra una funcionalidad de busqueda siendo probada, todas funcionan:
+
 <img src=./assets\img\HU04-BusquedaCriterioEjemplo.png>
+
+
 Finalmente está la captura de trello en el instante en el que esta HU pasó de IN PROCESS a DONE:
+
 <img src=./assets\img\HU04-TrelloDone.png>
+
+<br></br>
 
 ## HU05. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Enrique
 
@@ -1112,37 +1135,70 @@ Para implementar la HU05, he tenido que implementar mi ms-plantilla de la práct
 En estas capturas se muestran la funcionalidad de este microservicio. 
 
 La primera captura muestra la barra de búsqueda e la que se probaran las distintas funcionalidades: 
+
 <img src=./assets\img\HU_05_tabla.png>
+
+
 La segunda captura muestra la funcionalidad de la lista ordenada:
+
 <img src=./assets\img\HU_05_lista_ordenada.png>
+
+
 La tercera captura muestra la funcionalidad de la lista completa:
+
 <img src=./assets\img\HU_05_lista_completa.png>
+
+
 Finalmente está la captura de trello en el instante en el que esta HU pasó de IN PROCESS a DONE:
+
 <img src=./assets\img\HU_05_terminada_Trello.png>
+
+<br></br>
 
 ## HU06. Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”
 ## HU07. Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app
 Implementada por Carmen Huesa Guardiola y Francisco Javier Gálvez Marín
 
 -Cambios en front-end
-  * Para implementar esta HU hemos creado dos nuevos archivos en la carpeta js llamados ms-general.js y su correspondiente ms-general-spec.js
+  * Para implementar esta HU hemos creado dos nuevos archivos en la carpeta js llamados ms-general.js y su correspondiente ms-general-spec.js.
   * En ms-general-spec nos aseguramos de que se asignen correctamente los valores al sustituir los tags.
   * ms-general incluye todas las funciones necesarias para llamar a todos los microservicios y recibir los jugadores.
   * El ms-general se llama así de forma provisional, el que sea un microservicio finalmente o no dependerá del desarrollo de las otras HU.
+  * Creamos ms-general.css para que la lista resultante de nombre y apellido se muestre mejor.
 
-En la siguiente captura se puede ver el botón para esta nueva funcionalidad
+En la siguiente captura se puede ver el botón para esta nueva funcionalidad.
     ![Captura_HU_07_terminada](./assets/img/HU07terminada.png)
 
-Las dos capturas a continuación muestran el principio y final de la nueva lista (no hemos hecho captura de los datos intermedios
-por comodidad) que incluye a los 50 jugadores de todos
-los microservicios del proyecto. Los spec que se puede apreciar que fallan es porque hemos aprovechado para preparar el que será necesario
-para la funcionalidad HU06 que implementaremos posteriormente
+Las dos capturas a continuación muestran el principio y final de la nueva lista (no hemos hecho captura de los datos intermedios por comodidad) que incluye a los 50 jugadores de todos los microservicios del proyecto. Los spec que se puede apreciar que fallan es porque hemos aprovechado para preparar el que será necesario para la funcionalidad HU06 que implementaremos posteriormente.
     ![Captura_HU_07_ini](./assets/img/HU07terminadaDatos.png)
     ![Captura_HU_07_fin](./assets/img/HU07terminadaDatos2.png)
 
 Finalmente tenemos una captura que muestra el estado del tablero trello al finalizar esta HU
     ![Captura_HU_07_trello](./assets/img/HU07trello.png)
 
+<br></br>
+
 ## HU08. Ver un listado solo con los nombres de todos los jugadores/equipos ordenados alfabéticamente de todos los deportes incluidos en la app
-## HU09. Mostrar el nombre y el deporte de todos los jugadores/equipos que contengan una determinada cadena introducida por el usuario. (Por ejemplo, si el usuario introduce “EST” se mostrarán todos los nombres junto con el deporte practicado de todos los jugadores/equipos cuyo nombre incluya “EST”)
+
+
+## HU09. Mostrar el nombre y el deporte de todos los jugadores/equipos que contengan una determinada cadena introducida por el usuario. 
+Implementada por Carmen Huesa Guardiola y Francisco Javier Gálvez Marín
+
+
+La siguiente captura muestra el estado de Trello una vez terminada la historia de usuario.
+
+<img src=./assets\img\HU09trello.png>
+
+
+En estas capturas muestramos la funcionalidad de mi microservicio. La primera muestra la barra de búsqueda junto con su botón para mostras las lista.
+
+<img src=./assets\img\HU09terminada.png>
+
+
+Esta segunda, muestra el resultado de hacer una búsqueda por la cadena de caracteres 'no'.
+
+<img src=./assets\img\HU09terminadaDatos.png>
+
+<br></br>
+
 ## HU10. Modificar la visualización de la app con un modo ALTO CONTRASTE
