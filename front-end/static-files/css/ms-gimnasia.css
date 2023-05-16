@@ -12,14 +12,14 @@
 
 table.Aplicacion-atletas {
     width: 100%;
-    border: 1px solid rgba(255, 128, 0);
+    border: 1px solid rgb(11, 218, 255);
 }
   
 table.Aplicacion-atletas thead th,
 table.Aplicacion-atletas tbody th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(255, 128, 0);
+    background-color: rgb(11, 218, 255);
     text-transform: uppercase;
 }
   
@@ -31,7 +31,7 @@ table.Aplicacion-atletas tbody td {
 table.Aplicacion-atletas tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(255, 128, 0, 0.542)
+    background-color: rgba(11, 218, 255, 0.418);
 }
 table.Aplicacion-atletas thead,
 table.Aplicacion-atletas tbody,
@@ -46,14 +46,14 @@ table.Aplicacion-atletas {
 
 table.listado-atletas {
     width: 100%;
-    border: 1px solid rgba(210, 118, 26, 0.503);
+    border: 1px solid rgba(16, 107, 182, 0.542);
 }
 
 table.listado-atletas thead th,
 table.listado-atletas tbody th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(255, 128, 0);
+    background-color: rgba(11, 218, 255, 0.534);
     text-transform: uppercase;
 
 }
@@ -70,19 +70,19 @@ table.listado-atletas tbody td {
 table.listado-atletas tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(255, 128, 0, 0.542);
+    background-color: rgba(16, 107, 182, 0.542);
 }
  
 /**/
 table.listado-atletas {
     width: 100%;
-    border: 1px solid rgb(158, 107, 57);
+    border: 1px solid rgba(16, 107, 182, 0.589);
 }
 
 table.listado-atletas thead th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(255, 128, 0);
+    background-color: rgba(16, 107, 182, 0.542);
     text-transform: uppercase;
 
 }
@@ -95,7 +95,7 @@ table.listado-atletas tbody td {
 table.listado-atletas tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(255, 128, 0, 0.542);
+    background-color: rgba(16, 107, 182, 0.542);
 }
 
 .listado-atletas {
