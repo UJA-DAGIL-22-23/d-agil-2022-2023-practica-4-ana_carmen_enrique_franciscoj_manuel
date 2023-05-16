@@ -137,7 +137,7 @@ describe("general.imprimeSoloNombres: ", function() {
     general.imprimeSoloNombres([])
     expect(elementoGeneral.innerHTML).toBe("Listado de los nombres de todos los jugadores de todos los deportes")
     expect(generalContenido.querySelector('tbody').innerHTML).toBe('')
-})
+    })
 })
 
 
@@ -298,10 +298,24 @@ describe("general.SustituyeTagsAtletas: ", function() {
                         expect(msj.includes("Sommer")).toBeTrue();
                         expect(msj.includes("Gimnasia")).toBeTrue();
                     })
-            })
+        })
 
 
 
+describe("general.imprimeBusca: ", function() {
+    it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
+        function() {
+            general.imprimeSoloNombres(10)
+            expect(elementoGeneral.innerHTML).toBe("Listado de los nombres de los jugadores que incluyen una cadena y su deporte correspondiente")
+            expect(generalContenido.querySelector('tbody').innerHTML).toBe('')
+        })
+    it("Mostrar datos nulos cuando le pasamos vector nulo",
+        function() {
+            general.imprimeSoloNombres([])
+            expect(elementoGeneral.innerHTML).toBe("Listado de los nombres de los jugadores que incluyen una cadena y su deporte correspondiente")
+            expect(generalContenido.querySelector('tbody').innerHTML).toBe('')
+        })
+})
 
 /*
 IMPORTANTE
