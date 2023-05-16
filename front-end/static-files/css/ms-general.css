@@ -1,0 +1,56 @@
+/**
+ * @file ms-plantilla.css
+ * @description Estilos aplicables a la visualización de elementos relacionados con el MS Plantilla
+ * @author Víctor M. Rivas Santos <vrivas@ujaen.es>
+ * @date 03-Feb-2023
+ */
+
+ 
+ * {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+
+
+table.listado_general {
+    width: 100%;
+    border: 1px solid rgba(153, 17, 17, 0.61);
+}
+
+table.listado_general thead th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(153, 17, 17, 0.61);
+    text-transform: uppercase;
+
+}
+
+table.listado_general tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+table.listado_general tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(255, 59, 59, 0.568)
+}
+
+.listado_general {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table.listado_general thead,
+table.listado_general tbody,
+table.listado_general tr,
+table.listado_general td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+table.listado_general {
+    width: 100%;
+}
