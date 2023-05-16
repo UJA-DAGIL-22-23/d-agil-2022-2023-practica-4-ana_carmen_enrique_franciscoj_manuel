@@ -816,7 +816,7 @@
   rankingMundial: 12
 }
 ```
-### **5 Atleta**
+### **5º Atleta**
 ```
 {
   nombre: "Sara",
@@ -934,6 +934,7 @@
 * HU09. Mostrar el nombre y el deporte de todos los jugadores/equipos que contengan una determinada cadena introducida por el usuario. (Por ejemplo, si el usuario introduce “EST” se mostrarán todos los nombres junto con el deporte practicado de todos los jugadores/equipos cuyo nombre incluya “EST”).
 * HU10. Modificar la visualización de la app con un modo ALTO CONTRASTE.
 
+
 ## HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Carmen
 
 Para implementar toda la funcionalidad de mi práctica individual he tenido que:
@@ -956,7 +957,6 @@ Para implementar toda la funcionalidad de mi práctica individual he tenido que:
 -Modificaciones en ms-tiro_con_arco (anteriormente ms-plantilla en la práctica individual)
 * Añadir la carpeta ms-tiro_con_arco al proyecto.
 * Cambiar el nombre ms-plantilla por ms-tiro_con_arco tanto en package.json como en package-lock.json
-* Añadir la carpeta ms-tiro_con_arco al proyecto.
 
 -Modificaciones en assests
 * Subir las capturas de mi funcionalidad en img.
