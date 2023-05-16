@@ -461,11 +461,5 @@ gimnasia.procesarListaNombreOrdenado = function() {
     gimnasia.recupera(gimnasia.imprimeOrdenados,"/gimnasia/get_Atletas");
 }
 
-/**
- * Funcion que lista los nombres de los Atletas ordenados alfabéticamente
- */
-gimnasia.procesarListaNombreOrdenado = function() {
-    gimnasia.recupera(gimnasia.imprimeOrdenados,"/gimnasia/get_Atletas");
-}
 
 

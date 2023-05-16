@@ -216,14 +216,26 @@ general.generalTablaArqueros.actualizaNombres = function (arquero) {
  * @param {función} callBackFn Función a la que se llamará una vez recibidos los datos.
  */
 
-general.recupera = async function (callBackFn, direccion) {
-    let response = null
+general.recupera = async function (callBackFn) {
+    let response_tiro_con_arco = null
+    let response_balonmano = null
+    let response_motonautica = null
+    let response_futbol = null
+    let response_gimnasia = null
 
     // Intento conectar con el microservicio 
     try {
-        const url = Frontend.API_GATEWAY + direccion
-        response = await fetch(url)
+        const url_tiro_con_arco = Frontend.API_GATEWAY + "/tiro_con_arco/get_arqueros"
+        const url_balonmano = Frontend.API_GATEWAY + "/balonmano/get_lista_jugadores"
+        const url_motonautica = Frontend.API_GATEWAY + "/motonautica/get_pilotos"
+        const url_futbol = Frontend.API_GATEWAY + "/futbol/get_jugadores"
+        const url_gimnasia = Frontend.API_GATEWAY + "/gimnasia/get_Atletas"
 
+        response_tiro_con_arco = await fetch(url_tiro_con_arco)
+        response_balonmano = await fetch(url_balonmano)
+        response_motonautica = await fetch(url_motonautica)
+        response_futbol = await fetch(url_futbol)
+        response_gimnasia = await fetch(url_gimnasia)
     } catch (error) {
         alert("Error: No se han podido acceder al API Gateway")
         console.error(error)
@@ -232,9 +244,18 @@ general.recupera = async function (callBackFn, direccion) {
 
     // Muestro todos los arqueros que se han descargado
     let vectorArqueros = null
-    if (response) {
-        vectorArqueros  = await response.json()
-        callBackFn(vectorArqueros.data)
+    let vectorJugadores = null
+    let vectorPilotos = null
+    let vectorFutbolistas = null
+    let vectorAtletas = null
+
+    if (response_tiro_con_arco && response_balonmano && response_motonautica && response_futbol && response_gimnasia) {
+        vectorArqueros  = await response_tiro_con_arco.json()
+        vectorJugadores  = await response_balonmano.json()
+        vectorPilotos  = await response_motonautica.json()
+        vectorFutbolistas  = await response_futbol.json()
+        vectorAtletas  = await response_gimnasia.json()
+        callBackFn(vectorArqueros.data, vectorJugadores.data, vectorPilotos.data, vectorFutbolistas.data, vectorAtletas.data)
     }
 }
 
@@ -259,5 +280,5 @@ general.imprimeSoloNombres = function (vector) {
  * Función principal para recuperar solo los nombres de los arqueros desde el MS, y posteriormente imprimirlos
  */
 general.procesarListaNombre = function () {
-    general.recupera(general.imprimeSoloNombres,"/general/get_arqueros");
+    general.recupera(general.imprimeSoloNombres);
 }
