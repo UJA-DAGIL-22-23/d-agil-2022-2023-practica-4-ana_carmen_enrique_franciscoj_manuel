@@ -80,47 +80,10 @@ general.mostrarHome = function (datosDescargados) {
 }
 
 /**
- * Función principal para mostrar los datos enviados por la ruta "acerca de" de MS general
- */
-general.mostrarAcercaDe = function (datosDescargados) {
-    // Si no se ha proporcionado valor para datosDescargados
-    datosDescargados = datosDescargados || this.datosDescargadosNulos
-
-    // Si datos descargados NO es un objeto 
-    if (typeof datosDescargados !== "object") datosDescargados = this.datosDescargadosNulos
-
-    // Si datos descargados NO contiene los campos mensaje, autor, o email
-    if (typeof datosDescargados.mensaje === "undefined" ||
-        typeof datosDescargados.autor === "undefined" ||
-        typeof datosDescargados.email === "undefined" ||
-        typeof datosDescargados.fecha === "undefined"
-    ) datosDescargados = this.datosDescargadosNulos
-
-    const mensajeAMostrar = `<div>
-    <p>${datosDescargados.mensaje}</p>
-    <ul>
-        <li><b>Autor/a</b>: ${datosDescargados.autor}</li>
-        <li><b>E-mail</b>: ${datosDescargados.email}</li>
-        <li><b>Fecha</b>: ${datosDescargados.fecha}</li>
-    </ul>
-    </div>
-    `;
-    Frontend.Article.actualizar("general Acerca de", mensajeAMostrar)
-}
-
-
-/**
  * Función principal para responder al evento de elegir la opción "Home"
  */
 general.procesarHome = function () {
     this.descargarRuta("/general/", this.mostrarHome);
-}
-
-/**
- * Función principal para responder al evento de elegir la opción "Acerca de"
- */
-general.procesarAcercaDe = function () {
-    this.descargarRuta("/general/acercade", this.mostrarAcercaDe); //ODO
 }
 
 
@@ -128,7 +91,7 @@ general.procesarAcercaDe = function () {
 general.generalTablaJugadores = {}
 
 // Cabecera de la tabla para solo los nombres
-general.generalTablaJugadores.cabeceraNombres = `<table width="100%" class="listado_arqueros">
+general.generalTablaJugadores.cabeceraNombres = `<table width="100%" class="listado_general">
 <thead>
     <th width="15%">Nombre</th>
     <th width="15%">Apellido</th>
@@ -162,19 +125,108 @@ general.generalTablaJugadores.pie = `</tbody>
  * @param {general} arquero Objeto con los datos del arquero que queremos escribir en el TR
  * @returns La general del cuerpo de la tabla con los datos actualizados 
  */ 
-general.sustituyeTagsGeneral = function (tiroConArco, jugador) {
-    return tiroConArco
-        .replace(new RegExp(general.generalTags.NOMBRE, 'g'), jugador.data.nombre)
-        .replace(new RegExp(general.generalTags.APELLIDO, 'g'), jugador.data.apellido)
+general.sustituyeTagsArqueros = function (tagsArquero, arquero) {
+    return tagsArquero
+        .replace(new RegExp(general.generalTags.NOMBRE, 'g'), arquero.data.nombre)
+        .replace(new RegExp(general.generalTags.APELLIDO, 'g'), arquero.data.apellido)
         
 }
+
+/**
+ * Actualiza el cuerpo de la general deseada con los datos del arquero que se le pasa
+ * @param {String} general Cadena conteniendo HTML en la que se desea cambiar lso campos de la general por datos
+ * @param {general} arquero Objeto con los datos del arquero que queremos escribir en el TR
+ * @returns La general del cuerpo de la tabla con los datos actualizados 
+ */ 
+general.sustituyeTagsJugadores = function (tagsJugador, jugador) {
+    return tagsJugador
+        .replace(new RegExp(general.generalTags.NOMBRE, 'g'), jugador.data.name)
+        .replace(new RegExp(general.generalTags.APELLIDO, 'g'), jugador.data.surname)
+        
+}
+
+/**
+ * Actualiza el cuerpo de la general deseada con los datos del arquero que se le pasa
+ * @param {String} general Cadena conteniendo HTML en la que se desea cambiar lso campos de la general por datos
+ * @param {general} arquero Objeto con los datos del arquero que queremos escribir en el TR
+ * @returns La general del cuerpo de la tabla con los datos actualizados 
+ */ 
+general.sustituyeTagsPilotos = function (tagsPiloto, piloto) {
+    return tagsPiloto
+        .replace(new RegExp(general.generalTags.NOMBRE, 'g'), piloto.data.nombre)
+        .replace(new RegExp(general.generalTags.APELLIDO, 'g'), piloto.data.apellido)
+        
+}
+
+/**
+ * Actualiza el cuerpo de la general deseada con los datos del arquero que se le pasa
+ * @param {String} general Cadena conteniendo HTML en la que se desea cambiar lso campos de la general por datos
+ * @param {general} arquero Objeto con los datos del arquero que queremos escribir en el TR
+ * @returns La general del cuerpo de la tabla con los datos actualizados 
+ */ 
+general.sustituyeTagsFutbolistas = function (tagsFutbolista, futbolista) {
+    return tagsFutbolista
+        .replace(new RegExp(general.generalTags.NOMBRE, 'g'), futbolista.data.nombre)
+        .replace(new RegExp(general.generalTags.APELLIDO, 'g'), futbolista.data.apellidos)
+        
+}
+
+/**
+ * Actualiza el cuerpo de la general deseada con los datos del arquero que se le pasa
+ * @param {String} general Cadena conteniendo HTML en la que se desea cambiar lso campos de la general por datos
+ * @param {general} arquero Objeto con los datos del arquero que queremos escribir en el TR
+ * @returns La general del cuerpo de la tabla con los datos actualizados 
+ */ 
+general.sustituyeTagsAtletas = function (tagsAtleta, atleta) {
+    return tagsAtleta
+        .replace(new RegExp(general.generalTags.NOMBRE, 'g'), atleta.data.nombre)
+        .replace(new RegExp(general.generalTags.APELLIDO, 'g'), atleta.data.apellido)
+        
+}
+
 /**
  * Actualiza el cuerpo de la tabla con los datos del arquero que se le pasa
  * @param {arquero} arquero Objeto con los datos de la persona que queremos escribir el TR
  * @returns La general de cuerpo de la tabla con los datos actualizados
  */
-general.generalTablaJugadores.actualizaNombres = function (player) {
-    return general.sustituyeTagsGeneral(this.cuerpoNombres, player)
+general.generalTablaJugadores.actualizaNombresArqueros = function (player) {
+    return general.sustituyeTagsArqueros(this.cuerpoNombres, player)
+}
+
+/**
+ * Actualiza el cuerpo de la tabla con los datos del arquero que se le pasa
+ * @param {arquero} arquero Objeto con los datos de la persona que queremos escribir el TR
+ * @returns La general de cuerpo de la tabla con los datos actualizados
+ */
+general.generalTablaJugadores.actualizaNombresJugadores = function (player) {
+    return general.sustituyeTagsJugadores(this.cuerpoNombres, player)
+}
+
+/**
+ * Actualiza el cuerpo de la tabla con los datos del arquero que se le pasa
+ * @param {arquero} arquero Objeto con los datos de la persona que queremos escribir el TR
+ * @returns La general de cuerpo de la tabla con los datos actualizados
+ */
+general.generalTablaJugadores.actualizaNombresPilotos = function (player) {
+    return general.sustituyeTagsPilotos(this.cuerpoNombres, player)
+}
+
+/**
+ * Actualiza el cuerpo de la tabla con los datos del arquero que se le pasa
+ * @param {arquero} arquero Objeto con los datos de la persona que queremos escribir el TR
+ * @returns La general de cuerpo de la tabla con los datos actualizados
+ */
+general.generalTablaJugadores.actualizaNombresFutbolistas = function (player) {
+    return general.sustituyeTagsFutbolistas(this.cuerpoNombres, player)
+}
+
+/**
+ * Actualiza el cuerpo de la tabla con los datos del arquero que se le pasa
+ * @param {arquero} arquero Objeto con los datos de la persona que queremos escribir el TR
+ * @returns La general de cuerpo de la tabla con los datos actualizados
+ */
+general.generalTablaJugadores.actualizaNombresAtletas = function (player) {
+    return general.sustituyeTagsAtletas(this.cuerpoNombres, player)
 }
 
 /**
@@ -230,16 +282,20 @@ general.recupera = async function (callBackFn) {
  * que se recuperan de la BBDD
  * @param {vector_de_arqueros} vector 
  */
-general.imprimeSoloNombres = function (vector) {
+general.imprimeSoloNombres = function (vectorArqueros, vectorJugadores, vectorPilotos, vectorFutbolistas, vectorAtletas) {
     // Compongo el contenido que se va a mostrar dentro de la tabla
     let msj = general.generalTablaJugadores.cabeceraNombres
-    if (vector && Array.isArray(vector)) {
-        vector.forEach(e => msj += general.generalTablaJugadores.actualizaNombres(e));
+    if (Array.isArray(vectorArqueros) && Array.isArray(vectorJugadores) && Array.isArray(vectorPilotos) && Array.isArray(vectorFutbolistas) && Array.isArray(vectorAtletas)) {
+        vectorArqueros.forEach(e => msj += general.generalTablaJugadores.actualizaNombresArqueros(e));
+        vectorJugadores.forEach(e => msj += general.generalTablaJugadores.actualizaNombresJugadores(e));
+        vectorPilotos.forEach(e => msj += general.generalTablaJugadores.actualizaNombresPilotos(e));
+        vectorFutbolistas.forEach(e => msj += general.generalTablaJugadores.actualizaNombresFutbolistas(e));
+        vectorAtletas.forEach(e => msj += general.generalTablaJugadores.actualizaNombresAtletas(e));
     }
     msj += general.generalTablaJugadores.pie
 
     // Borrar toda la información del Article y la sustituyo por la que ma interesa
-    Frontend.Article.actualizar("Listado de los nombres de todos los arqueros", msj)
+    Frontend.Article.actualizar("Listado de los nombres de todos los jugadores de todos los deportes", msj)
 }
 
 /**
