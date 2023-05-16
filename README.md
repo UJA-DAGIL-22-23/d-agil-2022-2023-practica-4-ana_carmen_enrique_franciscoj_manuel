@@ -943,6 +943,7 @@ En esta imagen queda reflejado dicho proceso.
 
 ## HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Carmen
 Implementada por Carmen Huesa Guardiola
+
 Para implementar toda la funcionalidad de mi práctica individual he tenido que:
 
 -Modificaciones en front-end
@@ -1087,6 +1088,42 @@ Finalmente está la captura de trello en el instante en el que esta HU pasó de 
 <img src=./assets\img\HU04-TrelloDone.png>
 
 ## HU05. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Enrique
+
+Implementada por Enrique Fernández Fernández
+
+Para implementar la HU05, he tenido que implementar mi ms-plantilla de la práctica anterior, para ello he realizado las siguientes moficicaciones:
+
+- Cambios en front-end
+  * Añadir los ficheros ms-gimnasia.js y ms-gimnasia-spec.js en la carpeta js.
+  * Cambiar el nombre de las funciones de ms-gimnasia.js para que al ser llamadas no cause ningún problema con las llamadas de los otros microservicios. Además la Plantilla ahora se llama gimnasia.
+  * Cambiar los spec en ms-gimnasia-spec.js para adaptarse y reflejar los cambios anteriores.
+  * Añadido el fichero ms-gimnasia.css.
+  * Modificar los contenidos de ms-gimnasia.css para que los colores sean diferentes a los del resto de microservicios, en mi caso he utilizado el color amarillo.
+  * Cargar los ficheros ms-gimnasia.css, ms-gimnasia.js y ms-gimnasia-spec.js en index.html.
+  * Modificada la presentación del microservicio de gimnasia en index.html, incluyendo los cambios en el nombre de Plantilla a gimnasia y de las variables para que tengan nombres únicos que no coincidan con el resto de microservicios.
+
+- Modificaciones en api-gateway
+  * Carmen cambió el número de la ruta de este microservicio mientras realizaba el cambio del suyo
+
+- Modificaciones en ms-gimnasia (anteriormente ms-plantilla en la práctica individual)
+  * Añadir la carpeta ms-gimnasia al proyecto.
+  * Cambiar el nombre ms-plantilla por ms-gimnasia tanto en package.json como en package-lock.json
+  * Añadir la carpeta ms-gimnasia al proyecto.
+
+- Modificaciones en assests
+  * Capturas subidas de la funcionalidad y el trello.
+
+En estas capturas se muestran la funcionalidad de este microservicio. 
+
+La primera captura muestra la barra de búsqueda e la que se probaran las distintas funcionalidades: 
+<img src=./assets\img\HU_05_tabla.png>
+La segunda captura muestra la funcionalidad de la lista ordenada:
+<img src=./assets\img\HU_05_lista_ordenada.png>
+La tercera captura muestra la funcionalidad de la lista completa:
+<img src=./assets\img\HU_05_lista_completa.png>
+Finalmente está la captura de trello en el instante en el que esta HU pasó de IN PROCESS a DONE:
+<img src=./assets\img\HU_05_terminada_Trello.png>
+
 ## HU06. Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”
 ## HU07. Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app
 ## HU08. Ver un listado solo con los nombres de todos los jugadores/equipos ordenados alfabéticamente de todos los deportes incluidos en la app
