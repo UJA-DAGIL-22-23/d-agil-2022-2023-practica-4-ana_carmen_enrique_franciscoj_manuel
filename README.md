@@ -935,6 +935,48 @@
 * HU10. Modificar la visualización de la app con un modo ALTO CONTRASTE.
 
 ## HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Carmen
+
+Para implementar toda la funcionalidad de mi práctica individual he tenido que:
+
+-Modificaciones en front-end
+* Añadir la carpeta front-end de mi práctica indivual al repositorio para realizar las modificaciones a partir de ella.
+* Añadir mis ficheros ms-tiro_con_arco.js y ms-tiro_con_arco-spec.js en la carpeta js.
+* Cambiar el nombre de todas las funciones del ms-tiro_con_arco.js para que al llamarlas en el index.html no provoque ningún problema con las llamadas de mi equipo.
+* Cambiar el nombre de las definiciones de unos parametros en ms-tiro_con_arco-spec.js para que no genere problemas con los de mi equipo.
+* Modificar el fichero ms-plantilla.css de la carpeta css para llamarlo ms-tiro_con_arco.css.
+* En ms-tiro_con_arco.css crear tablas de color morado para mejorar la visualización mi funcionalidad, tanto de los botones como de las listas resultantes de pulsarlos.
+* Cargar mis ficheros ms-tiro_con_arco.css, ms-tiro_con_arco.js y ms-tiro_con_arco-spec.js en index.html.
+* Modificar la presentación de mi microservicio en index.html.
+
+-Modificaciones en api-gateway
+* Añadir la carpeta api-gateway de mi práctica indivual al repositorio para realizar las modificaciones a partir de ella.
+* Añadir a proxy-routes.js mi ruta.
+* Añadir a proxy-routes.js las rutas de mis compañeros de equipo, con un puerto distinto a cada uno.
+
+-Modificaciones en ms-tiro_con_arco (anteriormente ms-plantilla en la práctica individual)
+* Añadir la carpeta ms-tiro_con_arco al proyecto.
+* Cambiar el nombre ms-plantilla por ms-tiro_con_arco tanto en package.json como en package-lock.json
+* Añadir la carpeta ms-tiro_con_arco al proyecto.
+
+-Modificaciones en assests
+* Subir las capturas de mi funcionalidad en img.
+
+La siguiente captura muestra el estado de Trello una vez terminada la historia de usuario.
+
+![Captura_HU01_trello](./assets\img\HU01trello.png)
+
+
+En estas capturas muestro la funcionalidad de mi microservicio. La primera muestra los distintos botones tanto para mostras las listas como los de búsqueda.
+
+![Captura_HU01_terminada](./assets\img\HU01terminada.png)
+
+
+Esta segunda muestra el resultado de hacer una búsqueda por algún criterio, siendo el criterio por el que buscar de entre los arqueros que tengan nacionalidad española.
+
+![Captura_HU01_terminada_datos](./assets\img\HU01terminadadatos.png)
+
+
+
 ## HU02. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Fran
 ## HU03. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ana
 ## HU04. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Manuel
