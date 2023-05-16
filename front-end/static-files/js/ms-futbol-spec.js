@@ -170,6 +170,54 @@ describe("futbol.imprimeorden: ", function() {
         })
 })
 
+describe("futbol.sustituyeTags: ", function() {
+    it("Sustituye correctamente los tags",
+        function() {
+            let vecJugador = {
+                ref: {
+                    "@ref": {
+                        id: "1"
+                    }
+                },
+                data: {
+                        nombre: "Leo",
+                        apellidos: "Messi",
+                        fnac: {
+                          dia: 21,
+                          mes: 7,
+                          anio: 1987
+                        },
+                        equipos: ["F.C Barcelona", "Paris Saint-Germain F.C."],
+                        goles: 701
+                    
+                }
+            }
+            let plantillaTagsSpec = {
+                "nombre": "### nombre ###",
+                "apellidos" : "### apellidos ###",
+                "fnac": "### fnac ###",
+                "equipos": "### equipos ###",
+                "goles": "### goles ###"
+                }
+
+        let vecFinal = `
+            <tr title="${plantillaTagsSpec.nombre}">
+            <td>${plantillaTagsSpec.nombre}</td>
+            <td>${plantillaTagsSpec.apellidos}</td>
+            <td>${plantillaTagsSpec.fnac}</td>
+            <td>${plantillaTagsSpec["equipos"]}</td>
+            <td>${plantillaTagsSpec.goles}</td>
+        </tr>`;
+
+        let msj = futbol.sustituyeTodosTags(vecFinal, vecJugador);
+        expect(msj.includes("Leo")).toBeTrue();
+        expect(msj.includes("Messi")).toBeTrue();
+        expect(msj.includes("21/7/1987")).toBeTrue();
+        expect(msj.includes("F.C Barcelona", "Paris Saint-Germain F.C.")).toBeTrue();
+        expect(msj.includes("701")).toBeTrue();
+        })
+})
+
 /*
 IMPORTANTE
 ==========
