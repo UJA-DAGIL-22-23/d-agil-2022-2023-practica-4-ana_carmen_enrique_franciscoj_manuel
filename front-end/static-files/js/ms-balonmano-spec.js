@@ -251,9 +251,9 @@ describe("BalonmanoJugador.sustituyeTags: ", function() {
         expect(msj.includes("Sommer")).toBeTrue();
         expect(msj.includes("22/9/1921")).toBeTrue();
         expect(msj.includes("22/9/1921")).toBeTrue();
-        expect(msj.includes("1998,1999,2000,2001,2002,2003,2004")).toBeTrue;
-        expect(msj.includes("2,5,11,7,3,4,14")).toBeTrue;
-        expect(msj.includes("true")).toBeTrue;
+        expect(msj.includes("1998,1999,2000,2001,2002,2003,2004")).toBeTrue();
+        expect(msj.includes("2,5,11,7,3,4,14")).toBeTrue();
+        expect(msj.includes("true")).toBeTrue();
 
         })
 })
