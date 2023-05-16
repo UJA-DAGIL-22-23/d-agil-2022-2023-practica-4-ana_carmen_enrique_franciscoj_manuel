@@ -989,7 +989,7 @@ Implementada por Francisco Javier Gálvez Marín
 Para implementar la HU 02, he tenido que implementar mi ms-plantilla de la práctica anterior, para ello he realizado las siguientes moficicaciones:
 
 - Cambios en front-end
-  * Añadir los ficheros ms-balonmano.js y ms-balonmano.js en la carpeta js.
+  * Añadir los ficheros ms-balonmano.js y ms-balonmano-spec.js en la carpeta js.
   * Cambiar el nombre de todas las funciones de ms-balonmano.js para que cuando sean llamadas en index.html no cause conflicto ningún problema con las llamadas de los otros microservicios. Además Plantilla ahora se llama BalonmanoJugador.
   * Cambiar los spec en ms-balonmano-spec.js para adaptarse y reflejar los cambios anteriores.
   * Añadido el fichero ms-balonmano.css.
@@ -1022,7 +1022,7 @@ Implementada por Ana León Pulido
 Para implementar la HU03, he tenido que implementar mi ms-plantilla de la práctica anterior, para ello he realizado las siguientes moficicaciones:
 
 - Cambios en front-end
-  * Añadir los ficheros ms-motonautica.js y ms-motonautica.js en la carpeta js.
+  * Añadir los ficheros ms-motonautica.js y ms-motonautica-spec.js en la carpeta js.
   * Cambiar el nombre de las funciones de ms-motonautica.js para que al ser llamadas no cause ningún problema con las llamadas de los otros microservicios. Además la Plantilla ahora se llama motonautica.
   * Cambiar los spec en ms-motonautica-spec.js para adaptarse y reflejar los cambios anteriores.
   * Añadido el fichero ms-motonautica.css.
@@ -1051,6 +1051,41 @@ Finalmente está la captura de trello en el instante en el que esta HU pasó de 
 <img src=./assets\img\HU03trello.png>
 
 ## HU04. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Manuel
+Implementada por Manuel Lara Torres
+
+Para implementar la HU04, he tenido que implementar mi ms-plantilla de la práctica anterior, para ello he realizado las siguientes moficicaciones:
+
+- Cambios en front-end
+  * Añadir los ficheros ms-futbol.js y ms-futbol-spec.js en la carpeta js.
+  * Cambiar el nombre de las funciones de ms-futbol.js para que al ser llamadas no cause ningún problema con las llamadas de los otros microservicios. Además la Plantilla ahora se llama futbol.
+  * Cambiar los spec en ms-futbol-spec.js para adaptarse y reflejar los cambios anteriores.
+  * Añadido el fichero ms-futbol.css.
+  * Modificar los contenidos de ms-futbol.css para que los colores sean diferentes a los del resto de microservicios, en mi caso he utilizado el color naranja.
+  * Cargar los ficheros ms-futbol.css, ms-futbol.js y ms-futbol-spec.js en index.html.
+  * Modificada la presentación del microservicio de futbol en index.html, incluyendo los cambios en el nombre de Plantilla a futbol y de las variables para que tengan nombres únicos que no coincidan con el resto de microservicios.
+
+- Modificaciones en api-gateway
+  * Carmen cambió el número de la ruta de este microservicio mientras realizaba el cambio del suyo
+
+- Modificaciones en ms-futbol (anteriormente ms-plantilla en la práctica individual)
+  * Añadir la carpeta ms-futbol al proyecto.
+  * Cambiar el nombre ms-plantilla por ms-futbol tanto en package.json como en package-lock.json
+  * Añadir la carpeta ms-futbol al proyecto.
+
+- Modificaciones en assests
+  * Capturas subidas de la funcionalidad y el trello.
+
+En estas capturas se muestran la funcionalidad de este microservicio. 
+
+La primera captura muestra la barra de búsqueda e la que se probaran las distintas funcionalidades: 
+<img src=./assets\img\HU04-Tabla.PNG>
+La segunda captura muestra una funcionalidad de listado siendo probada, todas funcionan:
+<img src=./assets\img\HU04-JugadoresCompletaEjemplo.PNG>
+La segunda captura muestra una funcionalidad de busqueda siendo probada, todas funcionan:
+<img src=./assets\img\HU04-BusquedaCriterioEjemplo.PNG>
+Finalmente está la captura de trello en el instante en el que esta HU pasó de IN PROCESS a DONE:
+<img src=./assets\img\HU04-TrelloDone.png>
+
 ## HU05. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Enrique
 ## HU06. Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”
 ## HU07. Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app
