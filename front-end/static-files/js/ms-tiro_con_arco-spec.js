@@ -157,7 +157,58 @@ describe("tiro_con_arco.imprimeSoloNombres: ", function() {
     expect(TiroConArcoContenido.querySelector('tbody').innerHTML).toBe('')
 })
 })
+describe("BalonmanoJugador.sustituyeTags: ", function() {
+    it("Sustituye correctamente los tags",
+        function() {
+            let vecJugador = {
+                data: {
+                    "nombre": "Carmen",
+                    "apellido": "Nohuesa",
+                    "id": "77670913Y",
+                    "nacionalidad": "Española",
+                    "edad": 24,
+                    "disparo": {
+                      "tipo_de_arco": "Arco recurvo",
+                      "distancia_de_tiro": "30 metros",
+                      "tipo_de_flecha": "flecha de madera"
+                    },
+                    "puntuaciones_de_la_tanda": [5, 5, 7, 3, 8, 6]
+                }
+            }
+            let plantillaTagsSpec = {
+                "NOMBRE": "### NOMBRE ###",
+                "APELLIDO": "### APELLIDO ###",
+                "ID": "### ID ###",
+                "NACIONALIDAD": "### NACIONALIDAD ###",
+                "EDAD": "### EDAD ###",
+                "DISPARO": "### DISPARO ###",
+                "PUNTUACIONES_DE_LA_TANDA": "### PUNTUACIONES DE LA TANDA ###"
+                }
 
+        let vecFinal = `
+        <tr title="${plantillaTagsSpec.NOMBRE}">
+            <td>${plantillaTagsSpec.ID}</td>
+            <td>${plantillaTagsSpec.NOMBRE}</td>
+            <td>${plantillaTagsSpec.APELLIDO}</td>
+            <td>${plantillaTagsSpec.NACIONALIDAD}</td>
+            <td>${plantillaTagsSpec.EDAD}</td>
+            <td>${plantillaTagsSpec.DISPARO}</td>
+            <td>${plantillaTagsSpec["PUNTUACIONES_DE_LA_TANDA"]}</td>
+           
+        </tr>
+        `;
+
+        let msj = tiro_con_arco.sustituyeTags(vecFinal, vecJugador);
+        expect(msj.includes("Carmen")).toBeTrue();
+        expect(msj.includes("Nohuesa")).toBeTrue();
+        expect(msj.includes("77670913Y")).toBeTrue();
+        expect(msj.includes("Española")).toBeTrue();
+        expect(msj.includes("24")).toBeTrue();
+        expect(msj.includes("Arco recurvo, 30 metros, flecha de madera")).toBeTrue();
+        expect(msj.includes("5,5,7,3,8,6")).toBeTrue();
+
+        })
+})
 /*
 IMPORTANTE
 ==========
