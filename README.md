@@ -1004,7 +1004,6 @@ Para implementar la HU 02, he tenido que implementar mi ms-plantilla de la prác
 - Modificaciones en ms-balonmano (anteriormente ms-plantilla en la práctica individual)
   * Añadir la carpeta ms-balonmano al proyecto.
   * Cambiar el nombre ms-plantilla por ms-balonmano tanto en package.json como en package-lock.json
-  * Añadir la carpeta ms-balonmano al proyecto.
 
 - Modificaciones en assests
   * Capturas subidas de la funcionalidad y el trello.
@@ -1037,7 +1036,6 @@ Para implementar la HU03, he tenido que implementar mi ms-plantilla de la práct
 - Modificaciones en ms-motonautica (anteriormente ms-plantilla en la práctica individual)
   * Añadir la carpeta ms-motonautica al proyecto.
   * Cambiar el nombre ms-plantilla por ms-motonautica tanto en package.json como en package-lock.json
-  * Añadir la carpeta ms-motonautica al proyecto.
 
 - Modificaciones en assests
   * Capturas subidas de la funcionalidad y el trello.
@@ -1071,7 +1069,6 @@ Para implementar la HU04, he tenido que implementar mi ms-plantilla de la práct
 - Modificaciones en ms-futbol (anteriormente ms-plantilla en la práctica individual)
   * Añadir la carpeta ms-futbol al proyecto.
   * Cambiar el nombre ms-plantilla por ms-futbol tanto en package.json como en package-lock.json
-  * Añadir la carpeta ms-futbol al proyecto.
 
 - Modificaciones en assests
   * Capturas subidas de la funcionalidad y el trello.
@@ -1079,11 +1076,11 @@ Para implementar la HU04, he tenido que implementar mi ms-plantilla de la práct
 En estas capturas se muestran la funcionalidad de este microservicio. 
 
 La primera captura muestra la barra de búsqueda e la que se probaran las distintas funcionalidades: 
-<img src=./assets\img\HU04-Tabla.PNG>
+<img src=./assets\img\HU04-Tabla.png>
 La segunda captura muestra una funcionalidad de listado siendo probada, todas funcionan:
-<img src=./assets\img\HU04-JugadoresCompletaEjemplo.PNG>
+<img src=./assets\img\HU04-JugadoresCompletaEjemplo.png>
 La segunda captura muestra una funcionalidad de busqueda siendo probada, todas funcionan:
-<img src=./assets\img\HU04-BusquedaCriterioEjemplo.PNG>
+<img src=./assets\img\HU04-BusquedaCriterioEjemplo.png>
 Finalmente está la captura de trello en el instante en el que esta HU pasó de IN PROCESS a DONE:
 <img src=./assets\img\HU04-TrelloDone.png>
 
@@ -1108,7 +1105,6 @@ Para implementar la HU05, he tenido que implementar mi ms-plantilla de la práct
 - Modificaciones en ms-gimnasia (anteriormente ms-plantilla en la práctica individual)
   * Añadir la carpeta ms-gimnasia al proyecto.
   * Cambiar el nombre ms-plantilla por ms-gimnasia tanto en package.json como en package-lock.json
-  * Añadir la carpeta ms-gimnasia al proyecto.
 
 - Modificaciones en assests
   * Capturas subidas de la funcionalidad y el trello.
