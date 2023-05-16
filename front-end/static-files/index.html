@@ -202,21 +202,21 @@
                     <tr>
                         <td>
                             <a href="javascript:gimnasia.procesarListaNombre()" class="opcion-principal"
-                            title="Llama a la ruta /get_jugadores del MS gimnasia">Lista de nombres de jugadores</a>
+                            title="Llama a la ruta /get_jugadores del MS gimnasia">Lista de Atletas</a>
                             <a href="javascript:gimnasia.procesarListaEntera()" class="opcion-principal"
-                            title="Llama a la ruta /get_jugadores_completa del MS gimnasia">Lista de jugadores completa</a>
+                            title="Llama a la ruta /get_jugadores_completa del MS gimnasia">Lista de atletas completa</a>
                             <a href="javascript:gimnasia.procesarListaNombreOrdenado()" class="opcion-principal"
-                            title="Muestra los jugadores ordenados">Lista de jugadores ordenada</a>
+                            title="Muestra los jugadores ordenados">Lista de atletas ordenada</a>
                         </td>
                          <td>
                             <input type="text" placeholder="Nombre" id="criterio-g1">
                             <input type="text" placeholder="Apellido" id="criterio-g2">
                             <input type="text" placeholder="edad"id="criterio-g3">
-                            <button class="btn" onclick="gimnasia.buscaCriterio(document.getElementById('criterio-g1').value, document.getElementById('criterio-g2').value, document.getElementById('criterio-g3').value, true)">Buscar por algún criterio</button>
-                            <button class="btn" onclick="gimnasia.buscaCriterio(document.getElementById('criterio-g1').value, document.getElementById('criterio-g2').value, document.getElementById('criterio-g3').value, false)">Buscar todos los criterios</button>
+                            <button class="btn" onclick="gimnasia.procesarListaCriteriosPrecisa(document.getElementById('criterio-g1').value, document.getElementById('criterio-g2').value, document.getElementById('criterio-g3').value, true)">Buscar todos los criterios</button>
+                            <button class="btn" onclick="gimnasia.procesarListaCriteriosPrecisa(document.getElementById('criterio-g1').value, document.getElementById('criterio-g2').value, document.getElementById('criterio-g3').value, false)">Buscar por algún criterio</button>
                             <div></div>
                             <input type="text" placeholder="nombre" id="busqueda_gimnasia">
-                            <button class="btn" onclick="gimnasia.busquedaporNombre(document.getElementById('busqueda_gimnasia').value)">Buscar por nombre</button>
+                            <button class="btn" onclick="gimnasia.procesarListaBusquedaNombre(document.getElementById('busqueda_gimnasia').value)">Buscar por nombre</button>
                         </td>
                     </tr>
                 </tbody>
