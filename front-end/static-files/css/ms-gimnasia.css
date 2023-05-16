@@ -46,7 +46,7 @@ table.Aplicacion-atletas {
 
 table.listado-atletas {
     width: 100%;
-    border: 1px solid rgba(11, 218, 255, 0.534);
+    border: 1px solid rgba(16, 107, 182, 0.589);
 }
 
 table.listado-atletas thead th,
@@ -70,13 +70,13 @@ table.listado-atletas tbody td {
 table.listado-atletas tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(0, 0, 100, 0.1)
+    background-color: rgba(11, 218, 255, 0.534);
 }
  
 
 table.listado-atletas-completo {
     width: 100%;
-    border: 1px solid rgba(16, 107, 182, 0.589);
+    border: 1px solid rgba(11, 218, 255, 0.534);
 }
 
 table.listado-atletas-completo thead th {
