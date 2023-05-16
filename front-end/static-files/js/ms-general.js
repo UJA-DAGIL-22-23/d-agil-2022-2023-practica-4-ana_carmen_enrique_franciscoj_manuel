@@ -18,27 +18,17 @@ general.datosDescargadosNulos = {
     fecha: ""
 }
 
-// general de datosArqueros vacíos
-general.datosArquerosNulos = {
+// general de datosGenerales vacíos
+general.datosGeneralesNulos = {
     nombre: "undefined",
-    apellido: "undefined",
-    id: "undefined",
-    nacionalidad: "undefined",
-    edad: "undefined",
-    disparo: "undefined",
-    puntuaciones_de_la_tanda: "undefined"
+    apellido: "undefined"
 }
 
 // general de tags 
-general.arquerosTags = {
+general.generalTags = {
 
     "NOMBRE": "### NOMBRE ###",
-    "APELLIDO": "### APELLIDO ###",
-    "ID": "### ID ###",
-    "NACIONALIDAD": "### NACIONALIDAD ###",
-    "EDAD": "### EDAD ###",
-    "DISPARO": "### DISPARO ###",
-    "PUNTUACIONES_DE_LA_TANDA": "### PUNTUACIONES DE LA TANDA ###"
+    "APELLIDO": "### APELLIDO ###"
   
 }
 
@@ -130,58 +120,39 @@ general.procesarHome = function () {
  * Función principal para responder al evento de elegir la opción "Acerca de"
  */
 general.procesarAcercaDe = function () {
-    this.descargarRuta("/general/acercade", this.mostrarAcercaDe);
+    this.descargarRuta("/general/acercade", this.mostrarAcercaDe); //ODO
 }
 
 
 // general para poner los datos de varios arqueros dentro de una tabla
-general.generalTablaArqueros = {}
+general.generalTablaJugadores = {}
 
 // Cabecera de la tabla para solo los nombres
-general.generalTablaArqueros.cabeceraNombres = `<table width="100%" class="listado_arqueros">
+general.generalTablaJugadores.cabeceraNombres = `<table width="100%" class="listado_arqueros">
 <thead>
     <th width="15%">Nombre</th>
     <th width="15%">Apellido</th>
 </thead>
 <tbody>`;
 
-// Cabecera de la tabla para todos los datos
-general.generalTablaArqueros.cabeceraCompleta = `<table width="100%" class="listado_arqueros_completo">
-<thead>
-    <th >Id</th>
-    <th >Nombre</th>
-    <th >Apellido</th>
-    <th >Nacionalidad</th>
-    <th >Edad</th>
-    <th >Disparo</th>
-    <th >Puntuaciones de la Tanda</th>
-
-</thead>
-<tbody>`;
-
 //Elementos RT que muestra los nombre y apellido de un Arquero
-general.generalTablaArqueros.cuerpoNombres = `
-<tr title="${general.arquerosTags.NOMBRE}">
+general.generalTablaJugadores.cuerpoNombres = `
+<tr title="${general.generalTags.NOMBRE}">
     
-    <td>${general.arquerosTags.NOMBRE}</td>
-    <td>${general.arquerosTags.APELLIDO}</td>
+    <td>${general.generalTags.NOMBRE}</td>
+    <td>${general.generalTags.APELLIDO}</td>
 </tr>
 `;
 //Elementos RT que muestra los datos de un Arquero
-general.generalTablaArqueros.cuerpoCompleto = `
-<tr title="${general.arquerosTags.NOMBRE}">
-    <td>${general.arquerosTags.ID}</td>
-    <td>${general.arquerosTags.NOMBRE}</td>
-    <td>${general.arquerosTags.APELLIDO}</td>
-    <td>${general.arquerosTags.NACIONALIDAD}</td>
-    <td>${general.arquerosTags.EDAD}</td>
-    <td>${general.arquerosTags.DISPARO}</td>
-    <td>${general.arquerosTags["PUNTUACIONES_DE_LA_TANDA"]}</td>
+general.generalTablaJugadores.cuerpoCompleto = `
+<tr title="${general.generalTags.NOMBRE}">
+    <td>${general.generalTags.NOMBRE}</td>
+    <td>${general.generalTags.APELLIDO}</td>
    
 </tr>
 `;
 //pie de la tabla 
-general.generalTablaArqueros.pie = `</tbody>
+general.generalTablaJugadores.pie = `</tbody>
 </table>
 `;
 
@@ -191,15 +162,10 @@ general.generalTablaArqueros.pie = `</tbody>
  * @param {general} arquero Objeto con los datos del arquero que queremos escribir en el TR
  * @returns La general del cuerpo de la tabla con los datos actualizados 
  */ 
-general.sustituyeTagsArqueros = function (tiroConArco, arquero) {
+general.sustituyeTagsGeneral = function (tiroConArco, jugador) {
     return tiroConArco
-        .replace(new RegExp(general.arquerosTags.ID, 'g'), arquero.data.id)
-        .replace(new RegExp(general.arquerosTags.NOMBRE, 'g'), arquero.data.nombre)
-        .replace(new RegExp(general.arquerosTags.APELLIDO, 'g'), arquero.data.apellido)
-        .replace(new RegExp(general.arquerosTags.NACIONALIDAD, 'g'), arquero.data.nacionalidad)
-        .replace(new RegExp(general.arquerosTags.EDAD, 'g'), arquero.data.edad)
-        .replace(new RegExp(general.arquerosTags.DISPARO, 'g'), arquero.data.disparo.tipo_de_arco +", "+arquero.data.disparo.distancia_de_tiro+", "+arquero.data.disparo.tipo_de_flecha)
-        .replace(new RegExp(general.arquerosTags["PUNTUACIONES_DE_LA_TANDA"], 'g'), arquero.data.puntuaciones_de_la_tanda)
+        .replace(new RegExp(general.generalTags.NOMBRE, 'g'), jugador.data.nombre)
+        .replace(new RegExp(general.generalTags.APELLIDO, 'g'), jugador.data.apellido)
         
 }
 /**
@@ -207,8 +173,8 @@ general.sustituyeTagsArqueros = function (tiroConArco, arquero) {
  * @param {arquero} arquero Objeto con los datos de la persona que queremos escribir el TR
  * @returns La general de cuerpo de la tabla con los datos actualizados
  */
-general.generalTablaArqueros.actualizaNombres = function (arquero) {
-    return general.sustituyeTagsArqueros(this.cuerpoNombres, arquero)
+general.generalTablaJugadores.actualizaNombres = function (player) {
+    return general.sustituyeTagsGeneral(this.cuerpoNombres, player)
 }
 
 /**
@@ -242,7 +208,7 @@ general.recupera = async function (callBackFn) {
         //throw error
     }
 
-    // Muestro todos los arqueros que se han descargado
+
     let vectorArqueros = null
     let vectorJugadores = null
     let vectorPilotos = null
@@ -266,11 +232,11 @@ general.recupera = async function (callBackFn) {
  */
 general.imprimeSoloNombres = function (vector) {
     // Compongo el contenido que se va a mostrar dentro de la tabla
-    let msj = general.generalTablaArqueros.cabeceraNombres
+    let msj = general.generalTablaJugadores.cabeceraNombres
     if (vector && Array.isArray(vector)) {
-        vector.forEach(e => msj += general.generalTablaArqueros.actualizaNombres(e));
+        vector.forEach(e => msj += general.generalTablaJugadores.actualizaNombres(e));
     }
-    msj += general.generalTablaArqueros.pie
+    msj += general.generalTablaJugadores.pie
 
     // Borrar toda la información del Article y la sustituyo por la que ma interesa
     Frontend.Article.actualizar("Listado de los nombres de todos los arqueros", msj)
