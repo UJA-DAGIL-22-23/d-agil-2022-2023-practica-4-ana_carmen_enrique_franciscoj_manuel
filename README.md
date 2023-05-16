@@ -963,17 +963,17 @@ Para implementar toda la funcionalidad de mi práctica individual he tenido que:
 
 La siguiente captura muestra el estado de Trello una vez terminada la historia de usuario.
 
-![Captura_HU01_trello](./assets\img\HU01trello.png)
+<img src=./assets\img\HU01trello.png>
 
 
 En estas capturas muestro la funcionalidad de mi microservicio. La primera muestra los distintos botones tanto para mostras las listas como los de búsqueda.
 
-![Captura_HU01_terminada](./assets\img\HU01terminada.png)
+<img src=./assets\img\HU01terminada.png>
 
 
 Esta segunda muestra el resultado de hacer una búsqueda por algún criterio, siendo el criterio por el que buscar de entre los arqueros que tengan nacionalidad española.
 
-![Captura_HU01_terminada_datos](./assets\img\HU01terminadadatos.png)
+<img src=./assets\img\HU01terminadadatos.png>
 
 
 
