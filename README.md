@@ -1007,7 +1007,7 @@ búsqueda dentro de la nueva tabla mientras que la segunda captura muestra la li
 balonmano ordenados alfabéticamente como ejemplo de que las diferentes funcionalidades operan correctamente. 
 Finalmente está la captura de trello en el instante en el que esta HU pasó de IN PROCESS a DONE
 ![Captura_HU_02_tabla](./assets/img/HU02_funcional_tabla.png)
-![Captura_HU_02_ejemplo](./assets/img/HU02_funcional_ejemplo.png)
+![Captura_HU_02_ejemplo1](./assets/img/HU02_funcional_ejemplo1.png)
 ![Captura_HU_02_trello](./assets/img/CapturaTrello_HU02_final.png)
 
 ## HU03. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ana
