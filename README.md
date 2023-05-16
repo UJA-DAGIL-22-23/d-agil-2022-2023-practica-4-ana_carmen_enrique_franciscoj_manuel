@@ -919,8 +919,14 @@
 }
 ```
 
-
-
+# *Capturas de Trello al inicio:*
+En PRODUCT BACKLOG se encuentran todas las historias de usuario que se van a implementar. Estas pasan al sprint backlog al inicio del sprint.
+<br></br>
+<img src=./assets\img\trelloInicio.png>
+<br></br>
+En esta imagen queda reflejado dicho proceso.
+<br></br>
+<img src=./assets\img\trelloInicioSprint.png>
 
 # *Historias de usuario elegidas a implementar:* 
 * HU01. Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Carmen.
