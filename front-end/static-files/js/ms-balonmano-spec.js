@@ -200,6 +200,66 @@ describe("BalonmanoJugador.muestraOrdenado: ", function() {
 })
 
 
+describe("BalonmanoJugador.sustituyeTags: ", function() {
+    it("Sustituye correctamente los tags",
+        function() {
+            let vecJugador = {
+                ref: {
+                    "@ref": {
+                        id: "1"
+                    }
+                },
+                data: {
+                    playerId: 1,
+                    name: "Arno",
+                    surname: "Sommer",
+                    dateBirth: {
+                        day: 22,
+                        month: 9,
+                        year: 1921
+                    },
+                    seasonsPlayed: [1998, 1999, 2000, 2001, 2002, 2003, 2004],
+                    goalSeason: [2, 5, 11, 7, 3, 4, 14],
+                    disqualified: true
+                }
+            }
+            let plantillaTagsSpec = {
+                    "ID": "### ID ###",
+                    "PLAYERID": "### PLAYERID ###",
+                    "NAME": "### NAME ###",
+                    "SURNAME": "### SURNAME ###",
+                    "DATE_BIRTH": "### DATE_BIRTH ###",
+                    "SEASONS_PLAYED": "### SEASONS_PLAYED ###",
+                    "GOAL_SEASON": "### GOAL_SEASON ###",
+                    "DISQUALIFIED": "### DISQUALIFIED ###"
+                }
+
+        let vecFinal = `
+            <tr title="${plantillaTagsSpec.NAME}">
+            <td>${plantillaTagsSpec.PLAYERID}</td>
+            <td>${plantillaTagsSpec.NAME}</td>
+            <td>${plantillaTagsSpec.SURNAME}</td>
+            <td>${plantillaTagsSpec.DATE_BIRTH}</td>
+            <td>${plantillaTagsSpec["SEASONS_PLAYED"]}</td>
+            <td>${plantillaTagsSpec["GOAL_SEASON"]}</td>
+            <td>${plantillaTagsSpec.DISQUALIFIED}</td>
+        </tr>`;
+
+        let msj = BalonmanoJugador.sustituyeTags(vecFinal, vecJugador);
+        expect(msj.includes("1")).toBeTrue();
+        expect(msj.includes("Arno")).toBeTrue();
+        expect(msj.includes("Sommer")).toBeTrue();
+        expect(msj.includes("22/9/1921")).toBeTrue();
+        expect(msj.includes("22/9/1921")).toBeTrue();
+        expect(msj.includes("1998,1999,2000,2001,2002,2003,2004")).toBeTrue;
+        expect(msj.includes("2,5,11,7,3,4,14")).toBeTrue;
+        expect(msj.includes("true")).toBeTrue;
+
+        })
+})
+
+
+
 
 
 /*
