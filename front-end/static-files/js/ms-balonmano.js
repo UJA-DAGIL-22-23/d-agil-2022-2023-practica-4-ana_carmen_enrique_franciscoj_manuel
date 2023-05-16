@@ -140,7 +140,7 @@ BalonmanoJugador.procesarAcercaDe = function () {
 BalonmanoJugador.plantillaTablaJugadores = {}
 
 // Cabecera de la tabla para solo los nombres
-BalonmanoJugador.plantillaTablaJugadores.headerNombres = `<table width="100%" class="listado_jugadores">
+BalonmanoJugador.plantillaTablaJugadores.headerNombres = `<table width="100%" class="listado-jugadores-balonmano">
 <thead>
     <th width="5%">ID</th>
     <th width="15%">Nombre</th>
@@ -149,7 +149,7 @@ BalonmanoJugador.plantillaTablaJugadores.headerNombres = `<table width="100%" cl
 <tbody>`;
 
 // Cabecera de la tabla para solo los nombres
-BalonmanoJugador.plantillaTablaJugadores.headerTodosDatos = `<table width="100%" class="listado_jugadores_completo">
+BalonmanoJugador.plantillaTablaJugadores.headerTodosDatos = `<table width="100%" class="listado-jugadores-balonmano_completo">
 <thead>
     <th width="5%">ID</th>
     <th width="10%">Nombre</th>

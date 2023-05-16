@@ -5,33 +5,34 @@
  * @date 03-Feb-2023
  */
 
- 
- * {
+
+
+* {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 table.Aplicacion-balonmano {
     width: 100%;
-    border: 1px solid rgba(37, 143, 25, 0.8);
+    border: 1px solid rgba(7, 45, 8, 0.8);
 }
-  
+
 table.Aplicacion-balonmano thead th,
 table.Aplicacion-balonmano tbody th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(37, 143, 25, 0.8);
+    background-color: rgba(7, 45, 8, 0.8);
     text-transform: uppercase;
 }
-  
+
 table.Aplicacion-balonmano tbody td {
     padding: 0.5em;
     text-align: center;
 }
-  
+
 table.Aplicacion-balonmano tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(36, 97, 12, 0.54)
+    background-color: rgba(37, 143, 25, 0.8)
 }
 table.Aplicacion-balonmano thead,
 table.Aplicacion-balonmano tbody,
@@ -46,20 +47,20 @@ table.Aplicacion-balonmano {
 
 table.listado-balonmano {
     width: 100%;
-    border: 1px solid rgba(63, 0, 100, 0.8);
+    border: 1px solid rgba(37, 143, 25, 0.8);
 }
 
 table.listado-balonmano thead th,
 table.listado-balonmano tbody th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(36, 97, 12, 0.54);
     text-transform: uppercase;
 
 }
 
 table.listado-balonmano tbody th {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(37, 143, 25, 0.8);
 }
 
 table.listado-balonmano tbody td {
@@ -70,32 +71,89 @@ table.listado-balonmano tbody td {
 table.listado-balonmano tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(0, 0, 100, 0.1)
+    background-color: rgba(36, 97, 12, 0.54)
 }
 
+
+table.listado-jugadores-balonmano_completo {
+    width: 100%;
+    border: 1px solid rgba(7, 45, 8, 0.8);
+}
+
+table.listado-jugadores-balonmano_completo thead th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(7, 45, 8, 0.8);
+    text-transform: uppercase;
+
+}
+
+table.listado-jugadores-balonmano_completo tbody td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+table.listado-jugadores-balonmano_completo tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(37, 143, 25, 0.8)
+}
 
 .listado-balonmano {
     max-width: 100%;
     overflow-x: auto;
 }
-  
-.form-balonmano-elemento {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
+
+table.listado-jugadores-balonmano_completo thead,
+table.listado-jugadores-balonmano_completo tbody,
+table.listado-jugadores-balonmano_completo tr,
+table.listado-jugadores-balonmano_completo td {
+    text-align: center;
+    margin: 0 auto 0 auto;
 }
 
-.form-balonmano-elemento:disabled {
-    color: black;
-    background-color: inherit;
-    border-width: 0px;
+table.listado-jugadores-balonmano_completo {
+    width: 100%;
+}
+
+table.listado-jugadores-balonmano {
+    width: 100%;
+    border: 1px solid rgba(7, 45, 8, 0.8);
+}
+
+table.listado-jugadores-balonmano thead th {
+    margin: 3px;
+    height: 2.5em;
+    background-color: rgba(37, 143, 25, 0.8);
+    text-transform: uppercase;
+
+}
+
+table.listado-jugadores-balonmano tbody td {
+    padding: 0.5em;
     text-align: center;
 }
 
-.form-balonmano-elemento:enabled {
-    color: rgba(7, 45, 8, 0.8);
+table.listado-jugadores-balonmano tbody tr {
+    margin: 3px;
+    height: 2em;
+    background-color: rgba(37, 143, 25, 0.8)
 }
 
-.form-balonmano-elemento:enabled:required {
-    color: rgba(36, 97, 12, 0.54);
+.listado-balonmano {
+    max-width: 100%;
+    overflow-x: auto;
 }
+
+table.listado-jugadores-balonmano thead,
+table.listado-jugadores-balonmano tbody,
+table.listado-jugadores-balonmano tr,
+table.listado-jugadores-balonmano td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+table.listado-jugadores-balonmano {
+    width: 100%;
+}
+
