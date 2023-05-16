@@ -183,6 +183,46 @@
                 </tbody>
             </table>
         </nav>
+
+
+        <h2>Aplicación Microservicios - Gimnasia</h2>
+        <!-- Barra de navegación de la aplicación -->
+        <nav>
+            <table class="Aplicacion-gimnasia">
+                <thead>
+                    <tr>
+                        <th colspan="4">Aplicación Gimnasia</th>
+                    </tr>
+                </thead>
+                <thead>
+                        <th>Listados de jugadores</th><th>Búsquedas</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="javascript:futbol.procesarListaJugadores()" class="opcion-principal"
+                            title="Llama a la ruta /get_jugadores del MS Futbol">Lista de nombres de jugadores</a>
+                            <a href="javascript:futbol.procesarListaJugadoresCompleta()" class="opcion-principal"
+                            title="Llama a la ruta /get_jugadores_completa del MS Futbol">Lista de jugadores completa</a>
+                            <a href="javascript:futbol.ordenaListaNombresJugadores()" class="opcion-principal"
+                            title="Muestra los jugadores ordenados">Lista de jugadores ordenada</a>
+                        </td>
+                         <td>
+                            <input type="text" placeholder="Nombre" id="criterio-j1">
+                            <input type="text" placeholder="Apellido" id="criterio-j2">
+                            <input type="text" placeholder="Goles"id="criterio-j3">
+                            <button class="btn" onclick="futbol.buscaCriterio(document.getElementById('criterio-j1').value, document.getElementById('criterio-j2').value, document.getElementById('criterio-j3').value, true)">Buscar por algún criterio</button>
+                            <button class="btn" onclick="futbol.buscaCriterio(document.getElementById('criterio-j1').value, document.getElementById('criterio-j2').value, document.getElementById('criterio-j3').value, false)">Buscar todos los criterios</button>
+                            <div></div>
+                            <input type="text" placeholder="nombre" id="busqueda_nombre">
+                            <button class="btn" onclick="futbol.busquedaporNombre(document.getElementById('busqueda_nombre').value)">Buscar por nombre</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+
+
         <br></br>
 
     <!-- 

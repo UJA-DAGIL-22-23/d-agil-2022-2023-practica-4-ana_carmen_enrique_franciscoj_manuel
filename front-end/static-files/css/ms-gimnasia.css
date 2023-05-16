@@ -10,128 +10,107 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-table.Aplicacion-gimnasia {
+table.Aplicacion-futbol {
     width: 100%;
-    border: 1px solid rgba(0, 255, 234, 0.8);
+    border: 1px solid rgba(255, 128, 0);
 }
   
-table.Aplicacion-gimnasia thead th,
-table.Aplicacion-gimnasia tbody th {
+table.Aplicacion-futbol thead th,
+table.Aplicacion-futbol tbody th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(0, 255, 234, 0.8);
+    background-color: rgba(255, 128, 0);
     text-transform: uppercase;
 }
   
-table.Aplicacion-gimnasia tbody td {
+table.Aplicacion-futbol tbody td {
     padding: 0.5em;
     text-align: center;
 }
   
-table.Aplicacion-gimnasia tbody tr {
+table.Aplicacion-futbol tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(0, 255, 234, 0.8);
+    background-color: rgba(255, 128, 0, 0.542)
 }
-table.Aplicacion-gimnasia thead,
-table.Aplicacion-gimnasia tbody,
-table.Aplicacion-gimnasia tr,
-table.Aplicacion-gimnasia td {
+table.Aplicacion-futbol thead,
+table.Aplicacion-futbol tbody,
+table.Aplicacion-futbol tr,
+table.Aplicacion-futbol td {
     text-align: center;
     margin: 0 auto 0 auto;
 }
-table.Aplicacion-gimnasia {
+table.Aplicacion-futbol {
     width: 100%;
 }
 
-table.listado-gimnasia {
+table.listado-personas {
     width: 100%;
-    border: 1px solid rgba(0, 255, 234, 0.8);
+    border: 1px solid rgba(210, 118, 26, 0.503);
 }
 
-table.listado-gimnasia thead th,
-table.listado-gimnasia tbody th {
+table.listado-personas thead th,
+table.listado-personas tbody th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 128, 0);
     text-transform: uppercase;
 
 }
 
-table.listado-gimnasia tbody th {
+table.listado-personas tbody th {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-table.listado-gimnasia tbody td {
+table.listado-personas tbody td {
     padding: 0.5em;
     text-align: center;
 }
 
-table.listado-gimnasia tbody tr {
+table.listado-personas tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(0, 0, 100, 0.1)
+    background-color: rgba(255, 128, 0, 0.542);
 }
  
-
-table.listado-jugadores {
+/**/
+table.listado-personas {
     width: 100%;
-    border: 1px solid rgba(0, 255, 234, 0.8);
+    border: 1px solid rgb(158, 107, 57);
 }
 
-table.listado-jugadores thead th {
+table.listado-personas thead th {
     margin: 3px;
     height: 2.5em;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 128, 0);
     text-transform: uppercase;
 
 }
 
-table.listado-jugadores tbody td {
+table.listado-personas tbody td {
     padding: 0.5em;
     text-align: center;
 }
 
-table.listado-jugadores tbody tr {
+table.listado-personas tbody tr {
     margin: 3px;
     height: 2em;
-    background-color: rgba(0, 0, 100, 0.1)
+    background-color: rgba(255, 128, 0, 0.542);
 }
 
-.listado-gimnasia {
+.listado-personas {
     max-width: 100%;
     overflow-x: auto;
 }
-  
-.form-gimnasia-elemento {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-}
 
-.form-gimnasia-elemento:disabled {
-    color: black;
-    background-color: inherit;
-    border-width: 0px;
-    text-align: center;
-}
-
-.form-gimnasia-elemento:enabled {
-    color: rgba(7, 45, 8, 0.8);
-}
-
-.form-gimnasia-elemento:enabled:required {
-    color: rgba(36, 97, 12, 0.54);
-}
-
-table.listado-jugadores thead,
-table.listado-jugadores tbody,
-table.listado-jugadores tr,
-table.listado-jugadores td {
+table.listado-personas thead,
+table.listado-personas tbody,
+table.listado-personas tr,
+table.listado-personas td {
     text-align: center;
     margin: 0 auto 0 auto;
 }
 
-table.listado-jugadores {
+table.listado-personas {
     width: 100%;
 }
