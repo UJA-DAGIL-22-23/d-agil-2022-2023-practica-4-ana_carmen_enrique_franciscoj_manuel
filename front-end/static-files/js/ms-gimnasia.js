@@ -137,7 +137,7 @@ gimnasia.procesarAcercaDe = function () {
 gimnasia.gimnasiaTablaAtletas = {}
 
 // Cabecera de la tabla para solo los nombres
-gimnasia.gimnasiaTablaAtletas.cabeceraNombres = `<table width="100%" class="listado_Atletas">
+gimnasia.gimnasiaTablaAtletas.cabeceraNombres = `<table width="100%" class="listado-atletas">
 <thead>
     <th width="15%">Nombre</th>
     <th width="15%">Apellido</th>
@@ -145,7 +145,7 @@ gimnasia.gimnasiaTablaAtletas.cabeceraNombres = `<table width="100%" class="list
 <tbody>`;
 
 // Cabecera de la tabla para todos los datos
-gimnasia.gimnasiaTablaAtletas.cabeceraCompleta = `<table width="100%" class="listado_Atletas_completo">
+gimnasia.gimnasiaTablaAtletas.cabeceraCompleta = `<table width="100%" class="listado-atletas-completo">
 <thead>
     <th >Dni</th>
     <th >Nombre</th>
@@ -162,9 +162,6 @@ gimnasia.gimnasiaTablaAtletas.cuerpoNombres = `
     
     <td>${gimnasia.gimnasiaTags.NOMBRE}</td>
     <td>${gimnasia.gimnasiaTags.APELLIDO}</td>
-    <td>
-    <div></div>
-</td>
 </tr>
 `;
 //pie de la tabla 
@@ -181,9 +178,6 @@ gimnasia.gimnasiaTablaAtletas.cuerpoCompleto = `
     <td>${gimnasia.gimnasiaTags.EDAD}</td>
     <td>${gimnasia.gimnasiaTags.DIRECCION}</td>
     <td>${gimnasia.gimnasiaTags["MEDALLAS"]}</td>
-    <td>
-    <div></div>
-</td>
 </tr>
 `;
 
