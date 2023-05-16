@@ -1122,6 +1122,27 @@ Finalmente está la captura de trello en el instante en el que esta HU pasó de 
 
 ## HU06. Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”
 ## HU07. Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app
+Implementada por Carmen Huesa Guardiola y Francisco Javier Gálvez Marín
+
+-Cambios en front-end
+  * Para implementar esta HU hemos creado dos nuevos archivos en la carpeta js llamados ms-general.js y su correspondiente ms-general-spec.js
+  * En ms-general-spec nos aseguramos de que se asignen correctamente los valores al sustituir los tags.
+  * ms-general incluye todas las funciones necesarias para llamar a todos los microservicios y recibir los jugadores.
+  * El ms-general se llama así de forma provisional, el que sea un microservicio finalmente o no dependerá del desarrollo de las otras HU.
+
+En la siguiente captura se puede ver el botón para esta nueva funcionalidad
+    ![Captura_HU_07_terminada](./assets/img/HU07terminada.png)
+
+Las dos capturas a continuación muestran el principio y final de la nueva lista (no hemos hecho captura de los datos intermedios
+por comodidad) que incluye a los 50 jugadores de todos
+los microservicios del proyecto. Los spec que se puede apreciar que fallan es porque hemos aprovechado para preparar el que será necesario
+para la funcionalidad HU06 que implementaremos posteriormente
+    ![Captura_HU_07_ini](./assets/img/HU07terminadaDatos.png)
+    ![Captura_HU_07_fin](./assets/img/HU07terminadaDatos2.png)
+
+Finalmente tenemos una captura que muestra el estado del tablero trello al finalizar esta HU
+    ![Captura_HU_07_trello](./assets/img/HU07trello.png)
+
 ## HU08. Ver un listado solo con los nombres de todos los jugadores/equipos ordenados alfabéticamente de todos los deportes incluidos en la app
 ## HU09. Mostrar el nombre y el deporte de todos los jugadores/equipos que contengan una determinada cadena introducida por el usuario. (Por ejemplo, si el usuario introduce “EST” se mostrarán todos los nombres junto con el deporte practicado de todos los jugadores/equipos cuyo nombre incluya “EST”)
 ## HU10. Modificar la visualización de la app con un modo ALTO CONTRASTE
