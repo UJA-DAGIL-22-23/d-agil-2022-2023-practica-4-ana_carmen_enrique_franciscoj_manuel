@@ -167,7 +167,7 @@ general.sustituyeTagsPilotos = function (tagsPiloto, piloto) {
     return tagsPiloto
         .replace(new RegExp(general.generalTags.NOMBRE, 'g'), piloto.data.nombre)
         .replace(new RegExp(general.generalTags.APELLIDO, 'g'), piloto.data.apellido)
-        .replace(new RegExp(general.generalTags.DEPORTE, 'g'), "Motonaútica")
+        .replace(new RegExp(general.generalTags.DEPORTE, 'g'), "Motonáutica")
 }
 
 /**
@@ -202,6 +202,10 @@ general.sustituyeTagsAtletas = function (tagsAtleta, atleta) {
  * @returns La general de cuerpo de la tabla con los datos actualizados
  */
 general.generalTablaJugadores.actualizaNombresArqueros = function (player) {
+    return general.sustituyeTagsArqueros(this.cuerpoNombres, player)
+}
+
+general.generalTablaJugadores.actualizaNombresArquerosCompletos = function (player) {
     return general.sustituyeTagsArqueros(this.cuerpoCompleto, player)
 }
 
@@ -211,6 +215,11 @@ general.generalTablaJugadores.actualizaNombresArqueros = function (player) {
  * @returns La general de cuerpo de la tabla con los datos actualizados
  */
 general.generalTablaJugadores.actualizaNombresJugadores = function (player) {
+    return general.sustituyeTagsJugadores(this.cuerpoNombres, player)
+}
+
+
+general.generalTablaJugadores.actualizaNombresJugadoresCompletos = function (player) {
     return general.sustituyeTagsJugadores(this.cuerpoCompleto, player)
 }
 
@@ -220,15 +229,23 @@ general.generalTablaJugadores.actualizaNombresJugadores = function (player) {
  * @returns La general de cuerpo de la tabla con los datos actualizados
  */
 general.generalTablaJugadores.actualizaNombresPilotos = function (player) {
-    return general.sustituyeTagsPilotos(this.cuerpoCompleto, player)
+    return general.sustituyeTagsPilotos(this.cuerpoNombres, player)
 }
 
+
+general.generalTablaJugadores.actualizaNombresPilotosCompletos = function (player) {
+    return general.sustituyeTagsPilotos(this.cuerpoCompleto, player)
+}
 /**
  * Actualiza el cuerpo de la tabla con los datos del player que se le pasa
  * @param {player} player Objeto con los datos de la persona que queremos escribir el TR
  * @returns La general de cuerpo de la tabla con los datos actualizados
  */
 general.generalTablaJugadores.actualizaNombresFutbolistas = function (player) {
+    return general.sustituyeTagsFutbolistas(this.cuerpoNombres, player)
+}
+
+general.generalTablaJugadores.actualizaNombresFutbolistasCompletos = function (player) {
     return general.sustituyeTagsFutbolistas(this.cuerpoCompleto, player)
 }
 
@@ -238,9 +255,12 @@ general.generalTablaJugadores.actualizaNombresFutbolistas = function (player) {
  * @returns La general de cuerpo de la tabla con los datos actualizados
  */
 general.generalTablaJugadores.actualizaNombresAtletas = function (player) {
-    return general.sustituyeTagsAtletas(this.cuerpoCompleto, player)
+    return general.sustituyeTagsAtletas(this.cuerpoNombres, player)
 }
 
+general.generalTablaJugadores.actualizaNombresAtletasCompletos = function (player) {
+    return general.sustituyeTagsAtletas(this.cuerpoCompleto, player)
+}
 /**
  * Función que recuperar todos los arqueros llamando al MS general
  * @param {función} callBackFn Función a la que se llamará una vez recibidos los datos.
@@ -336,11 +356,11 @@ general.imprimeBusca = function (vectorArqueros, vectorJugadores, vectorPilotos,
 
 
     if (Array.isArray(vectorArqueros) && Array.isArray(vectorJugadores) && Array.isArray(vectorPilotos) && Array.isArray(vectorFutbolistas) && Array.isArray(vectorAtletas)) {
-        vectorArqueros.forEach(e => msj += general.generalTablaJugadores.actualizaNombresArqueros(e));
-        vectorJugadores.forEach(e => msj += general.generalTablaJugadores.actualizaNombresJugadores(e));
-        vectorPilotos.forEach(e => msj += general.generalTablaJugadores.actualizaNombresPilotos(e));
-        vectorFutbolistas.forEach(e => msj += general.generalTablaJugadores.actualizaNombresFutbolistas(e));
-        vectorAtletas.forEach(e => msj += general.generalTablaJugadores.actualizaNombresAtletas(e));
+        vectorArqueros.forEach(e => msj += general.generalTablaJugadores.actualizaNombresArquerosCompletos(e));
+        vectorJugadores.forEach(e => msj += general.generalTablaJugadores.actualizaNombresJugadoresCompletos(e));
+        vectorPilotos.forEach(e => msj += general.generalTablaJugadores.actualizaNombresPilotosCompletos(e));
+        vectorFutbolistas.forEach(e => msj += general.generalTablaJugadores.actualizaNombresFutbolistasCompletos(e));
+        vectorAtletas.forEach(e => msj += general.generalTablaJugadores.actualizaNombresAtletasCompletos(e));
     }
     msj += general.generalTablaJugadores.pie
 
@@ -351,6 +371,61 @@ general.imprimeBusca = function (vectorArqueros, vectorJugadores, vectorPilotos,
 /**
  * Función principal para recuperar solo los nombres de los arqueros desde el MS, y posteriormente imprimirlos
  */
-general.procesarListaBusca = function () {
-    general.recupera(general.imprimeBusca);
+general.procesarListaBusca = function (cadena) {
+    general.recuperaCadena(general.imprimeBusca, cadena);
+}
+
+/**
+ * Función que recuperar todos los arqueros llamando al MS general
+ * @param {función} callBackFn Función a la que se llamará una vez recibidos los datos.
+ */
+
+general.recuperaCadena = async function (callBackFn, cadena) {
+    let response_tiro_con_arco = null
+    let response_balonmano = null
+    let response_motonautica = null
+    let response_futbol = null
+    let response_gimnasia = null
+
+    // Intento conectar con el microservicio
+    try {
+        const url_tiro_con_arco = Frontend.API_GATEWAY + "/tiro_con_arco/get_arqueros"
+        const url_balonmano = Frontend.API_GATEWAY + "/balonmano/get_lista_jugadores"
+        const url_motonautica = Frontend.API_GATEWAY + "/motonautica/get_pilotos"
+        const url_futbol = Frontend.API_GATEWAY + "/futbol/get_jugadores"
+        const url_gimnasia = Frontend.API_GATEWAY + "/gimnasia/get_Atletas"
+
+        response_tiro_con_arco = await fetch(url_tiro_con_arco)
+        response_balonmano = await fetch(url_balonmano)
+        response_motonautica = await fetch(url_motonautica)
+        response_futbol = await fetch(url_futbol)
+        response_gimnasia = await fetch(url_gimnasia)
+    } catch (error) {
+        alert("Error: No se han podido acceder al API Gateway")
+        console.error(error)
+        //throw error
+    }
+
+
+    let vectorArqueros = null
+    let vectorJugadores = null
+    let vectorPilotos = null
+    let vectorFutbolistas = null
+    let vectorAtletas = null
+
+    if (response_tiro_con_arco && response_balonmano && response_motonautica && response_futbol && response_gimnasia) {
+        vectorArqueros  = await response_tiro_con_arco.json()
+        vectorJugadores  = await response_balonmano.json()
+        vectorPilotos  = await response_motonautica.json()
+        vectorFutbolistas  = await response_futbol.json()
+        vectorAtletas  = await response_gimnasia.json()
+
+        const filtroArqueros = vectorArqueros.data.filter(player => player.data.nombre.includes(cadena) === true || player.data.apellido.includes(cadena) === true );
+        const filtroJugadores = vectorJugadores.data.filter(player => player.data.name.includes(cadena) === true || player.data.surname.includes(cadena) === true );
+        const filtroPilotos= vectorPilotos.data.filter(player => player.data.nombre.includes(cadena) === true || player.data.apellido.includes(cadena) === true );
+        const filtroFutbolistas = vectorFutbolistas.data.filter(player => player.data.nombre.includes(cadena) === true || player.data.apellidos.includes(cadena) === true );
+        const filtroAtletas = vectorAtletas.data.filter(player => player.data.nombre.includes(cadena) === true || player.data.apellido.includes(cadena) === true );
+
+        callBackFn(filtroArqueros, filtroJugadores, filtroPilotos, filtroFutbolistas, filtroAtletas)
+    }
 }
