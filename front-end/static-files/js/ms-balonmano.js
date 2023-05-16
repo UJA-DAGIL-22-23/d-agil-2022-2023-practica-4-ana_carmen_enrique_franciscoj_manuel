@@ -168,9 +168,6 @@ BalonmanoJugador.plantillaTablaJugadores.cuerpoNombres = `
     <td>${BalonmanoJugador.plantillaTags.PLAYERID}</td>
     <td>${BalonmanoJugador.plantillaTags.NAME}</td>
     <td>${BalonmanoJugador.plantillaTags.SURNAME}</td>
-    <td>
-    <div></div>
-</td>
 </tr>`;
 
 
@@ -185,9 +182,6 @@ BalonmanoJugador.plantillaTablaJugadores.cuerpoCompleto = `
     <td>${BalonmanoJugador.plantillaTags["SEASONS_PLAYED"]}</td>
     <td>${BalonmanoJugador.plantillaTags["GOAL_SEASON"]}</td>
     <td>${BalonmanoJugador.plantillaTags.DISQUALIFIED}</td>
-    <td>
-    <div></div>
-</td>
 </tr>`;
 
 
