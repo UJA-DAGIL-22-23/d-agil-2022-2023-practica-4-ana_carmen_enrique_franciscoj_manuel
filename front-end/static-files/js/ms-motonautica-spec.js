@@ -176,6 +176,74 @@ describe("motonautica.imprimeorden: ", function() {
         })
 })
 
+describe("motonautica.sustituyeTags: ", function() {
+    it("Sustituye correctamente los tags",
+        function() {
+            let vecJugador = {
+                data: {
+                    nombre: "Ana",
+                    apellido: "Tello",
+                }
+            }
+            let plantillaTagsSpecMotonautica = {
+                "nombre": "### nombre ###",
+                "apellido": "### apellido ###",
+            }
+
+        let vecFinal = `
+            <tr title="${plantillaTagsSpecMotonautica.nombre}">
+            <td>${plantillaTagsSpecMotonautica.nombre}</td>
+            <td>${plantillaTagsSpecMotonautica.apellido}</td>
+        </tr>`;
+
+        let msj = motonautica.sustituyeTags(vecFinal, vecJugador);
+        expect(msj.includes("Ana")).toBeTrue();
+        expect(msj.includes("Tello")).toBeTrue();
+        })
+})
+
+describe("motonautica.sustituyeTagscompleto: ", function() {
+    it("Sustituye correctamente los tags",
+        function() {
+            let vecJugador = {
+                data: {
+                    nombre: "Ana",
+                    apellido: "Tello",
+                    edad: 27,
+                    motos: {
+                        nombre: "Jet Ski",
+                        plazas: "1 persona",
+                        peso: 150
+                    },
+                    playasvisitadas: ["Ses Illetes", "Bolonia", "Catedrales"]
+                }
+            }
+            let plantillaTagsSpecMotonautica = {
+                "nombre": "### nombre ###",
+                "apellido": "### apellido ###",
+                "edad": "### edad ###",
+                "motos": "### motos ###",
+                "playasvisitadas": "### playasvisitadas ###"
+            }
+
+        let vecFinal = `
+            <tr title="${plantillaTagsSpecMotonautica.nombre}">
+            <td>${plantillaTagsSpecMotonautica.nombre}</td>
+            <td>${plantillaTagsSpecMotonautica.apellido}</td>
+            <td>${plantillaTagsSpecMotonautica.edad}</td>
+            <td>${plantillaTagsSpecMotonautica.motos}</td>
+            <td>${plantillaTagsSpecMotonautica["playasvisitadas"]}</td>
+        </tr>`;
+
+        let msj = motonautica.sustituyeTagscompleto(vecFinal, vecJugador);
+        expect(msj.includes("Ana")).toBeTrue();
+        expect(msj.includes("Tello")).toBeTrue();
+        expect(msj.includes("27")).toBeTrue();
+        expect(msj.includes("Jet Ski/1 persona/150")).toBeTrue();
+        expect(msj.includes("Ses Illetes", "Bolonia", "Catedrales")).toBeTrue();
+        })
+})
+
 
 /*
 IMPORTANTE
