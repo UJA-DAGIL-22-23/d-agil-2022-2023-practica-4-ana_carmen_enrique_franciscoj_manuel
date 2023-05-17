@@ -76,14 +76,14 @@ describe("general.mostrarAcercaDe: ", function () {
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
             general.mostrarAcercaDe()
-            expect(elementoGeneral.innerHTML).toBe(ACERCA_DE_GENERAL)
+            expect(elementoGeneral.innerHTML).toBe("Acerca de todos los miembros de proyecto")
             expect(generalContenido.innerHTML.search(general.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
         })
 
     it("muestra datos nulos cuando le pasamos un valor que no es un objeto",
         function () {
             general.mostrarAcercaDe(23)
-            expect(elementoGeneral.innerHTML).toBe(ACERCA_DE_GENERAL)
+            expect(elementoGeneral.innerHTML).toBe("Acerca de todos los miembros de proyecto")
             expect(generalContenido.innerHTML.search(general.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
         })
 
@@ -91,30 +91,30 @@ describe("general.mostrarAcercaDe: ", function () {
         function () {
             // Objeto vacío
             general.mostrarAcercaDe({})
-            expect(elementoGeneral.innerHTML).toBe(ACERCA_DE_GENERAL)
+            expect(elementoGeneral.innerHTML).toBe("Acerca de todos los miembros de proyecto")
             expect(generalContenido.innerHTML.search(general.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
 
             // Objeto sin campo mensaje
             general.mostrarAcercaDe({ autor: "un autor", email: "un email", fecha: "una fecha" })
-            expect(elementoGeneral.innerHTML).toBe(ACERCA_DE_GENERAL)
+            expect(elementoGeneral.innerHTML).toBe("Acerca de todos los miembros de proyecto")
             expect(generalContenido.innerHTML.search(general.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
             // Objeto sin campo autor
             general.mostrarAcercaDe({ mensaje: "un mensaje", email: "un email", fecha: "una fecha" })
-            expect(elementoGeneral.innerHTML).toBe(ACERCA_DE_GENERAL)
+            expect(elementoGeneral.innerHTML).toBe("Acerca de todos los miembros de proyecto")
             expect(generalContenido.innerHTML.search(general.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
             // Objeto sin campo email
             general.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", fecha: "una fecha" })
-            expect(elementoGeneral.innerHTML).toBe(ACERCA_DE_GENERAL)
+            expect(elementoGeneral.innerHTML).toBe("Acerca de todos los miembros de proyecto")
             expect(generalContenido.innerHTML.search(general.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
             // Objeto sin campo fecha
             general.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", email: "un email" })
-            expect(elementoGeneral.innerHTML).toBe(ACERCA_DE_GENERAL)
+            expect(elementoGeneral.innerHTML).toBe("Acerca de todos los miembros de proyecto")
             expect(generalContenido.innerHTML.search(general.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
         })
     it("muestra correctamente el título y el mensaje conteniendo el autor, el email y la fecha",
         function () {
             general.mostrarAcercaDe(datosDescargadosPruebaGeneral)
-            expect(elementoGeneral.innerHTML).toBe(ACERCA_DE_GENERAL)
+            expect(elementoGeneral.innerHTML).toBe("Acerca de todos los miembros de proyecto")
 
             // Comprobamos que al buscar el autor, el email y la fecha de prueba los encuentra dentro del contenido del article
             expect(generalContenido.innerHTML.search(datosDescargadosPruebaGeneral.autor) >= 0).toBeTrue()
