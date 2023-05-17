@@ -918,6 +918,7 @@
   rankingMundial: 5467
 }
 ```
+# **Sprint Review**
 
 # *Capturas de Trello al inicio:*
 En PRODUCT BACKLOG se encuentran todas las historias de usuario que se van a implementar. Estas pasan al sprint backlog al inicio del sprint.
@@ -989,7 +990,7 @@ Implementada por Francisco Javier Gálvez Marín
 
 Para implementar la HU 02, he tenido que implementar mi ms-plantilla de la práctica anterior, para ello he realizado las siguientes moficicaciones:
 
-- Cambios en front-end
+- Modificaciones en front-end
   * Añadir los ficheros ms-balonmano.js y ms-balonmano-spec.js en la carpeta js.
   * Cambiar el nombre de todas las funciones de ms-balonmano.js para que cuando sean llamadas en index.html no cause conflicto ningún problema con las llamadas de los otros microservicios. Además Plantilla ahora se llama BalonmanoJugador.
   * Cambiar los spec en ms-balonmano-spec.js para adaptarse y reflejar los cambios anteriores.
@@ -1023,7 +1024,7 @@ Implementada por Ana León Pulido
 
 Para implementar la HU03, he tenido que implementar mi ms-plantilla de la práctica anterior, para ello he realizado las siguientes moficicaciones:
 
-- Cambios en front-end
+- Modificaciones en front-end
   * Añadir los ficheros ms-motonautica.js y ms-motonautica-spec.js en la carpeta js.
   * Cambiar el nombre de las funciones de ms-motonautica.js para que al ser llamadas no cause ningún problema con las llamadas de los otros microservicios. Además la Plantilla ahora se llama motonautica.
   * Cambiar los spec en ms-motonautica-spec.js para adaptarse y reflejar los cambios anteriores.
@@ -1065,7 +1066,7 @@ Implementada por Manuel Lara Torres
 
 Para implementar la HU04, he tenido que implementar mi ms-plantilla de la práctica anterior, para ello he realizado las siguientes moficicaciones:
 
-- Cambios en front-end
+- Modificaciones en front-end
   * Añadir los ficheros ms-futbol.js y ms-futbol-spec.js en la carpeta js.
   * Cambiar el nombre de las funciones de ms-futbol.js para que al ser llamadas no cause ningún problema con las llamadas de los otros microservicios. Además la Plantilla ahora se llama futbol.
   * Cambiar los spec en ms-futbol-spec.js para adaptarse y reflejar los cambios anteriores.
@@ -1113,7 +1114,7 @@ Implementada por Enrique Fernández Fernández
 
 Para implementar la HU05, he tenido que implementar mi ms-plantilla de la práctica anterior, para ello he realizado las siguientes moficicaciones:
 
-- Cambios en front-end
+- Modificaciones en front-end
   * Añadir los ficheros ms-gimnasia.js y ms-gimnasia-spec.js en la carpeta js.
   * Cambiar el nombre de las funciones de ms-gimnasia.js para que al ser llamadas no cause ningún problema con las llamadas de los otros microservicios. Además la Plantilla ahora se llama gimnasia.
   * Cambiar los spec en ms-gimnasia-spec.js para adaptarse y reflejar los cambios anteriores.
@@ -1159,9 +1160,15 @@ Finalmente está la captura de trello en el instante en el que esta HU pasó de 
 ## HU07. Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app
 Implementada por Carmen Huesa Guardiola y Francisco Javier Gálvez Marín
 
--Cambios en front-end
+- Modificaciones en front-end
   * Para implementar esta HU hemos creado dos nuevos archivos en la carpeta js llamados ms-general.js y su correspondiente ms-general-spec.js.
-  * En ms-general-spec nos aseguramos de que se asignen correctamente los valores al sustituir los tags.
+  * En ms-general.js hemos creado _generalTags_ que sirve para identificar de el nombre y apellidos de los jugadores de cada una de las bases de datos.
+  * Hemos creado una tabla con cuerpo llamado _cuerpoNombres_ y cabecera llamada _cabeceraNombres_ para que muestre los nombre y apellidos.
+  * Implementada las funciones que actualizan los jugadores con la tabla.
+  * También, hemos implementado una función que sustituye los tags por cada deporte.
+  * La función _recupera_ que carga todos los jugadores de los diferentes microservicios.
+  * Por último, hemos creado la función _imprimeSoloNombres_ que llama a las funciones de actualizar para que se puedan ver en la página los nombres y apellidos de los jugadores y _procesarListaNombre_ que es la función que llamaremos desde index.html.
+  * En ms-general-spec nos aseguramos de que se asignen correctamente los valores al sustituir los tags y que _imprimeSoloNombres_ funcione correctamente.
   * ms-general incluye todas las funciones necesarias para llamar a todos los microservicios y recibir los jugadores.
   * El ms-general se llama así de forma provisional, el que sea un microservicio finalmente o no dependerá del desarrollo de las otras HU.
   * Creamos ms-general.css para que la lista resultante de nombre y apellido se muestre mejor.
@@ -1184,6 +1191,15 @@ Finalmente tenemos una captura que muestra el estado del tablero trello al final
 ## HU09. Mostrar el nombre y el deporte de todos los jugadores/equipos que contengan una determinada cadena introducida por el usuario. 
 Implementada por Carmen Huesa Guardiola y Francisco Javier Gálvez Marín
 
+- Modificaciones en front-end
+  * En ms-general.js hemos añadido un tag adicional llamado DEPORTE que sirve para identificar de que MS viene cada jugador. 
+  * Hemos creado una cabecera y cuerpo nuevos para mostrar adecuadamente este nuevo tag
+  * Hemos adaptado las funciones ya implementadas que sustituían tags para funcionar con el nuevo tag DEPORTE según de que ms provenga
+  * Implementada una nueva función que actualiza los jugadores con el nuevo cuerpo (y por tanto el deporte).
+  * Implementada la función _recuperaCadena_ que carga todos los jugadores de los diferentes microservicios, tras esto busca la cadena deseada en los apellidos y nombres de los jugadores, con lo que se filtran aquellos que cumplan el requisito. Tras lo que se llama a la función _imprimeBusca_. Importante, se diferencia entre mayúsculas y minúsculas a la hora de buscar la cadena.
+  * Implementada la función _imprimeBusca_ que llama al nuevo actualizar mencionado anteriormente para que se puedan ver en la página los jugadores buscados.
+  * En ms-general-spec.js hemos creado los spec correspondientes a las nuevas funciones. Actualizando los antiguos para comprobar que las funciones de sustitución operan adecuadamente con el nuevo tag.
+  * En index.html se ha implementado la barra de búsqueda y botón correspondiente a esta nueva HU.
 
 La siguiente captura muestra el estado de Trello una vez terminada la historia de usuario.
 
@@ -1202,3 +1218,5 @@ Esta segunda, muestra el resultado de hacer una búsqueda por la cadena de carac
 <br></br>
 
 ## HU10. Modificar la visualización de la app con un modo ALTO CONTRASTE
+
+# **Sprint Retrospective**
