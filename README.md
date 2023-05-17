@@ -1157,6 +1157,26 @@ Finalmente está la captura de trello en el instante en el que esta HU pasó de 
 <br></br>
 
 ## HU06. Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”
+Implementada por Ana León Pulido y Manuel Lara Torres
+
+- Modificaciones en front-end
+  * Para implementar esta HU hemos modificado los archivos creados en la HU07, ms-general y ms-general-spec.
+  * Hemos adaptado los spec de uno de los acerca de individuales para contener los datos de todos los miembros del proyecto.
+  * Hemos modificado la funcion descargaRuta de ms-general para que accediera a los acerca de de los 5 microservicios de deportes.
+  * Hemos creado las funciones mostrarAcercaDe y procesarAcercaDe para concatenar los datos recibidos de los 5 microservicios.
+  * Por último, comprobamos que las funciones y sus correspondientes spec no fallan.
+
+  En la siguiente captura se puede ver el botón para esta nueva funcionalidad.
+    ![HU06_boton_acercade](./assets/img/HU06_boton_acercade.PNG)
+
+La siguiente captura muestra el funcionamiento del Acerca de una vez accionado el botón.
+    ![HU06_funcionamiento_acercade](./assets/img/HU06_funcionamiento_acercade.PNG)
+
+Finalmente tenemos una captura que muestra el estado del tablero trello al finalizar esta HU.
+    ![HU06_trello](./assets/img/HU06_trello.PNG)
+
+<br></br>
+
 ## HU07. Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app
 Implementada por Carmen Huesa Guardiola y Francisco Javier Gálvez Marín
 
