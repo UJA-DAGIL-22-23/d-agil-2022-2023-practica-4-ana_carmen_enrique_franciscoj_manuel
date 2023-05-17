@@ -86,6 +86,41 @@ general.procesarHome = function () {
     this.descargarRuta("/general/", this.mostrarHome);
 }
 
+/**
+ * Función principal para mostrar los datos enviados por la ruta "AcercaDe" de MS general
+ */
+general.mostrarAcercaDe = function (datosDescargados) {
+    // Si no se ha proporcionado valor para datosDescargados
+    datosDescargados = datosDescargados || this.datosDescargadosNulos
+
+    // Si datos descargados NO es un objeto 
+    if (typeof datosDescargados !== "object") datosDescargados = this.datosDescargadosNulos
+
+    // Si datos descargados NO contiene los campos mensaje, autor, o email
+    if (typeof datosDescargados.mensaje === "undefined" ||
+        typeof datosDescargados.autor === "undefined" ||
+        typeof datosDescargados.email === "undefined" ||
+        typeof datosDescargados.fecha === "undefined"
+    ) datosDescargados = this.datosDescargadosNulos
+
+    const mensajeAMostrar = `<div>
+    <p>${datosDescargados.mensaje}</p>
+    <ul>
+        <li><b>Autor/a</b>: ${datosDescargados.autor}</li>
+        <li><b>E-mail</b>: ${datosDescargados.email}</li>
+        <li><b>Fecha</b>: ${datosDescargados.fecha}</li>
+    </ul>
+    </div>
+    `;
+    Frontend.Article.actualizar("general Acerca de", mensajeAMostrar)
+}
+
+/**
+ * Función principal para responder al evento de elegir la opción "Acerca de"
+ */
+general.procesarAcercaDe = function () {
+    this.descargarRuta("/motonautica/acercade", this.mostrarAcercaDe);
+}
 
 // general para poner los datos de varios arqueros dentro de una tabla
 general.generalTablaJugadores = {}
