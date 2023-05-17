@@ -623,6 +623,8 @@ general.imprimeTodosOrdenados = function (vectorArqueros, vectorJugadores,vector
             vectorFutbolistas.forEach(jugador => vector.push(general.procesafutbolista(jugador))),
             vectorAtletas.forEach(jugador => vector.push(general.procesagenerico(jugador)))
             
+
+            
             general.ordena(vector);
 
             vector.forEach((e => msj += general.generalTablaJugadores.actualizaNombresAtletas(e)));
@@ -675,7 +677,7 @@ general.procesafutbolista = function ( futbolista ){
 general.ordena = function(vector){
     vector.sort(function (min, max) {
         let nameMin = min.data.nombre.toUpperCase(); // convertir a mayúsculas para evitar problemas de ordenamiento
-        let nameMax = max.data.apellido.toUpperCase(); // convertir a mayúsculas para evitar problemas de ordenamiento
+        let nameMax = max.data.nombre.toUpperCase(); // convertir a mayúsculas para evitar problemas de ordenamiento
         if (nameMin < nameMax) {
             return -1;
         }
