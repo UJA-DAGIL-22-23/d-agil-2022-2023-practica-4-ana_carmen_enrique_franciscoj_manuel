@@ -601,3 +601,30 @@ general.recuperaCadena = async function (callBackFn, cadena) {
         callBackFn(filtroArqueros, filtroJugadores, filtroPilotos, filtroFutbolistas, filtroAtletas)
     }
 }
+
+
+
+general.imprimeTodosOrdenados = function (vectorArqueros, vectorAtletas, vectorFutbolistas, vectorJugadores, vectorPilotos) {
+    
+    let msj = general.generalTablaJugadores.cabeceraNombresTodos;
+
+    if (Array.isArray(vectorArqueros) && Array.isArray(vectorAtletas) && Array.isArray(vectorFutbolistas) && Array.isArray(vectorJugadores) && Array.isArray(vectorPilotos)) {
+        const todosLosJugadores = [
+            ...vectorJugadores_general.map(jugador => jugador.data.nombre_completo.nombre),
+            ...vectorJugadores_equitacion.map(jugador => jugador.data.nombre),
+            ...vectorJugadores_motociclismo.map(jugador => jugador.data.nombre),
+            ...vectorJugadores_parkour.map(jugador => jugador.data.nombre),
+            ...vectorJugadores_gimnasia.map(jugador => jugador.data.nombre)
+        ];
+
+        todosLosJugadores.sort((a, b) => a.localeCompare(b));
+
+        todosLosJugadores.forEach(nombreJugador => {
+            msj += `<tr><td>${nombreJugador}</td></tr>`;
+        });
+    }
+    
+    msj += general.generalTablaJugadores.pie;
+
+    Frontend.Article.actualizar("Listado de los nombres de todos los jugadores de todos los deportes ordenados alfabeticamente", msj);
+}
