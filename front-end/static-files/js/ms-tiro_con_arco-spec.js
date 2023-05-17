@@ -157,7 +157,7 @@ describe("tiro_con_arco.imprimeSoloNombres: ", function() {
     expect(TiroConArcoContenido.querySelector('tbody').innerHTML).toBe('')
 })
 })
-describe("BalonmanoJugador.sustituyeTags: ", function() {
+describe("tiro_con_arco.sustituyeTags: ", function() {
     it("Sustituye correctamente los tags",
         function() {
             let vecJugador = {
