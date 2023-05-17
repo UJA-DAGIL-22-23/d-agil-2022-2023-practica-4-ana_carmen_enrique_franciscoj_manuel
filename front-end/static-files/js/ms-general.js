@@ -641,8 +641,8 @@ general.procesagenerico = function ( arquero ){
                 apellido:""
             }
         }
-        jugador.nombre=arquero.nombre;
-        jugador.apellido=arquero.apellido;
+        jugador.data.nombre=arquero.data.nombre;
+        jugador.data.apellido=arquero.data.apellido;
         return jugador;
 }
 
@@ -653,8 +653,8 @@ general.procesajug = function ( jug ){
             apellido:""
         }
     }
-    jugador.nombre=jug.name;
-    jugador.apellido=jug.surname;
+    jugador.data.nombre=jug.data.name;
+    jugador.data.apellido=jug.data.surname;
     return jugador;
 }
 
@@ -665,8 +665,8 @@ general.procesafutbolista = function ( futbolista ){
             apellidos:""
         }
     }
-    jugador.nombre=futbolista.nombre;
-    jugador.apellidos=futbolista.apellidos;
+    jugador.data.nombre=futbolista.data.nombre;
+    jugador.data.apellidos=futbolista.data.apellidos;
     return jugador;
 }
 
