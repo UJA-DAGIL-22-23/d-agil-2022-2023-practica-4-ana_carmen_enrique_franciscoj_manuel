@@ -664,11 +664,11 @@ general.procesafutbolista = function ( futbolista ){
     let jugador = {
         data:{
             nombre:"",
-            apellidos:""
+            apellido:""
         }
     }
     jugador.data.nombre=futbolista.data.nombre;
-    jugador.data.apellidos=futbolista.data.apellidos;
+    jugador.data.apellido=futbolista.data.apellidos;
     return jugador;
 }
 
