@@ -317,6 +317,21 @@ describe("general.imprimeBusca: ", function() {
         })
 })
 
+describe("general.imprimeorden: ", function() {
+    it("Mostrar datos nulos cuando le pasamos vector nulo",
+        function() {
+            general.imprimeorden([])
+            expect(elementoTitulo.innerHTML).toBe("Lista ordenada de todos los nombres de todos los deportistas")
+            expect(elementoContenido.querySelector('tbody').innerHTML).toBe('')
+        })
+    it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
+        function() {
+            general.imprimeorden(10)
+            expect(elementoTitulo.innerHTML).toBe("Lista ordenada de todos los nombres de todos los deportistas")
+            expect(elementoContenido.querySelector('tbody').innerHTML).toBe('')
+        })
+})
+
 
 /*
 IMPORTANTE
