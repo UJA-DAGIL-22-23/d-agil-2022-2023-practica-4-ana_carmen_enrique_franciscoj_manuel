@@ -37,28 +37,48 @@ general.generalTags = {
 
 /**
  * Función que descarga la info MS general al llamar a una de sus rutas
- * @param {string} ruta Ruta a descargar
  * @param {función} callBackFn Función a la que se llamará una vez recibidos los datos.
  */
-general.descargarRuta = async function (ruta, callBackFn) {
-    let response = null
+general.descargarRuta = async function (callBackFn) {
+    let response_tiro_con_arco = null
+    let response_balonmano = null
+    let response_motonautica = null
+    let response_futbol = null
+    let response_gimnasia = null
 
-    // Intento conectar con el microservicio general
+    // Intento conectar con el microservicio 
     try {
-        const url = Frontend.API_GATEWAY + ruta
-        response = await fetch(url)
+        const url_tiro_con_arco = Frontend.API_GATEWAY + "/tiro_con_arco/acercade"
+        const url_balonmano = Frontend.API_GATEWAY + "/balonmano/acercade"
+        const url_motonautica = Frontend.API_GATEWAY + "/motonautica/acercade"
+        const url_futbol = Frontend.API_GATEWAY + "/futbol/acercade"
+        const url_gimnasia = Frontend.API_GATEWAY + "/gimnasia/acercade"
 
+        response_tiro_con_arco = await fetch(url_tiro_con_arco)
+        response_balonmano = await fetch(url_balonmano)
+        response_motonautica = await fetch(url_motonautica)
+        response_futbol = await fetch(url_futbol)
+        response_gimnasia = await fetch(url_gimnasia)
     } catch (error) {
         alert("Error: No se han podido acceder al API Gateway")
         console.error(error)
         //throw error
     }
 
-    // Muestro la info que se han descargado
-    let datosDescargados = null
-    if (response) {
-        datosDescargados = await response.json()
-        callBackFn(datosDescargados)
+
+    let acercadeArqueros = null
+    let acercadeJugadores = null
+    let acercadePilotos = null
+    let acercadeFutbolistas = null
+    let acercadeAtletas = null
+
+    if (response_tiro_con_arco && response_balonmano && response_motonautica && response_futbol && response_gimnasia) {
+        acercadeArqueros  = await response_tiro_con_arco.json()
+        acercadeJugadores  = await response_balonmano.json()
+        acercadePilotos  = await response_motonautica.json()
+        acercadeFutbolistas  = await response_futbol.json()
+        acercadeAtletas  = await response_gimnasia.json()
+        callBackFn(acercadeArqueros, acercadeJugadores, acercadePilotos, acercadeFutbolistas, acercadeAtletas)
     }
 }
 
@@ -84,6 +104,104 @@ general.mostrarHome = function (datosDescargados) {
  */
 general.procesarHome = function () {
     this.descargarRuta("/general/", this.mostrarHome);
+}
+
+
+/**
+ * Función principal para mostrar los datos enviados por la ruta "acerca de" de MS Plantilla
+ */
+general.mostrarAcercaDe = function (datosArqueros, datosJugadores, datosPilotos, datosFutbolistas, datosAtletas) {
+    // Si no se ha proporcionado valor para datosDescargados
+    datosArqueros = datosArqueros || this.datosDescargadosNulos
+    datosJugadores = datosJugadores || this.datosDescargadosNulos
+    datosPilotos = datosPilotos || this.datosDescargadosNulos
+    datosFutbolistas = datosFutbolistas || this.datosDescargadosNulos
+    datosAtletas = datosAtletas || this.datosDescargadosNulos
+
+    let datosDescargados = {
+        mensaje: "Proyecto Multiples Microservicios: Acerca de",
+        autor: "",
+        email: "",
+        fecha: "18/4/2023"
+    }
+
+    // Si datos descargados NO es un objeto 
+    if (typeof datosArqueros !== "object") datosArqueros = this.datosDescargadosNulos
+
+    // Si datos descargados NO contiene los campos mensaje, autor, o email
+    if (typeof datosArqueros.mensaje === "undefined" ||
+        typeof datosArqueros.autor === "undefined" ||
+        typeof datosArqueros.email === "undefined" ||
+        typeof datosArqueros.fecha === "undefined"
+    ) datosArqueros = this.datosDescargadosNulos
+
+    if (typeof datosJugadores !== "object") datosJugadores = this.datosDescargadosNulos
+
+    // Si datos descargados NO contiene los campos mensaje, autor, o email
+    if (typeof datosJugadores.mensaje === "undefined" ||
+        typeof datosJugadores.autor === "undefined" ||
+        typeof datosJugadores.email === "undefined" ||
+        typeof datosJugadores.fecha === "undefined"
+    ) datosJugadores = this.datosDescargadosNulos
+
+    if (typeof datosPilotos !== "object") datosPilotos = this.datosDescargadosNulos
+
+    // Si datos descargados NO contiene los campos mensaje, autor, o email
+    if (typeof datosPilotos.mensaje === "undefined" ||
+        typeof datosPilotos.autor === "undefined" ||
+        typeof datosPilotos.email === "undefined" ||
+        typeof datosPilotos.fecha === "undefined"
+    ) datosPilotos = this.datosDescargadosNulos
+
+    if (typeof datosFutbolistas !== "object") datosFutbolistas = this.datosDescargadosNulos
+
+    // Si datos descargados NO contiene los campos mensaje, autor, o email
+    if (typeof datosFutbolistas.mensaje === "undefined" ||
+        typeof datosFutbolistas.autor === "undefined" ||
+        typeof datosFutbolistas.email === "undefined" ||
+        typeof datosFutbolistas.fecha === "undefined"
+    ) datosFutbolistas = this.datosDescargadosNulos
+
+    if (typeof datosAtletas !== "object") datosAtletas = this.datosDescargadosNulos
+
+    // Si datos descargados NO contiene los campos mensaje, autor, o email
+    if (typeof datosAtletas.mensaje === "undefined" ||
+        typeof datosAtletas.autor === "undefined" ||
+        typeof datosAtletas.email === "undefined" ||
+        typeof datosAtletas.fecha === "undefined"
+    ) datosAtletas = this.datosDescargadosNulos
+
+    datosDescargados.autor = datosDescargados.autor + datosArqueros.autor
+    datosDescargados.autor = datosDescargados.autor + ", " +datosJugadores.autor
+    datosDescargados.autor = datosDescargados.autor + ", " +datosPilotos.autor
+    datosDescargados.autor = datosDescargados.autor + ", " +datosFutbolistas.autor
+    datosDescargados.autor = datosDescargados.autor + ", " +datosAtletas.autor
+
+    datosDescargados.email = datosDescargados.email + datosArqueros.email
+    datosDescargados.email = datosDescargados.email + ", " +datosJugadores.email
+    datosDescargados.email = datosDescargados.email + ", " +datosPilotos.email
+    datosDescargados.email = datosDescargados.email + ", " +datosFutbolistas.email
+    datosDescargados.email = datosDescargados.email + ", " +datosAtletas.email
+
+
+
+    const mensajeAMostrar = `<div>
+    <p>${datosDescargados.mensaje}</p>
+    <ul>
+        <li><b>Autor/a</b>: ${datosDescargados.autor}</li>
+        <li><b>E-mail</b>: ${datosDescargados.email}</li>
+        <li><b>Fecha</b>: ${datosDescargados.fecha}</li>
+    </ul>
+    </div>
+    `;
+    Frontend.Article.actualizar("Acerca de todos los miembros de proyecto", mensajeAMostrar)
+}
+
+/**
+ * Función principal para responder al evento de elegir la opción "Acerca de"
+ */
+general.procesarAcercaDe = function () {
+    this.descargarRuta(this.mostrarAcercaDe);
 }
 
 
