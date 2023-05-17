@@ -1161,7 +1161,13 @@ Implementada por Carmen Huesa Guardiola y Francisco Javier Gálvez Marín
 
 - Modificaciones en front-end
   * Para implementar esta HU hemos creado dos nuevos archivos en la carpeta js llamados ms-general.js y su correspondiente ms-general-spec.js.
-  * En ms-general-spec nos aseguramos de que se asignen correctamente los valores al sustituir los tags.
+  * En ms-general.js hemos creado _generalTags_ que sirve para identificar de el nombre y apellidos de los jugadores de cada una de las bases de datos.
+  * Hemos creado una tabla con cuerpo llamado _cuerpoNombres_ y cabecera llamada _cabeceraNombres_ para que muestre los nombre y apellidos.
+  * Implementada las funciones que actualizan los jugadores con la tabla.
+  * También, hemos implementado una función que sustituye los tags por cada deporte.
+  * La función _recupera_ que carga todos los jugadores de los diferentes microservicios.
+  * Por último, hemos creado la función _imprimeSoloNombres_ que llama a las funciones de actualizar para que se puedan ver en la página los nombres y apellidos de los jugadores y _procesarListaNombre_ que es la función que llamaremos desde index.html.
+  * En ms-general-spec nos aseguramos de que se asignen correctamente los valores al sustituir los tags y que _imprimeSoloNombres_ funcione correctamente.
   * ms-general incluye todas las funciones necesarias para llamar a todos los microservicios y recibir los jugadores.
   * El ms-general se llama así de forma provisional, el que sea un microservicio finalmente o no dependerá del desarrollo de las otras HU.
   * Creamos ms-general.css para que la lista resultante de nombre y apellido se muestre mejor.
@@ -1189,12 +1195,9 @@ Implementada por Carmen Huesa Guardiola y Francisco Javier Gálvez Marín
   * Hemos creado una cabecera y cuerpo nuevos para mostrar adecuadamente este nuevo tag
   * Hemos adaptado las funciones ya implementadas que sustituían tags para funcionar con el nuevo tag DEPORTE según de que ms provenga
   * Implementada una nueva función que actualiza los jugadores con el nuevo cuerpo (y por tanto el deporte).
-  * Iplementada la función imprimeCadena que carga todos los jugadores de los diferentes microservicios, tras esto busca
-la cadena deseada en los apellidos y nombres de los jugadores, con lo que se filtran aquellos que cumplan el requisito. Tras lo que se llama a
-la función imprimeBusca. Importante, se diferencia entre mayúsculas y minúsculas a la hora de buscar la cadena.
-  * Implementada la función imprimeBusca que llama al nuevo actualizar mencionado anteriormente para que se puedan ver en la página los jugadores buscados
-  * En ms-general-spec.js hemos creado los spec correspondientes a las nuevas funciones. Actualizando los antiguos para comprobar que las funciones de 
-  sustitución operan adecuadamente con el nuevo tag.
+  * Implementada la función _recuperaCadena_ que carga todos los jugadores de los diferentes microservicios, tras esto busca la cadena deseada en los apellidos y nombres de los jugadores, con lo que se filtran aquellos que cumplan el requisito. Tras lo que se llama a la función _imprimeBusca_. Importante, se diferencia entre mayúsculas y minúsculas a la hora de buscar la cadena.
+  * Implementada la función _imprimeBusca_ que llama al nuevo actualizar mencionado anteriormente para que se puedan ver en la página los jugadores buscados.
+  * En ms-general-spec.js hemos creado los spec correspondientes a las nuevas funciones. Actualizando los antiguos para comprobar que las funciones de sustitución operan adecuadamente con el nuevo tag.
   * En index.html se ha implementado la barra de búsqueda y botón correspondiente a esta nueva HU.
 
 La siguiente captura muestra el estado de Trello una vez terminada la historia de usuario.
