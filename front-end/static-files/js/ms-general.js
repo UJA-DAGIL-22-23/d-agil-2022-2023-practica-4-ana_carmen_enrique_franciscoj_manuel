@@ -262,7 +262,7 @@ general.generalTablaJugadores.actualizaNombresAtletasCompletos = function (playe
     return general.sustituyeTagsAtletas(this.cuerpoCompleto, player)
 }
 /**
- * Función que recuperar todos los arqueros llamando al MS general
+ * Función que recuperar todos los jugadores llamando al MS general
  * @param {función} callBackFn Función a la que se llamará una vez recibidos los datos.
  */
 
