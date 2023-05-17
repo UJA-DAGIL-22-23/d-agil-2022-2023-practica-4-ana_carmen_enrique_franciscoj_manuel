@@ -123,6 +123,59 @@ describe("gimnasia.mostrarAcercaDe: ", function () {
         })
 })
 
+describe("gimnasia.sustituyeTags: ", function() {
+    it("Sustituye correctamente los tags",
+        function() {
+            let vecJugador = {
+                data: {
+                    nombre: "Ana",
+                    apellido: "Romero",
+                    edad: 22,
+                    dni: "01234567H",
+                    medallas: [2018],
+                    direccion: {
+                      calle: "Calle A",
+                      numero: "123",
+                      ciudad: "Sevilla",
+                      pais: "España"
+                    },
+                    rankingMundial: 19
+                  }
+            }
+            let plantillaTagsSpec = {
+                "NOMBRE": "### NOMBRE ###",
+                "APELLIDO": "### APELLIDO ###",
+                "EDAD": "### EDAD ###",
+                "DNI": "### DNI ###",
+                "MEDALLAS": "### MEDALLAS ###",
+                "DIRECCION": "### DIRECCION ###",
+                "RANKINGMUNDIAL": "### RANKINGMUNDIAL ###"
+                }
+
+
+        let vecFinal = `
+        <tr title="${plantillaTagsSpec.NOMBRE}">
+            <td>${plantillaTagsSpec.APELLIDO}</td>
+            <td>${plantillaTagsSpec.EDAD}</td>
+            <td>${plantillaTagsSpec.DNI}</td>
+            <td>${plantillaTagsSpec.MEDALLAS}</td>
+            <td>${plantillaTagsSpec.RANKINGMUNDIAL}</td>
+            <td>${plantillaTagsSpec["DIRECCION"]}</td>
+           
+        </tr>
+        `;
+
+        let msj = gimnasia.sustituyeTags(vecFinal,vecJugador);
+        expect(msj.includes("Ana")).toBeTrue();
+        expect(msj.includes("Romero")).toBeTrue();
+        expect(msj.includes("22")).toBeTrue();
+        expect(msj.includes("01234567H")).toBeTrue();
+        expect(msj.includes("2018")).toBeTrue();
+        expect(msj.includes("19")).toBeTrue();
+        expect(msj.includes("Calle A","123","Sevilla","España")).toBeTrue();
+
+        })
+})
 
 /*
 IMPORTANTE
