@@ -123,7 +123,7 @@ describe("gimnasia.mostrarAcercaDe: ", function () {
         })
 })
 
-describe("tiro_con_arco.sustituyeTags: ", function() {
+describe("gimnasia.sustituyeTags: ", function() {
     it("Sustituye correctamente los tags",
         function() {
             let vecJugador = {
@@ -165,13 +165,13 @@ describe("tiro_con_arco.sustituyeTags: ", function() {
         </tr>
         `;
 
-        let msj = tiro_con_arco.sustituyeTags(vecFinal, vecJugador);
+        let msj = gimnasia.sustituyeTags(vecFinal,vecJugador);
         expect(msj.includes("Ana")).toBeTrue();
         expect(msj.includes("Romero")).toBeTrue();
         expect(msj.includes("01234567H")).toBeTrue();
         expect(msj.includes("19")).toBeTrue();
         expect(msj.includes("22")).toBeTrue();
-        expect(msj.includes("Calle A, 123, Sevilla, España")).toBeTrue();
+        expect(msj.includes("Calle A,123,Sevilla,España")).toBeTrue();
         expect(msj.includes("2018")).toBeTrue();
 
         })

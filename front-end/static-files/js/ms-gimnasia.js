@@ -195,7 +195,7 @@ gimnasia.sustituyeTags = function (gim, Atleta) {
         .replace(new RegExp(gimnasia.gimnasiaTags.APELLIDO, 'g'), Atleta.data.apellido)
         .replace(new RegExp(gimnasia.gimnasiaTags.RANKINGMUNDIAL, 'g'), Atleta.data.rankingMundial)
         .replace(new RegExp(gimnasia.gimnasiaTags.EDAD, 'g'), Atleta.data.edad)
-        .replace(new RegExp(gimnasia.gimnasiaTags.DIRECCION, 'g'), Atleta.data.direccion.calle +", "+Atleta.data.direccion.numero +", "+Atleta.data.direccion.ciudad+", "+Atleta.data.direccion.pais)
+        .replace(new RegExp(gimnasia.gimnasiaTags.DIRECCION, 'g'), Atleta.data.direccion.calle+","+Atleta.data.direccion.numero +","+Atleta.data.direccion.ciudad+","+Atleta.data.direccion.pais)
         .replace(new RegExp(gimnasia.gimnasiaTags["MEDALLAS"], 'g'), Atleta.data.medallas)
 
 }
