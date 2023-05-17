@@ -918,6 +918,7 @@
   rankingMundial: 5467
 }
 ```
+# **Sprint Review**
 
 # *Capturas de Trello al inicio:*
 En PRODUCT BACKLOG se encuentran todas las historias de usuario que se van a implementar. Estas pasan al sprint backlog al inicio del sprint.
@@ -1202,3 +1203,5 @@ Esta segunda, muestra el resultado de hacer una búsqueda por la cadena de carac
 <br></br>
 
 ## HU10. Modificar la visualización de la app con un modo ALTO CONTRASTE
+
+# **Sprint Retrospective**
