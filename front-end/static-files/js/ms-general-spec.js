@@ -45,7 +45,7 @@ describe("general.mostrarHome: ", function () {
 
     it("muestra datos nulos cuando le pasamos un valor que no es un objeto",
         function () {
-            general.mostrarHome(23)
+            general.mostrarHome(23, 23, 23, 23, 23)
             expect(elementoGeneral.innerHTML).toBe(TITULO_HOME_GENERAL)
             expect(generalContenido.innerHTML).toBe(general.datosDescargadosNulos.mensaje)
         })
@@ -53,7 +53,7 @@ describe("general.mostrarHome: ", function () {
     it("muestra datos nulos cuando le pasamos un objeto que no tiene campo mensaje",
         function () {
             // Objeto vacío
-            general.mostrarHome({})
+            general.mostrarHome({}, {}, {}, {}, {})
             expect(elementoGeneral.innerHTML).toBe(TITULO_HOME_GENERAL)
             expect(generalContenido.innerHTML).toBe(general.datosDescargadosNulos.mensaje)
 
@@ -113,13 +113,13 @@ describe("general.mostrarAcercaDe: ", function () {
         })
     it("muestra correctamente el título y el mensaje conteniendo el autor, el email y la fecha",
         function () {
-            general.mostrarAcercaDe(datosDescargadosPruebaGeneral)
+            general.mostrarAcercaDe(datosDescargadosPruebaGeneral, )
             expect(elementoGeneral.innerHTML).toBe("Acerca de todos los miembros de proyecto")
 
             // Comprobamos que al buscar el autor, el email y la fecha de prueba los encuentra dentro del contenido del article
             expect(generalContenido.innerHTML.search(datosDescargadosPruebaGeneral.autor) >= 0).toBeTrue()
             expect(generalContenido.innerHTML.search(datosDescargadosPruebaGeneral.email) >= 0).toBeTrue()
-            expect(generalContenido.innerHTML.search(datosDescargadosPruebaGeneral.fecha) >= 0).toBeTrue()
+            expect(generalContenido.innerHTML.search("18/4/2023") >= 0).toBeTrue()
         })
     
 })

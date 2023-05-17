@@ -153,71 +153,90 @@ general.mostrarAcercaDe = function (datosArqueros, datosJugadores, datosPilotos,
     datosFutbolistas = datosFutbolistas || this.datosDescargadosNulos
     datosAtletas = datosAtletas || this.datosDescargadosNulos
 
-    let datosDescargados = {
-        mensaje: "Proyecto Multiples Microservicios: Acerca de",
-        autor: "",
-        email: "",
-        fecha: "18/4/2023"
-    }
+    let datosDescargados = general.datosDescargadosNulos;
 
-    // Si datos descargados NO es un objeto 
-    if (typeof datosArqueros !== "object") datosArqueros = this.datosDescargadosNulos
+    let comprueba = true;
+        // Si datos descargados NO es un objeto
+    if (typeof datosArqueros !== "object"){
+        datosArqueros = this.datosDescargadosNulos
+        comprueba = false;
+    }
 
     // Si datos descargados NO contiene los campos mensaje, autor, o email
     if (typeof datosArqueros.mensaje === "undefined" ||
         typeof datosArqueros.autor === "undefined" ||
         typeof datosArqueros.email === "undefined" ||
         typeof datosArqueros.fecha === "undefined"
-    ) datosArqueros = this.datosDescargadosNulos
+    ){ datosArqueros = this.datosDescargadosNulos;
+        comprueba = false;
+    }
 
-    if (typeof datosJugadores !== "object") datosJugadores = this.datosDescargadosNulos
+    if (typeof datosJugadores !== "object"){
+        datosJugadores = this.datosDescargadosNulos;
+        comprueba = false;
+    }
 
     // Si datos descargados NO contiene los campos mensaje, autor, o email
     if (typeof datosJugadores.mensaje === "undefined" ||
         typeof datosJugadores.autor === "undefined" ||
         typeof datosJugadores.email === "undefined" ||
         typeof datosJugadores.fecha === "undefined"
-    ) datosJugadores = this.datosDescargadosNulos
+    ){
+        datosJugadores = this.datosDescargadosNulos;
+        comprueba = false;
+    }
 
-    if (typeof datosPilotos !== "object") datosPilotos = this.datosDescargadosNulos
+    if (typeof datosPilotos !== "object"){
+        datosPilotos = this.datosDescargadosNulos;
+        comprueba = false;
+    }
 
     // Si datos descargados NO contiene los campos mensaje, autor, o email
     if (typeof datosPilotos.mensaje === "undefined" ||
         typeof datosPilotos.autor === "undefined" ||
         typeof datosPilotos.email === "undefined" ||
         typeof datosPilotos.fecha === "undefined"
-    ) datosPilotos = this.datosDescargadosNulos
+    ){
+        datosPilotos = this.datosDescargadosNulos;
+        comprueba = false;
+    }
 
-    if (typeof datosFutbolistas !== "object") datosFutbolistas = this.datosDescargadosNulos
+    if (typeof datosFutbolistas !== "object"){
+        datosFutbolistas = this.datosDescargadosNulos;
+        comprueba = false;
+    }
 
     // Si datos descargados NO contiene los campos mensaje, autor, o email
     if (typeof datosFutbolistas.mensaje === "undefined" ||
         typeof datosFutbolistas.autor === "undefined" ||
         typeof datosFutbolistas.email === "undefined" ||
         typeof datosFutbolistas.fecha === "undefined"
-    ) datosFutbolistas = this.datosDescargadosNulos
+    ){
+        datosFutbolistas = this.datosDescargadosNulos;
+        comprueba = false;
+    }
 
-    if (typeof datosAtletas !== "object") datosAtletas = this.datosDescargadosNulos
+    if (typeof datosAtletas !== "object"){
+        datosAtletas = this.datosDescargadosNulos;
+        comprueba = false;
+    }
 
     // Si datos descargados NO contiene los campos mensaje, autor, o email
     if (typeof datosAtletas.mensaje === "undefined" ||
         typeof datosAtletas.autor === "undefined" ||
         typeof datosAtletas.email === "undefined" ||
         typeof datosAtletas.fecha === "undefined"
-    ) datosAtletas = this.datosDescargadosNulos
+    ) {
+        datosAtletas = this.datosDescargadosNulos
+        comprueba = false;
+    }
 
-    datosDescargados.autor = datosDescargados.autor + datosArqueros.autor
-    datosDescargados.autor = datosDescargados.autor + ", " +datosJugadores.autor
-    datosDescargados.autor = datosDescargados.autor + ", " +datosPilotos.autor
-    datosDescargados.autor = datosDescargados.autor + ", " +datosFutbolistas.autor
-    datosDescargados.autor = datosDescargados.autor + ", " +datosAtletas.autor
-
-    datosDescargados.email = datosDescargados.email + datosArqueros.email
-    datosDescargados.email = datosDescargados.email + ", " +datosJugadores.email
-    datosDescargados.email = datosDescargados.email + ", " +datosPilotos.email
-    datosDescargados.email = datosDescargados.email + ", " +datosFutbolistas.email
-    datosDescargados.email = datosDescargados.email + ", " +datosAtletas.email
-
+    if(comprueba){
+        datosDescargados.mensaje =  "Proyecto Multiples Microservicios: acerca de";
+        datosDescargados.autor = datosArqueros.autor+ ", " +datosJugadores.autor + ", " +datosPilotos.autor + ", " +datosFutbolistas.autor + ", " +datosAtletas.autor;
+        datosDescargados.email = datosArqueros.email + ", " +datosJugadores.email + ", " +datosPilotos.email + ", " +datosFutbolistas.email + ", " +datosAtletas.email;
+        datosDescargados.fecha = "18/4/2023";
+    }
 
 
     const mensajeAMostrar = `<div>
