@@ -123,6 +123,59 @@ describe("gimnasia.mostrarAcercaDe: ", function () {
         })
 })
 
+describe("tiro_con_arco.sustituyeTags: ", function() {
+    it("Sustituye correctamente los tags",
+        function() {
+            let vecJugador = {
+                data: {
+                    "nombre": "Ana",
+                    "apellido": "Romero",
+                    "dni": "01234567H",
+                    "rankingmundial": "19",
+                    "edad": 22,
+                    "nacionalidad": {
+                      "calle": "Calle A",
+                      "numero": "123",
+                      "ciudad": "Sevilla",
+                      "pais": "España"
+                    },
+                    "medallas": [2018]
+                }
+            }
+            let plantillaTagsSpec = {
+                "NOMBRE": "### NOMBRE ###",
+                "APELLIDO": "### APELLIDO ###",
+                "EDAD": "### EDAD ###",
+                "DNI": "### DNI ###",
+                "MEDALLAS": "### MEDALLAS ###",
+                "DIRECCION": "### DIRECCION ###",
+                "RANKINGMUNDIAL": "### RANKINGMUNDIAL ###"
+                }
+
+
+        let vecFinal = `
+        <tr title="${plantillaTagsSpec.NOMBRE}">
+            <td>${plantillaTagsSpec.APELLIDO}</td>
+            <td>${plantillaTagsSpec.EDAD}</td>
+            <td>${plantillaTagsSpec.DNI}</td>
+            <td>${plantillaTagsSpec.MEDALLAS}</td>
+            <td>${plantillaTagsSpec.RANKINGMUNDIAL}</td>
+            <td>${plantillaTagsSpec["DIRECCION"]}</td>
+           
+        </tr>
+        `;
+
+        let msj = tiro_con_arco.sustituyeTags(vecFinal, vecJugador);
+        expect(msj.includes("Ana")).toBeTrue();
+        expect(msj.includes("Romero")).toBeTrue();
+        expect(msj.includes("01234567H")).toBeTrue();
+        expect(msj.includes("19")).toBeTrue();
+        expect(msj.includes("22")).toBeTrue();
+        expect(msj.includes("Calle A, 123, Sevilla, España")).toBeTrue();
+        expect(msj.includes("2018")).toBeTrue();
+
+        })
+})
 
 /*
 IMPORTANTE
