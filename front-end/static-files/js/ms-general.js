@@ -603,28 +603,85 @@ general.recuperaCadena = async function (callBackFn, cadena) {
 }
 
 
+general.procesarListaBusca = function () {
+    general.recupera(general.imprimeTodosOrdenados);
+}
 
-general.imprimeTodosOrdenados = function (vectorArqueros, vectorAtletas, vectorFutbolistas, vectorJugadores, vectorPilotos) {
+
+
+general.imprimeTodosOrdenados = function (vectorArqueros, vectorJugadores,vectorPilotos,vectorFutbolistas,vectorAtletas) {
     
-    let msj = general.generalTablaJugadores.cabeceraNombresTodos;
+    let msj = general.generalTablaJugadores.cabeceraNombres;
+    let vector = [];
+
 
     if (Array.isArray(vectorArqueros) && Array.isArray(vectorAtletas) && Array.isArray(vectorFutbolistas) && Array.isArray(vectorJugadores) && Array.isArray(vectorPilotos)) {
-        const todosLosJugadores = [
-            ...vectorJugadores_general.map(jugador => jugador.data.nombre_completo.nombre),
-            ...vectorJugadores_equitacion.map(jugador => jugador.data.nombre),
-            ...vectorJugadores_motociclismo.map(jugador => jugador.data.nombre),
-            ...vectorJugadores_parkour.map(jugador => jugador.data.nombre),
-            ...vectorJugadores_gimnasia.map(jugador => jugador.data.nombre)
-        ];
+   
+            vectorArqueros.forEach(jugador => vector.push(general.procesagenerico(jugador))),
+            vectorJugadores.forEach(jugador => vector.push(general.procesajug(jugador))),
+            vectorPilotos.forEach(jugador => vector.push(general.procesagenerico(jugador))),
+            vectorFutbolistas.forEach(jugador => vector.push(general.procesafutbolista(jugador))),
+            vectorAtletas.forEach(jugador => vector.push(general.procesagenerico(jugador)))
+            
+            general.ordena(vector);
 
-        todosLosJugadores.sort((a, b) => a.localeCompare(b));
-
-        todosLosJugadores.forEach(nombreJugador => {
-            msj += `<tr><td>${nombreJugador}</td></tr>`;
-        });
+            vector.forEach((e => msj += general.generalTablaJugadores.actualizaNombresAtletas(e)));
     }
     
     msj += general.generalTablaJugadores.pie;
 
     Frontend.Article.actualizar("Listado de los nombres de todos los jugadores de todos los deportes ordenados alfabeticamente", msj);
+}
+
+
+general.procesagenerico = function ( arquero ){
+        let jugador = {
+            data:{
+                nombre:"",
+                apellido:""
+            }
+        }
+        jugador.nombre=arquero.nombre;
+        jugador.apellido=arquero.apellido;
+        return jugador;
+}
+
+general.procesajug = function ( jug ){
+    let jugador = {
+        data:{
+            nombre:"",
+            apellido:""
+        }
+    }
+    jugador.nombre=jug.name;
+    jugador.apellido=jug.surname;
+    return jugador;
+}
+
+general.procesafutbolista = function ( futbolista ){
+    let jugador = {
+        data:{
+            nombre:"",
+            apellidos:""
+        }
+    }
+    jugador.nombre=futbolista.nombre;
+    jugador.apellidos=futbolista.apellidos;
+    return jugador;
+}
+
+
+
+general.ordena = function(vector){
+    vector.sort(function (min, max) {
+        let nameMin = min.data.nombre.toUpperCase(); // convertir a mayúsculas para evitar problemas de ordenamiento
+        let nameMax = max.data.apellido.toUpperCase(); // convertir a mayúsculas para evitar problemas de ordenamiento
+        if (nameMin < nameMax) {
+            return -1;
+        }
+        if (nameMin > nameMax) {
+            return 1;
+        }
+        return 0;
+    });
 }
