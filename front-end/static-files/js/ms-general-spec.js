@@ -317,17 +317,17 @@ describe("general.imprimeBusca: ", function() {
         })
 })
 
-describe("general.imprimeorden: ", function() {
+describe("general.imprimeTodosOrdenados: ", function() {
     it("Mostrar datos nulos cuando le pasamos vector nulo",
         function() {
-            general.imprimeorden([])
-            expect(elementoTitulo.innerHTML).toBe("Lista ordenada de todos los nombres de todos los deportistas")
+            general.imprimeTodosOrdenados([])
+            expect(elementoTitulo.innerHTML).toBe("Listado de los nombres de todos los jugadores de todos los deportes ordenados alfabeticamente")
             expect(elementoContenido.querySelector('tbody').innerHTML).toBe('')
         })
     it("Mostrar datos nulos cuando le pasamos un valor que no es un objeto",
         function() {
-            general.imprimeorden(10)
-            expect(elementoTitulo.innerHTML).toBe("Lista ordenada de todos los nombres de todos los deportistas")
+            general.imprimeTodosOrdenados(10)
+            expect(elementoTitulo.innerHTML).toBe("Listado de los nombres de todos los jugadores de todos los deportes ordenados alfabeticamente")
             expect(elementoContenido.querySelector('tbody').innerHTML).toBe('')
         })
 })
