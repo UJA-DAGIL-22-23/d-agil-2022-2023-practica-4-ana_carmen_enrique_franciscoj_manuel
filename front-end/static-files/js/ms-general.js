@@ -223,8 +223,8 @@ general.mostrarAcercaDe = function (datosArqueros, datosJugadores, datosPilotos,
     const mensajeAMostrar = `<div>
     <p>${datosDescargados.mensaje}</p>
     <ul>
-        <li><b>Autor/a</b>: ${datosDescargados.autor}</li>
-        <li><b>E-mail</b>: ${datosDescargados.email}</li>
+        <li><b>Autores</b>: ${datosDescargados.autor}</li>
+        <li><b>E-mails</b>: ${datosDescargados.email}</li>
         <li><b>Fecha</b>: ${datosDescargados.fecha}</li>
     </ul>
     </div>
