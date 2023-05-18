@@ -603,7 +603,7 @@ general.recuperaCadena = async function (callBackFn, cadena) {
 }
 
 
-general.procesarListaBusca = function () {
+general.procesarListaOrdenada = function () {
     general.recupera(general.imprimeTodosOrdenados);
 }
 
