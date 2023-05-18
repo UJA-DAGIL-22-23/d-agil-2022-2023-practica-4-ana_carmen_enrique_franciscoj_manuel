@@ -355,6 +355,53 @@ describe("general.ordena: ", function () {
         })
 })
 
+describe("general.procesagenerico: ", function () {
+
+    it("convierte adecuadamente de un tipo de jugador al generico",
+        function () {
+            jugador =
+                {data: {nombre: 'Arno',
+                    apellido: 'Sommer'}};
+
+            jugadorArreglado = general.procesagenerico(jugador);
+
+            expect(jugadorArreglado.data.nombre).toEqual("Arno");
+            expect(jugadorArreglado.data.apellido).toEqual("Sommer");
+        })
+})
+
+describe("general.procesajug: ", function () {
+
+    it("convierte adecuadamente de un jugador de balonmano al generico",
+        function () {
+            jugador =
+                {data: {name: 'Arno',
+                        surname: 'Sommer'}
+                };
+
+            jugadorArreglado = general.procesajug(jugador);
+
+            expect(jugadorArreglado.data.nombre).toEqual("Arno");
+            expect(jugadorArreglado.data.apellido).toEqual("Sommer");
+        })
+})
+
+describe("general.procesafutbolista: ", function () {
+
+    it("convierte adecuadamente de un tipo de jugador al generico",
+        function () {
+            jugador =
+                {data: {nombre: 'Arno',
+                        apellidos: 'Sommer'}};
+
+            jugadorArreglado = general.procesafutbolista(jugador);
+
+            expect(jugadorArreglado.data.nombre).toEqual("Arno");
+            expect(jugadorArreglado.data.apellido).toEqual("Sommer");
+        })
+})
+
+
 
 /*
 IMPORTANTE
