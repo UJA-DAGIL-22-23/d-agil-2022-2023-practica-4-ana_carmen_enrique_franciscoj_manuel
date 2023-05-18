@@ -65,27 +65,27 @@ Implementada por Carmen Huesa Guardiola
 
 Para implementar toda la funcionalidad de mi práctica individual he tenido que:
 
--Modificaciones en front-end
-* Añadir la carpeta front-end de mi práctica indivual al repositorio para realizar las modificaciones a partir de ella.
-* Añadir mis ficheros ms-tiro_con_arco.js y ms-tiro_con_arco-spec.js en la carpeta js.
-* Cambiar el nombre de todas las funciones del ms-tiro_con_arco.js para que al llamarlas en el index.html no provoque ningún problema con las llamadas de mi equipo.
-* Cambiar el nombre de las definiciones de unos parametros en ms-tiro_con_arco-spec.js para que no genere problemas con los de mi equipo.
-* Modificar el fichero ms-plantilla.css de la carpeta css para llamarlo ms-tiro_con_arco.css.
-* En ms-tiro_con_arco.css crear tablas de color morado para mejorar la visualización de mi funcionalidad, tanto de los botones como de las listas resultantes de pulsarlos.
-* Cargar mis ficheros ms-tiro_con_arco.css, ms-tiro_con_arco.js y ms-tiro_con_arco-spec.js en index.html.
-* Modificar la presentación de mi microservicio en index.html.
+- Modificaciones en front-end
+  * Añadir la carpeta front-end de mi práctica indivual al repositorio para realizar las modificaciones a partir de ella.
+  * Añadir mis ficheros ms-tiro_con_arco.js y ms-tiro_con_arco-spec.js en la carpeta js.
+  * Cambiar el nombre de todas las funciones del ms-tiro_con_arco.js para que al llamarlas en el index.html no provoque ningún problema con las llamadas de mi equipo.
+  * Cambiar el nombre de las definiciones de unos parametros en ms-tiro_con_arco-spec.js para que no genere problemas con los de mi equipo.
+  * Modificar el fichero ms-plantilla.css de la carpeta css para llamarlo ms-tiro_con_arco.css.
+  * En ms-tiro_con_arco.css crear tablas de color morado para mejorar la visualización de mi funcionalidad, tanto de los botones como de las listas resultantes de pulsarlos.
+  * Cargar mis ficheros ms-tiro_con_arco.css, ms-tiro_con_arco.js y ms-tiro_con_arco-spec.js en index.html.
+  * Modificar la presentación de mi microservicio en index.html.
 
--Modificaciones en api-gateway
-* Añadir la carpeta api-gateway de mi práctica indivual al repositorio para realizar las modificaciones a partir de ella.
-* Añadir a proxy-routes.js mi ruta.
-* Añadir a proxy-routes.js las rutas de mis compañeros de equipo, con un puerto distinto a cada uno.
+- Modificaciones en api-gateway
+  * Añadir la carpeta api-gateway de mi práctica indivual al repositorio para realizar las modificaciones a partir de ella.
+  * Añadir a proxy-routes.js mi ruta.
+  * Añadir a proxy-routes.js las rutas de mis compañeros de equipo, con un puerto distinto a cada uno.
 
--Modificaciones en ms-tiro_con_arco (anteriormente ms-plantilla en la práctica individual)
-* Añadir la carpeta ms-tiro_con_arco al proyecto.
-* Cambiar el nombre ms-plantilla por ms-tiro_con_arco tanto en package.json como en package-lock.json
+- Modificaciones en ms-tiro_con_arco (anteriormente ms-plantilla en la práctica individual)
+  * Añadir la carpeta ms-tiro_con_arco al proyecto.
+  * Cambiar el nombre ms-plantilla por ms-tiro_con_arco tanto en package.json como en package-lock.json
 
--Modificaciones en assests
-* Subir las capturas de mi funcionalidad en img.
+- Modificaciones en assests
+  * Subir las capturas de mi funcionalidad en img.
 
 La siguiente captura muestra el estado de Trello una vez terminada la historia de usuario.
 
@@ -381,10 +381,10 @@ Esta segunda, muestra el resultado de hacer una búsqueda por la cadena de carac
 Implementada por Enrique Fernández Fernández
 
 - Modificaciones en front-end
-  * En index.html creamos el boton correspondiente a la funcionalidad funcionalidad 
-  * En index.html Creamos la funcion cambiar modo la cual nos permite interactuar con el css
-  * En front-end.css Implementamos las tres funciones necesarias para el funcionamiento del contraste
-  * Creamos la funcion .oscuro.
+  * En index.html creamos el botón correspondiente a la funcionalidad.
+  * En index.html Creamos la función cambiar modo la cual nos permite interactuar con el CSS.
+  * En front-end.css Implementamos las tres funciones necesarias para el funcionamiento del contraste.
+  * Creamos la función _oscuro_.
   
   La siguiente captura muestra el estado de Trello una vez terminada la historia de usuario.
 
