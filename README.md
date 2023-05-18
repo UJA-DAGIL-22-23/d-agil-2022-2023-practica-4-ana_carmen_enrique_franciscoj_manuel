@@ -1206,7 +1206,29 @@ Finalmente tenemos una captura que muestra el estado del tablero trello al final
 <br></br>
 
 ## HU08. Ver un listado solo con los nombres de todos los jugadores/equipos ordenados alfabéticamente de todos los deportes incluidos en la app
+Implementada por Enrique Fernandez Fernandez, Manuel Lara Torres y Ana León Pulido
 
+- Modificaciones en front-end
+  * En ms-general-spec.js se han implementado las pruebas para la funcion que tendrá la funcionalidad.
+  * En index.html se ha implementado el boton correspondiente a esta funcionalidad.
+  * Se ha implementado la funcion _imprimeTodosOrdenados_ que muestra el listado de deportistas de todos los deportes ordenados.
+  * Se han implementado las funciones _procesagenerico_, _procesajug_, y _procesafutbolista_ para convertir todos los deportistas con atributos distintos a uno generico con los atributos comunes.
+  * Se ha implementaod la funcion _ordena_ que ordena los nombres de los deportistas alfabeticamente.
+  * Se ha comprobado que las funciones implementadas satisfacen los spec y que todo funciona correctamente.
+
+  La siguiente captura muestra el estado de Trello una vez terminada la historia de usuario.
+
+<img src=./assets\img\HU08_trello.PNG>
+
+  En la siguiente imagen se puede ver el boton correspondiente a la funcionalidad de la HU.
+
+<img src=./assets\img\HU08_boton.PNG>
+
+  Y en la siguiente imagen se puede observar el funcionamiento de la HU una vez implementada, mostrando los nobres de todos los deportistas de los 5 microservicios ordenados alfabeticamente.
+
+<img src=./assets\img\HU08_en_funcionamiento.PNG>
+
+<br></br>
 
 ## HU09. Mostrar el nombre y el deporte de todos los jugadores/equipos que contengan una determinada cadena introducida por el usuario. 
 Implementada por Carmen Huesa Guardiola y Francisco Javier Gálvez Marín
@@ -1226,7 +1248,7 @@ La siguiente captura muestra el estado de Trello una vez terminada la historia d
 <img src=./assets\img\HU09trello.png>
 
 
-En estas capturas muestramos la funcionalidad de mi microservicio. La primera muestra la barra de búsqueda junto con su botón para mostras las lista.
+En estas capturas mostramos la funcionalidad de la HU. La primera muestra la barra de búsqueda junto con su botón para mostras las lista.
 
 <img src=./assets\img\HU09terminada.png>
 
