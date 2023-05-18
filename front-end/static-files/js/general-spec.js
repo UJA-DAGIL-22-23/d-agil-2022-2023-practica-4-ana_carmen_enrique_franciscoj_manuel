@@ -332,6 +332,29 @@ describe("general.imprimeTodosOrdenados: ", function() {
         })
 })
 
+describe("general.ordena: ", function () {
+
+    it("ordena correctamente un vector",
+        function () {
+            vector = [
+                {data: {nombre: 'Arno'}},
+                {data: {nombre: 'Admes'}},
+                {data: {nombre: 'Sobunar'}},
+                {data: {nombre: 'Cairbre'}},
+            ];
+
+            vectorOrdenado = [
+                {data: {nombre: 'Admes'}},
+                {data: {nombre: 'Arno'}},
+                {data: {nombre: 'Cairbre'}},
+                {data: {nombre: 'Sobunar'}},
+            ];
+
+            general.ordena(vector)
+            expect(vector).toEqual(vectorOrdenado)
+        })
+})
+
 
 /*
 IMPORTANTE
