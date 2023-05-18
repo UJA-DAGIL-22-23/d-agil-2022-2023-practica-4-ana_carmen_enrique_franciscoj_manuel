@@ -1244,17 +1244,15 @@ Implementada por Enrique Fernández Fernández
   * En index.html creamos el boton correspondiente a la funcionalidad funcionalidad 
   * En index.html Creamos la funcion cambiar modo la cual nos permite interactuar con el css
   * En front-end.css Implementamos las tres funciones necesarias para el funcionamiento del contraste
-  * Creamos la funcion .opcion-principal.
-  * Creamos la funcion .opcion-principal:hover.
   * Creamos la funcion .oscuro.
   
   La siguiente captura muestra el estado de Trello una vez terminada la historia de usuario.
 
-<img src=./assets\img\HU09trello.png>
+<img src=./assets\img\HU10trello.png>
 
 
 En estas capturas muestramos la funcionalidad de mi microservicio. Como podemos observar los colores han sido cambiados al pulsar el boton Alto contraste.
 
-<img src=./assets\img\HU09terminada.png>
+<img src=./assets\img\HU10Funcionalidad.png>
 
 # **Sprint Retrospective**
