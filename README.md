@@ -1238,5 +1238,23 @@ Esta segunda, muestra el resultado de hacer una búsqueda por la cadena de carac
 <br></br>
 
 ## HU10. Modificar la visualización de la app con un modo ALTO CONTRASTE
+Implementada por Enrique Fernández Fernández
+
+- Modificaciones en front-end
+  * En index.html creamos el boton correspondiente a la funcionalidad funcionalidad 
+  * En index.html Creamos la funcion cambiar modo la cual nos permite interactuar con el css
+  * En front-end.css Implementamos las tres funciones necesarias para el funcionamiento del contraste
+  * Creamos la funcion .opcion-principal.
+  * Creamos la funcion .opcion-principal:hover.
+  * Creamos la funcion .oscuro.
+  
+  La siguiente captura muestra el estado de Trello una vez terminada la historia de usuario.
+
+<img src=./assets\img\HU09trello.png>
+
+
+En estas capturas muestramos la funcionalidad de mi microservicio. Como podemos observar los colores han sido cambiados al pulsar el boton Alto contraste.
+
+<img src=./assets\img\HU09terminada.png>
 
 # **Sprint Retrospective**
