@@ -396,3 +396,21 @@ En estas capturas muestramos la funcionalidad de mi microservicio. Como podemos 
 <img src=./assets\img\HU10Funcionalidad.png>
 
 # **Sprint Retrospective**
+## **¿Qué ha ido bien?**
+- Nos hemos repartido adecuadamente el trabajo, de forma equitativa.
+- Nos hemos ajustado correctamente al calendario de trabajo de la práctica.
+- Todas las HU que hemos seleccionado para el sprint han sido implementadas.
+- Los spec de TDD se han implenmentado en la mayoria de casos de forma previa o paralela (mientras uno hacia spec otro hacia la función) a las propias funciones.
+- La comunicación entre los miembros del equipo ha sido correcta evitando conflictos graves a la hora de trabajar.
+## **¿Cómo mejorar?**
+- Un miembro del equipo ha estado indispuesto y el resto del equipo ha esperado a su recuperación para comenzar el desarrollo de la práctica. Si esto se repite, el resto de compañeros comenzará antes porque el Desarrollo Ágil lo permite.
+- En general, algo que debemos tener más en cuenta es no hacer introducir ramas con funcionalidades sin terminar en main.
+- En el siguiente sprint todo el mundo usará GitHub Desktop para un mejor manejo de las ramas.
+- Establecer un estándar a la hora de crear y nombrar ramas desde el principio.
+- Fran: "Me comprometo a no estar enfermo en el siguiente sprint."
+- Carmen: "Algo que debería mejorar es llevar un mejor manejo de las ramas y ser más consciente de en qué rama estoy trabajando."
+- Manuel y Ana: "Deberiamos tener un ritmo más constante de trabajo."
+- Enrique: "Me comprometo a crear más spec"
+## **Notas:**
+- Al final, los archivos ms-general.js y ms-general-spec.js no se han convertido en un microservicio propio, así que serán renombrados como general.js y general-spec.js respectivamente.
+- Si se ve una cantidad anormalmente alta de acciones en Trello por parte de Carmen es debido a que decidimos conjuntamente que fuera ella quien creara todas las tarjetas correspondientes a las HU en PRODUCT BACKLOG y posteriormente desplazarlas al SPRINT BACKLOG estando todos los miembros del grupo presentes. Esto lo hemos hecho por comodidad, para evitar que varias personas introdujeran las mismas HU por error.
